@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWRZCLZPTZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-SWRZCLZPTZ');
+    </script>
+    <meta name="description"
+        content="UBCFinder is a tool designed to help UBC students easily find and compare courses by displaying averages, grade distributions, prerequisites, and other course information.">
+    <meta name="keywords"
+        content="ubcfinder, UBC, University of British Columbia, courses, grades, prerequisites, course finder, GPA booster">
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>UBCFinder - Course Details</title>
+    <link rel="stylesheet" href="/styles/main.css?v=1.2.3">
+</head>
+
+<body>
+
+    <div class="header-container">
+        <h1><a href="index.html" class="home-link">UBCFinder</a></h1>
+        <div class="course-header-wrapper">
+            <div class="course-header-flex">
+                <div class="course-header-box">
+                    <div class="course-header">
+                        <h2 id="courseTitle">
+                            <span id="courseCode"></span> - <span id="courseName"></span>
+                        </h2>
+                        <p id="courseDescription" class="course-description"></p>
+                        <p id="courseSubject" class="course-credits"></p>
+                        <p id="credFacElement" class="course-credits"></p>
+                    </div>
+                </div>
+                <div class="session-selector">
+                    <select id="sessionSelect" class="filter-select">
+                        <option value="2023W">2023W</option>
+                        <option value="2023S">2023S</option>
+                        <option value="2022W">2022W</option>
+                        <option value="2022S">2022S</option>
+                        <option value="2021W">2021W</option>
+                        <option value="2021S">2021S</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="course-details-container">
+        <div class="course-details-grid">
+            <!-- Professors Box -->
+            <div class="details-box professors-box">
+                <div class="box-content" id="professorsContent"></div>
+            </div>
+
+            <!-- Grades Box -->
+            <div class="details-box grades-box">
+                <div class="box-content" id="gradesContent"></div>
+            </div>
+
+            <!-- Prerequisites Box -->
+            <div class="details-box prerequisites-box">
+                <h3>Course Requirements</h3>
+                <div class="box-content">
+                    <div class="section">
+                        <h4>Prerequisites:</h4>
+                        <div id="prerequisites">None</div>
+                    </div>
+                    <div class="section">
+                        <h4>Corequisites:</h4>
+                        <div id="corequisites">None</div>
+                    </div>
+                    <div class="section">
+                        <h4>Required by:</h4>
+                        <div id="dependencies">None</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/course-details/manager.js?v=1.2.3"></script>
+    <!-- Vercel Analytics -->
+    <script type="module">
+        import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@1.0.0/+esm'
+        import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics@1.0.0/+esm'
+        
+        inject()
+        injectSpeedInsights()
+      </script>
+</body>
+
+</html>

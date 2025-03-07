@@ -1,0 +1,143 @@
+/* Credits Container */
+.credits-container {
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+.credits-content {
+    background: #1a1f2e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 40px;
+}
+
+/* Sections */
+.credits-section {
+    margin-bottom: 40px;
+}
+
+.credits-section:last-child {
+    margin-bottom: 0;
+}
+
+.credits-section h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Developer Card */
+.developer-card {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+}
+
+.developer-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.developer-info h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+}
+
+.developer-info p {
+    color: #8b949e;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+/* Tech Stack */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tech-item {
+    padding: 8px 16px;
+    background: rgba(67, 97, 238, 0.1);
+    border: 1px solid rgba(67, 97, 238, 0.3);
+    border-radius: 20px;
+    color: #4361ee;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.credits-footer {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+
+.credits-footer p {
+    margin: 4px 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .credits-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .credits-content {
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .developer-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tech-stack {
+        justify-content: center;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 380px) {
+    .credits-section {
+        font-size: 0.7 rem;
+    }
+
+    .credits-container {
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    .credits-content {
+        padding: 15px;
+    }
+
+    .credits-section h2 {
+        font-size: 1.3rem;
+    }
+}

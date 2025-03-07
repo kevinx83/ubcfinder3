@@ -1,0 +1,200 @@
+/* Container and Table Base Styles */
+.professors-box .table-container {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.professors-box table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: center;
+}
+
+/* Make the professor box content scrollable with fixed height */
+.professors-box .box-content {
+    max-height: 400px; /* Same height as grades box */
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+/* Table Header Styles */
+.professors-box th {
+    background-color: #1d242f;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    text-align: left;
+}
+
+/* Table Cell Base Styles */
+.professors-box td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.95rem;
+}
+
+/* Column Specific Styles */
+.professors-box th:nth-child(1),
+.professors-box td:nth-child(1) {
+    width: 40%;
+    text-align: left;
+}
+
+.professors-box th:nth-child(2),
+.professors-box td:nth-child(2) {
+    width: 35%;
+    text-align: center;
+}
+
+.professors-box th:nth-child(3),
+.professors-box td:nth-child(3) {
+    width: 25%;
+    text-align: center;
+}
+
+/* Row Styles */
+.professors-box tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.professors-box tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Grade Colors */
+.excellent-average { color: #4361ee; }
+.great-average { color: #009c1f; }
+.good-average { color: #79ff00; }
+.fair-average { color: #ffef00; }
+.bad-average { color: #f0883e; }
+.horrible-average { color: #f85149; }
+
+/* Link Styles */
+.course-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.course-link:hover {
+    color: #4361ee;
+    text-decoration: underline;
+}
+
+/* View Grades Button */
+.view-grades-btn {
+    padding: 8px 16px;
+    background: #1a1f2e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #e9e9e9;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.view-grades-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+/* Style scrollbar to match the rest of the site */
+.professors-box .box-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.professors-box .box-content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.professors-box .box-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+.professors-box .box-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Adjust header and cell padding */
+    .professors-box th,
+    .professors-box td {
+        padding: 12px 8px;
+    }
+
+    /* Reduce font sizes */
+    .professors-box th {
+        font-size: 0.8rem;
+        letter-spacing: 0;
+    }
+
+    .professors-box td {
+        font-size: 0.8rem;
+    }
+
+    /* Adjust button sizes */
+    .view-grades-btn {
+        padding: 4px 8px;
+        font-size: 0.8rem;
+    }
+
+    /* Make specific columns more compact */
+    .professors-box th:nth-child(3),
+    .professors-box td:nth-child(3) {
+        padding-right: 8px;
+    }
+}
+
+/* Sort container styles */
+.sort-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  
+  /* Make the sort dropdown more compact */
+  .professors-box .sort-container .filter-select {
+    width: auto;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+  
+  /* Add some space before the table */
+  .professors-box .table-container {
+    margin-top: 8px;
+  }
+  
+  /* Animation for sort changes */
+  .professors-box tbody tr {
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Responsive styles for mobile */
+  @media (max-width: 768px) {
+    .sort-container {
+      justify-content: center;
+    }
+    
+    .professors-box .sort-container .filter-select {
+      width: 100%;
+      max-width: 300px;
+      font-size: 0.8rem;
+      padding: 6px 10px;
+    }
+  }

@@ -1,0 +1,139 @@
+.header-container {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.menu-button {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  background: #1a1f2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 8px 16px; 
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  min-width: fit-content; 
+}
+
+.menu-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.credit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #8b949e;
+  margin: 20px;
+  font-size: 0.85rem;
+}
+
+.page-container {
+  display: flex;
+  gap: 30px;
+  width: 97%;
+  margin: 0 auto;
+  min-height: calc(100vh - 150px);
+  max-width: 100%; /* Prevent overflow */
+}
+
+.sidebar {
+  width: fit-content;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.control-panel {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+}
+
+/* Updated media queries */
+@media (max-width: 1000px) {
+  .menu-button {
+    display: block;
+  }
+
+  .header-container {
+    padding: 0 10px;
+    margin-top: 100px;
+    width: 100%; /* Ensure header doesn't cause overflow */
+    box-sizing: border-box;
+  }
+
+  .credit {
+    right: 10px;
+    margin: 10px;
+    top: 10px;
+  }
+
+  .page-container {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin: 0; /* Remove margin on mobile */
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    width: 300px;
+    max-width: 80vw;
+    background: #0d1117;
+    padding: 80px 20px 20px 20px;
+    transition: left 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  .sidebar.active {
+    left: 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding-bottom: 100px; /* Add extra padding at the bottom for scrolling */
+  }
+
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+
+  .sidebar-overlay.active {
+    display: block;
+  }
+}

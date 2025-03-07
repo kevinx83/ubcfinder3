@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWRZCLZPTZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-SWRZCLZPTZ');
+    </script>
+    <meta name="description" content="Interesting statistics and insights about UBC courses">
+    <meta name="keywords" content="ubcfinder, UBC, statistics, course data, insights">
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>UBCFinder - Course Insights</title>
+    <link rel="stylesheet" href="/styles/main.css?v=1.2.3">
+</head>
+
+<body>
+    <div class="credit">
+        <a href="index.html" class="credit-link">Back to Home</a>
+    </div>
+
+    <div class="header-container">
+        <h1><a href="index.html" class="home-link">UBCFinder</a></h1>
+    </div>
+
+    <div class="insights-container">
+        <div class="insights-content">
+            <div id="statsContent">
+                <!-- Stats will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/js/insights.js?v=1.2.3"></script>
+    <!-- Vercel Analytics -->
+    <script type="module">
+        import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@1.0.0/+esm'
+        import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics@1.0.0/+esm'
+        
+        inject()
+        injectSpeedInsights()
+      </script>
+</body>
+
+</html>

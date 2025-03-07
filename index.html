@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWRZCLZPTZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SWRZCLZPTZ');
+    </script>
+    <meta name="description"
+        content="UBCFinder is a tool designed to help UBC students easily find and compare courses by displaying averages, grade distributions, prerequisites, and other course information.">
+    <meta name="keywords"
+        content="ubcfinder, UBC, University of British Columbia, courses, grades, prerequisites, course finder, GPA booster">
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>UBCFinder</title>
+    <link rel="stylesheet" href="/styles/main.css?v=1.2.3">
+</head>
+
+<body>
+    <div class="credit">
+        <a href="credits.html" class="credit-link">About</a>
+    </div>
+    <button class="menu-button">☰ Filters</button>
+    <div class="sidebar-overlay"></div>
+
+    <div class="header-container">
+        <h1>
+            <a href="index.html" style="text-decoration: none; color: inherit; cursor: pointer;">UBCFinder</a>
+        </h1>
+    </div>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="campus-toggle">
+                <span class="toggle-label">UBC-V</span>
+                <label class="switch">
+                    <input type="checkbox" id="campusToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label">UBC-O</span>
+            </div>
+
+            <!-- Always visible filters -->
+            <div class="filter-group">
+                <div class="filters-row">
+                    <div class="filter-section">
+                        <h4>Year Levels</h4>
+                        <div id="yearLevelFilters" class="filter-container"></div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Grade Averages</h4>
+                        <div id="averageFilters" class="filter-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="show-more-filters" id="showMoreFilters">Show More Filters</button>
+
+            <!-- Collapsible filters -->
+            <div class="filter-group collapsible" id="collapsibleFilters">
+                <div class="filters-row">
+                    <div class="filter-section">
+                        <h4>Student Count</h4>
+                        <div id="studentFilters" class="filter-container"></div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>Credits</h4>
+                        <div id="creditFilters" class="filter-container"></div>
+                    </div>
+                </div>
+
+                <div class="filters-row">
+                    <div class="filter-section">
+                        <h4>Faculties</h4>
+                        <div id="facultyFilters" class="filter-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="backToTop" class="back-to-top">Back to Top</button>
+        </aside>
+
+        <main class="main-content">
+            <div class="control-panel">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search by course or subject">
+                <a href="professors.html" class="control-button">Search by Professor</a>
+                <select id="sortBy" class="filter-select">
+                    <option value="students">Sort by Students ↓</option>
+                    <option value="students-asc">Sort by Students ↑</option>
+                    <option value="code">Sort by Code</option>
+                    <option value="average">Sort by Average ↓</option>
+                    <option value="average-asc">Sort by Average ↑</option>
+                </select>
+            </div>
+
+            <div class="courses-header">
+                <div class="courses-header-left">
+                    <div class="total-courses">
+                        Showing <span id="totalCourses" class="value">--</span> courses
+                    </div>
+                </div>
+
+                <select id="sessionSelect" class="filter-select">
+                    <option value="2023W">2023W</option>
+                    <option value="2023S">2023S</option>
+                    <option value="2022W">2022W</option>
+                    <option value="2022S">2022S</option>
+                    <option value="2021W">2021W</option>
+                    <option value="2021S">2021S</option>
+                </select>
+            </div>
+
+            <div class="table-container">
+                <table id="courseTable">
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Course Name</th>
+                            <th>Students</th>
+                            <th>Average</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="paginationContainer"></div>
+        </main>
+    </div>
+
+    <script type="module" src="/js/main.js?v=1.2.3"></script>
+
+    <!-- Vercel Analytics -->
+    <script type="module">
+        import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@1.0.0/+esm'
+        import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics@1.0.0/+esm'
+
+        inject()
+        injectSpeedInsights()
+    </script>
+</body>
+
+</html>

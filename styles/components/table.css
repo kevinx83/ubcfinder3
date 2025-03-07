@@ -1,0 +1,328 @@
+/* Table Styles */
+.table-container {
+  flex-grow: 1;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th,
+td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+  background-color: #1d242f;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+
+tbody tr td {
+  font-size: 0.95rem;
+}
+
+tbody tr td[colspan="3"] {
+  background-color: #1a1f2e;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 16px;
+  color: #fff;
+  position: sticky;
+  top: 39px;
+  z-index: 1;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Grade Colors */
+
+.excellent-average {
+  color: #4361ee;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.great-average {
+  color: #009c1f;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.good-average {
+  color: #79ff00;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.fair-average {
+  color: #ffef00;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.bad-average {
+  color: #f0883e;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.horrible-average {
+  color: #f85149;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+
+.excellent-average,
+.great-average,
+.good-average,
+.fair-average,
+.bad-average,
+.horrible-average {
+  font-weight: 100;
+}
+
+.course-link {
+  text-decoration: underline !important;
+  color: inherit;
+}
+
+.course-link:hover {
+  color: #4361ee !important;
+  text-decoration: underline !important;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Column widths for desktop */
+th:nth-child(1),
+td:nth-child(1) {
+  width: 15%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 55%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 15%;
+  text-align: center;
+  padding-right: 24px;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  text-align: center;
+  width: 15%;
+}
+
+/* Pagination controls */
+.pagination-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.pagination-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pagination-info {
+  color: #8b949e;
+  font-size: 0.95rem;
+  margin: 0 12px;
+}
+
+.items-per-page {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.control-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.control-button:disabled:hover {
+  background-color: #1a1f2e;
+  transform: none;
+}
+
+/* Professor's Table */
+
+#professorTable th:nth-child(1),
+#professorTable td:nth-child(1) {
+  width: 20%;
+}
+
+#professorTable th:nth-child(2),
+#professorTable td:nth-child(2) {
+  width: 35%;
+}
+
+#professorTable th:nth-child(3),
+#professorTable td:nth-child(3) {
+  width: 15%;
+}
+
+#professorTable th:nth-child(4),
+#professorTable td:nth-child(4) {
+  width: 15%;
+}
+
+#professorTable th:nth-child(5),
+#professorTable td:nth-child(5) {
+  width: 15%;
+  text-align: center;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+
+  /* Adjust column widths for mobile */
+  #professorTable th:nth-child(1),
+  #professorTable td:nth-child(1) {
+    width: 20%;
+  }
+
+  #professorTable th:nth-child(2),
+  #professorTable td:nth-child(2) {
+    display: none;
+    visibility: collapse;
+    padding: 0;
+    font-size: 0rem;
+  }
+
+  #professorTable th:nth-child(3),
+  #professorTable td:nth-child(3) {
+    width: 100%;
+  }
+
+  #professorTable th:nth-child(4),
+  #professorTable td:nth-child(4) {
+    width: 10%;
+    text-align: center;
+  }
+
+  #professorTable th:nth-child(5),
+  #professorTable td:nth-child(5) {
+    width: 10%;
+  }
+
+  /* Make headers more compact */
+  #professorTable th {
+    padding: 10px 6px;
+    font-size: 0.7rem;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  table {
+    font-size: 0.95rem;
+  }
+
+  th,
+  td {
+    padding: 12px 8px;
+  }
+
+  /* Adjust column widths for mobile */
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 32%;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    width: 100%;
+  }
+
+  th:nth-child(3),
+  td:nth-child(3) {
+    width: 15%;
+  }
+
+  th:nth-child(4),
+  td:nth-child(4) {
+    width: 15%;
+  }
+
+  /* Make headers more compact */
+  th {
+    padding: 8px 8px;
+    font-size: 0.65rem;
+    letter-spacing: 0;
+  }
+
+  /* Make course names wrap properly */
+  td:nth-child(2) {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  /* Reduce font size for better mobile fit */
+  tbody tr td {
+    font-size: 0.65rem;
+  }
+
+  /* Further reduce font size */
+  #professorTable td,
+  #professorTable th {
+    font-size: 0.65rem;
+    padding: 8px 8px;
+  }
+
+  /* Adjust course row spacing */
+  .course-row {
+    margin-bottom: 3px;
+    font-size: 0.65rem;
+  }
+
+  /* Adjust pagination for mobile */
+  .pagination-controls {
+    flex-direction: column;
+    gap: 15px;
+    padding: 8px;
+    margin-top: 8px;
+  }
+
+  .pagination-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .pagination-info {
+    text-align: center;
+    font-size: 0.65rem;
+    margin: 0 8px;
+  }
+}

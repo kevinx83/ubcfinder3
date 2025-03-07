@@ -1,0 +1,14 @@
+{
+    "name": "UBCFinder",
+    "short_name": "UBCFinder",
+    "icons": [
+        {
+            "src": "./favicon.ico",
+            "sizes": "128x128",
+            "type": "image/x-icon"
+        }
+    ],
+    "theme_color": "#0d1117",
+    "background_color": "#0d1117",
+    "display": "standalone"
+}

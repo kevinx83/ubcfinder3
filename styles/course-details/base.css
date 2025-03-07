@@ -1,0 +1,152 @@
+/* Course Header */
+.course-header-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 24px auto;
+    width: fit-content;
+}
+
+.course-header {
+    text-align: center;
+}
+
+.course-header h2 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.course-description {
+    font-size: 0.95rem;
+    color: #e9e9e9;
+    margin: 8px auto;
+    line-height: 1.5;
+    max-width: 1200px;
+}
+
+.course-credits {
+    font-size: 0.80rem;
+    color: #8b949e;
+    margin: 4px 0 0 0;
+}
+
+/* Back Button */
+.back-button {
+    position: absolute;
+    top: 25px;
+    left: 25%;
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-2px);
+}
+
+/* Grid Layout */
+.course-details-container {
+    max-width: 97%;
+    margin: 0 auto;
+}
+
+.course-details-grid {
+    display: grid;
+    grid-template-columns: 27% 49% 21%; /* add up to 95 */
+    gap: 24px;
+    align-items: start;
+}
+
+/* Common Box Styles */
+.details-box {
+    background: rgba(255, 255, 255, 0.03); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.details-box h3 {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.details-box h4 {
+    color: #8b949e;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0 0 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Sidebar Column */
+.sidebar-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.prerequisites-box .section {
+    margin-bottom: 20px;
+}
+
+.prerequisites-box .section:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .course-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .back-button {
+        left: 20px;
+    }
+
+    .sidebar-column {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .course-details-container {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    .course-header-box {
+        padding: 16px;
+        margin: 16px auto;
+    }
+
+    .course-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .course-details-grid {
+        gap: 16px;
+    }
+
+    .sidebar-column {
+        grid-template-columns: 1fr;
+    }
+
+    .details-box {
+        padding: 16px;
+    }
+}

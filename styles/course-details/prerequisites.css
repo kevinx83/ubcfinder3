@@ -1,0 +1,42 @@
+/* Prerequisites Box Specific Styles */
+.prerequisites-box .section {
+    margin-bottom: 12px;
+}
+
+.prerequisites-box h4 {
+    color: #8b949e;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0 0 0px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.prerequisites-box p {
+    color: #e9e9e9;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Course Link Styles */
+.course-link {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.course-link:hover {
+    color: #4361ee;
+}
+
+/* Space after course link but before comma */
+.course-link+.comma {
+    margin-right: 0.4em;
+}
+
+.prerequisites-box .section:last-child div#dependencies {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 5px;
+  }

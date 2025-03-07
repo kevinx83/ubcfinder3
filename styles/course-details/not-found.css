@@ -1,0 +1,86 @@
+/* Course Not Found Styles */
+.not-found-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .not-found-card {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(26, 31, 46, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+  
+  .not-found-404 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #4361ee, #7209b7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 24px;
+  }
+  
+  .not-found-title {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  
+  .not-found-message {
+    color: #a1a1aa;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+  
+  .not-found-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #4361ee, #3730a3);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .not-found-button:hover {
+    background: linear-gradient(135deg, #3651d4, #2b2589);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .not-found-card {
+      padding: 30px 20px;
+    }
+    
+    .not-found-404 {
+      font-size: 2rem;
+    }
+    
+    .not-found-title {
+      font-size: 1.5rem;
+    }
+    
+    .not-found-message {
+      font-size: 1rem;
+    }
+  }

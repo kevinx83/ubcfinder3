@@ -1,0 +1,209 @@
+/* Grades Statistics Grid */
+.grades-header {
+    margin: 30px 0;
+}
+
+/* Grades Statistics Grid - Override insights styles */
+.grades-box .stats-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0 !important;
+    justify-content: space-around !important;
+    width: 100% !important;
+}
+
+.grades-box .stats-box {
+    text-align: center !important;
+    min-width: 120px !important;
+    max-width: 150px !important;
+}
+
+.grades-box .stats-box h4 {
+    color: #8b949e !important;
+    font-size: 0.75rem !important;
+    margin-bottom: 8px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Grade Distribution */
+.grade-distribution {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 24px 20px 90px 20px;
+    /* Increased bottom padding for vertical labels */
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    /* Changed from overflow-x: auto */
+    min-height: 300px;
+}
+
+/* Distribution Bars Container */
+.distribution-bars {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    height: 250px;
+    gap: 3px;
+    position: relative;
+    min-width: min-content;
+}
+
+/* Grid Lines */
+.distribution-bars::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(to top,
+            rgba(255, 255, 255, 0.05) 0px,
+            rgba(255, 255, 255, 0.05) 1px,
+            transparent 1px,
+            transparent 50px);
+    pointer-events: none;
+}
+
+/* Bar Groups */
+.bar-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    min-width: 35px;
+    /* Reduced minimum width */
+}
+
+.bar-container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.bar {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #4361ee;
+    transition: height 0.3s ease;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    cursor: pointer;
+}
+
+.bar:hover {
+    opacity: 0.8;
+}
+
+/* Labels and Tooltips */
+.bar-label {
+    font-size: 0.75rem;
+    color: #ffffff;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    transition: transform 0.3s ease;
+}
+
+.bar-tooltip {
+    visibility: hidden;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 10px;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 10;
+    margin-bottom: 5px;
+}
+
+.bar:hover .bar-tooltip {
+    visibility: visible;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .bar-group {
+        min-width: 35px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .bar-label {
+        transform: rotate(-45deg);
+        transform-origin: top right;
+        bottom: -35px;
+        right: 50%;
+        width: auto;
+    }
+}
+
+@media (max-width: 1200px) {
+    .bar-group {
+        min-width: 30px;
+    }
+    
+    .bar-label {
+        transform: rotate(-60deg);
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .grade-distribution {
+        padding: 16px 10px 50px 10px;
+        margin-top: 16px;
+    }
+
+    .stats-grid {
+        gap: 10px;
+    }
+
+    .stats-box {
+        min-width: 100px;
+        max-width: 120px;
+    }
+
+    .bar-group {
+        min-width: 25px;
+    }
+
+    .bar-label {
+        transform: rotate(-75deg);
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .grade-distribution {
+        padding-bottom: 70px;
+    }
+
+    .stats-grid {
+        justify-content: center;
+    }
+
+    .bar-group {
+        min-width: 20px;
+    }
+
+    .bar-label {
+        transform: rotate(-90deg);
+        transform-origin: right;
+        bottom: -30px;
+        right: 50%;
+        font-size: 0.65rem;
+        width: auto;
+    }
+}

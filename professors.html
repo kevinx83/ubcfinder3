@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWRZCLZPTZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SWRZCLZPTZ');
+    </script>
+    <meta name="description"
+        content="UBCFinder - Search and compare UBC professors and their courses">
+    <meta name="keywords"
+        content="ubcfinder, UBC, University of British Columbia, professors, courses, grades">
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBCFinder - Professor Search</title>
+    <link rel="stylesheet" href="/styles/main.css?v=1.2">
+</head>
+
+<body>
+    <div class="credit">
+        <a href="credits.html" class="credit-link">About</a>
+    </div>
+    <button class="menu-button">☰ Filters</button>
+    <div class="sidebar-overlay"></div>
+
+    <div class="header-container">
+        <h1>
+            <a href="index.html" style="text-decoration: none; color: inherit; cursor: pointer;">UBCFinder</a>
+        </h1>
+    </div>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="campus-toggle">
+                <span class="toggle-label">UBC-V</span>
+                <label class="switch">
+                    <input type="checkbox" id="campusToggle">
+                    <span class="slider round"></span>
+                </label>
+                <span class="toggle-label">UBC-O</span>
+            </div>
+
+            <!-- Always visible filters -->
+            <div class="filter-group">
+                <div class="filters-row">
+                    <div class="filter-section">
+                        <h4>Year Levels</h4>
+                        <div id="yearLevelFilters" class="filter-container"></div>
+                    </div>
+                    <div class="filter-section">
+                        <h4>Grade Averages</h4>
+                        <div id="averageFilters" class="filter-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Show more filters button -->
+            <button type="button" class="show-more-filters" id="showMoreFilters">Show More Filters</button>
+
+            <!-- Collapsible filters -->
+            <div class="filter-group collapsible" id="collapsibleFilters">
+                <div class="filters-row">
+                    <div class="filter-section">
+                        <h4>Faculties</h4>
+                        <div id="facultyFilters" class="filter-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="backToTop" class="back-to-top">Back to Top</button>
+        </aside>
+
+        <main class="main-content">
+            <div class="control-panel">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search by professor name">
+                <a href="index.html" class="control-button">Search by Course</a>
+                <select id="sortBy" class="filter-select">
+                    <option value="students">Sort by Students ↓</option>
+                    <option value="students-asc">Sort by Students ↑</option>
+                    <option value="name">Sort by Name</option>
+                    <option value="average">Sort by Average ↓</option>
+                    <option value="average-asc">Sort by Average ↑</option>
+                </select>
+            </div>
+
+            <div class="courses-header">
+                <div class="courses-header-left">
+                    <div class="total-courses">
+                        Showing <span id="totalProfessors" class="value">--</span> professors
+                    </div>
+                </div>
+
+                <select id="sessionSelect" class="filter-select">
+                    <option value="2023W">2023W</option>
+                    <option value="2023S">2023S</option>
+                    <option value="2022W">2022W</option>
+                    <option value="2022S">2022S</option>
+                    <option value="2021W">2021W</option>
+                    <option value="2021S">2021S</option>
+                </select>
+            </div>
+
+            <div class="table-container">
+                <table id="professorTable">
+                    <thead>
+                        <tr>
+                            <th>PROFESSOR</th>
+                            <th>FACULTY</th>
+                            <th>COURSES</th>
+                            <th>STUDENTS</th>
+                            <th>AVERAGE</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="paginationContainer"></div>
+        </main>
+    </div>
+
+    <script type="module" src="/js/professors-page/main.js"></script>
+    <!-- Vercel Analytics -->
+    <script type="module">
+        import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@1.0.0/+esm'
+        import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics@1.0.0/+esm'
+        
+        inject()
+        injectSpeedInsights()
+      </script>
+</body>
+
+</html>
