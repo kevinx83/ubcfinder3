@@ -30,19 +30,20 @@ export class GradesManager {
             this.showNoCourseMessage();
             return;
         }
-
-        // Create header with viewing status and properly styled reset button
+    
+        // Create the view status text (now a separate element)
         const viewingText = viewMode === 'overall' 
-            ? '<span style="color: #e9e9e9;">Viewing overall data</span>' 
-            : `<span style="color: #e9e9e9;">Viewing data for: ${viewMode}</span> <button id="viewOverallBtn" class="view-grades-btn" style="margin-left: 8px;">View Overall</button>`;
-
+            ? '<div class="view-status"><span style="color: #8b949e;">Viewing overall data</span></div>' 
+            : `<div class="view-status"><span style="color: #8b949e;">Viewing data for: ${viewMode}</span> <button id="viewOverallBtn" class="view-grades-btn" style="margin-left: 8px;">View Overall</button></div>`;
+    
         // Create the stats section with summary data and distribution
         this.gradesContent.innerHTML = `
-            <h3>Course Grades <span style="float: right; font-size: 0.9em; font-weight: normal;">${viewingText}</span></h3>
+            <h3>Course Grades</h3>
+            ${viewingText}
             ${this.createStatsSection(course)}
             ${this.createDistributionSection(course)}
         `;
-
+    
         // Add event listener for the View Overall button if it exists
         const viewOverallBtn = document.getElementById('viewOverallBtn');
         if (viewOverallBtn) {
