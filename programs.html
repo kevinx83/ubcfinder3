@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SWRZCLZPTZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SWRZCLZPTZ');
+    </script>
+    <meta name="description"
+        content="UBCFinder - Search and compare UBC programs by faculty and requirements">
+    <meta name="keywords"
+        content="ubcfinder, UBC, University of British Columbia, programs, degrees, faculties">
+    <link rel="icon" href="/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBCFinder - Program Search</title>
+    <link rel="stylesheet" href="/styles/main.css?v=1.2.3">
+</head>
+
+<body>
+    <div class="credit">
+        <a href="credits.html" class="credit-link">About</a>
+    </div>
+    <button class="menu-button">☰ Filters</button>
+    <div class="sidebar-overlay"></div>
+
+    <div class="header-container">
+        <h1>
+            <a href="index.html" class="home-link">UBCFinder</a>
+        </h1>
+    </div>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <!-- Faculty filter section -->
+            <div class="filter-group">
+                <div class="filters-row">
+                    <div class="filter-section">
+                        <h4>Faculties</h4>
+                        <div id="facultyFilters" class="filter-container"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="backToTop" class="back-to-top">Back to Top</button>
+        </aside>
+
+        <main class="main-content">
+            <div class="control-panel">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search by program name">
+                <select id="searchTypeSelect" class="filter-select">
+                    <option value="course">Search by Course</option>
+                    <option value="professor">Search by Professor</option>
+                    <option value="program" selected>Search by Program</option>
+                </select>
+            </div>
+
+            <div class="courses-header">
+                <div class="courses-header-left">
+                    <div class="total-courses">
+                        Showing <span id="totalPrograms" class="value">--</span> programs
+                    </div>
+                </div>
+
+                <div class="courses-header-right">
+                    <span class="campus-note">Only UBCV programs available</span>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table id="programTable">
+                    <thead>
+                        <tr>
+                            <th>PROGRAM</th>
+                            <th>FACULTY</th>
+                            <th>LENGTH</th>
+                            <th>REQUIREMENTS</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div id="paginationContainer"></div>
+        </main>
+    </div>
+
+    <script type="module" src="/js/programs-page/main.js"></script>
+    <!-- Vercel Analytics -->
+    <script type="module">
+        import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@1.0.0/+esm'
+        import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics@1.0.0/+esm'
+        
+        inject()
+        injectSpeedInsights()
+    </script>
+</body>
+
+</html>

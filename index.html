@@ -96,13 +96,10 @@
         <main class="main-content">
             <div class="control-panel">
                 <input type="text" id="searchInput" class="search-input" placeholder="Search by course or subject">
-                <a href="professors.html" class="control-button">Search by Professor</a>
-                <select id="sortBy" class="filter-select">
-                    <option value="students">Sort by Students ↓</option>
-                    <option value="students-asc">Sort by Students ↑</option>
-                    <option value="code">Sort by Code</option>
-                    <option value="average">Sort by Average ↓</option>
-                    <option value="average-asc">Sort by Average ↑</option>
+                <select id="searchTypeSelect" class="filter-select">
+                    <option value="course" selected>Search by Course</option>
+                    <option value="professor">Search by Professor</option>
+                    <option value="program">Search by Program</option>
                 </select>
             </div>
 
@@ -113,14 +110,24 @@
                     </div>
                 </div>
 
-                <select id="sessionSelect" class="filter-select">
-                    <option value="2023W">2023W</option>
-                    <option value="2023S">2023S</option>
-                    <option value="2022W">2022W</option>
-                    <option value="2022S">2022S</option>
-                    <option value="2021W">2021W</option>
-                    <option value="2021S">2021S</option>
-                </select>
+                <div class="courses-header-right">
+                    <select id="sortBy" class="filter-select">
+                        <option value="students">Sort by Students ↓</option>
+                        <option value="students-asc">Sort by Students ↑</option>
+                        <option value="code">Sort by Code</option>
+                        <option value="average">Sort by Average ↓</option>
+                        <option value="average-asc">Sort by Average ↑</option>
+                    </select>
+
+                    <select id="sessionSelect" class="filter-select">
+                        <option value="2023W">2023W</option>
+                        <option value="2023S">2023S</option>
+                        <option value="2022W">2022W</option>
+                        <option value="2022S">2022S</option>
+                        <option value="2021W">2021W</option>
+                        <option value="2021S">2021S</option>
+                    </select>
+                </div>
             </div>
 
             <div class="table-container">

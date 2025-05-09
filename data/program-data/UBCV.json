@@ -1,0 +1,807 @@
+[
+  {
+    "name": "Biomedical Engineering",
+    "length": "4 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/biomedical-engineering",
+    "program link": "https://you.ubc.ca/ubc_programs/biomedical-engineering/"
+  },
+  {
+    "name": "Chemical Engineering",
+    "length": "4 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/chemical-and-biological-engineering",
+    "program link": "https://you.ubc.ca/ubc_programs/chemical-engineering/"
+  },
+  {
+    "name": "Chemical and Biological Engineering",
+    "length": "4 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/chemical-and-biological-engineering",
+    "program link": "https://you.ubc.ca/ubc_programs/chemical-biological-engineering/"
+  },
+  {
+    "name": "Civil Engineering",
+    "length": "4 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/civil-engineering",
+    "program link": "https://you.ubc.ca/ubc_programs/civil-engineering-vancouver/"
+  },
+  {
+    "name": "Computer Engineering",
+    "length": "4 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/electrical-and-computer-engineering",
+    "program link": "https://you.ubc.ca/ubc_programs/computer-engineering/"
+  },
+  {
+    "name": "Electrical Engineering",
+    "length": "4 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/electrical-and-computer-engineering",
+    "program link": "https://you.ubc.ca/ubc_programs/electrical-engineering-vancouver/"
+  },
+  {
+    "name": "Engineering Physics",
+    "length": "5 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/engineering-physics",
+    "program link": "https://you.ubc.ca/ubc_programs/engineering-physics/"
+  },
+  {
+    "name": "Environmental Engineering",
+    "length": "4.5 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/environmental-engineering",
+    "program link": "https://you.ubc.ca/ubc_programs/environmental-engineering/"
+  },
+  {
+    "name": "Geological Engineering",
+    "length": "4 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/geological-engineering",
+    "program link": "https://you.ubc.ca/ubc_programs/geological-engineering/"
+  },
+  {
+    "name": "Integrated Engineering",
+    "length": "4 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/integrated-engineering",
+    "program link": "https://you.ubc.ca/ubc_programs/integrated-engineering/"
+  },
+  {
+    "name": "Manufacturing Engineering",
+    "length": "4 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/manufacturing-engineering",
+    "program link": "https://you.ubc.ca/ubc_programs/manufacturing-engineering-vancouver/"
+  },
+  {
+    "name": "Materials Engineering",
+    "length": "4 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/materials-engineering",
+    "program link": "https://you.ubc.ca/ubc_programs/materials-engineering/"
+  },
+  {
+    "name": "Mechanical Engineering",
+    "length": "4 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/mechanical-engineering",
+    "program link": "https://you.ubc.ca/ubc_programs/mechanical-engineering-vancouver/"
+  },
+  {
+    "name": "Mining Engineering",
+    "length": "4 years",
+    "faculty": "Faculty of Applied Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-applied-science/bachelor-applied-science/mining-engineering",
+    "program link": "https://you.ubc.ca/ubc_programs/mining-engineering/"
+  },
+  {
+    "name": "Ancient Mediterranean and Near Eastern Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/ancient-mediterranean-and-near-eastern-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/ancient-mediterranean-near-eastern-studies/"
+  },
+  {
+    "name": "Anthropology",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/anthropology",
+    "program link": "https://you.ubc.ca/ubc_programs/anthropology-vancouver/"
+  },
+  {
+    "name": "Archaeology",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/archaeology",
+    "program link": "https://you.ubc.ca/ubc_programs/archaeology/"
+  },
+  {
+    "name": "Art History",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/art-history-visual-art-and-theory",
+    "program link": "https://you.ubc.ca/ubc_programs/art-history/"
+  },
+  {
+    "name": "Asian Area Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/asian-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/asian-area-studies/"
+  },
+  {
+    "name": "Asian Language and Culture",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/asian-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/asian-language-culture/"
+  },
+  {
+    "name": "Canadian Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/canadian-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/canadian-studies/"
+  },
+  {
+    "name": "Cinema Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/cinema-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/cinema-studies/"
+  },
+  {
+    "name": "English",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/english",
+    "program link": "https://you.ubc.ca/ubc_programs/english-vancouver/"
+  },
+  {
+    "name": "First Nations and Endangered Languages",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/first-nations-and-endangered-languages",
+    "program link": "https://you.ubc.ca/ubc_programs/first-nations-endangered-languages/"
+  },
+  {
+    "name": "First Nations and Indigenous Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/first-nations-and-indigenous-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/first-nations-indigenous-studies/"
+  },
+  {
+    "name": "French",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/french-language-literatures-and-cultures",
+    "program link": "https://you.ubc.ca/ubc_programs/french-vancouver/"
+  },
+  {
+    "name": "Gender, Race, Sexuality, and Social Justice",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/gender-race-sexuality-and-social-justice",
+    "program link": "https://you.ubc.ca/ubc_programs/gender-race-sexuality-social-justice/"
+  },
+  {
+    "name": "Geography: Environment and Sustainability",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/environment-and-sustainability",
+    "program link": "https://you.ubc.ca/ubc_programs/geo-environment-sustainability/"
+  },
+  {
+    "name": "Geography: Human Geography",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/human-geography",
+    "program link": "https://you.ubc.ca/ubc_programs/human-geography/"
+  },
+  {
+    "name": "German Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/german-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/german/"
+  },
+  {
+    "name": "History",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/history",
+    "program link": "https://you.ubc.ca/ubc_programs/history-vancouver/"
+  },
+  {
+    "name": "Interdisciplinary Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/interdisciplinary-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/interdisciplinary-studies/"
+  },
+  {
+    "name": "International Relations",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/international-relations",
+    "program link": "https://you.ubc.ca/ubc_programs/international-relations-vancouver/"
+  },
+  {
+    "name": "Latin American Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/latin-american-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/latin-american-studies-vancouver/"
+  },
+  {
+    "name": "Linguistics",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/linguistics",
+    "program link": "https://you.ubc.ca/ubc_programs/linguistics/"
+  },
+  {
+    "name": "Mathematics (BA)",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/mathematics",
+    "program link": "https://you.ubc.ca/ubc_programs/mathematics-vancouver-ba/"
+  },
+  {
+    "name": "Medieval Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/medieval-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/medieval-studies/"
+  },
+  {
+    "name": "Modern European Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/modern-european-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/modern-european-studies/"
+  },
+  {
+    "name": "Museum Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/museum-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/museum-studies/"
+  },
+  {
+    "name": "Music",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/music",
+    "program link": "https://you.ubc.ca/ubc_programs/music/"
+  },
+  {
+    "name": "Philosophy",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/philosophy",
+    "program link": "https://you.ubc.ca/ubc_programs/philosophy-vancouver/"
+  },
+  {
+    "name": "Political Science",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/political-science",
+    "program link": "https://you.ubc.ca/ubc_programs/political-science-vancouver/"
+  },
+  {
+    "name": "Psychology",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/psychology",
+    "program link": "https://you.ubc.ca/ubc_programs/psychology-vancouver-ba/"
+  },
+  {
+    "name": "Religion Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/program-study-religion",
+    "program link": "https://you.ubc.ca/ubc_programs/religion/"
+  },
+  {
+    "name": "Romance Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/romance-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/romance-studies/"
+  },
+  {
+    "name": "Sociology",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/sociology",
+    "program link": "https://you.ubc.ca/ubc_programs/sociology-vancouver/"
+  },
+  {
+    "name": "Spanish",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/spanish",
+    "program link": "https://you.ubc.ca/ubc_programs/spanish-hispanic-studies/"
+  },
+  {
+    "name": "Speech Sciences",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/speech-sciences",
+    "program link": "https://you.ubc.ca/ubc_programs/speech-sciences/"
+  },
+  {
+    "name": "Theatre",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/theatre",
+    "program link": "https://you.ubc.ca/ubc_programs/theatre/"
+  },
+  {
+    "name": "United States Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/united-states-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/united-states-studies/"
+  },
+  {
+    "name": "Urban Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/urban-studies",
+    "program link": "https://you.ubc.ca/ubc_programs/urbanstudies/"
+  },
+  {
+    "name": "Visual Art (BA)",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/art-history-visual-art-and-theory",
+    "program link": "https://you.ubc.ca/ubc_programs/visual-art-ba/"
+  },
+  {
+    "name": "Business and Computer Science",
+    "length": "4 years",
+    "faculty": "Faculty of Commerce",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-commerce-and-business-administration/bachelor-commerce/business-and-computer-science-combined-major",
+    "program link": "https://you.ubc.ca/ubc_programs/business-computer-science/"
+  },
+  {
+    "name": "Commerce",
+    "length": "4 years",
+    "faculty": "Faculty of Commerce",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-commerce-and-business-administration/bachelor-commerce",
+    "program link": "https://you.ubc.ca/ubc_programs/commerce/"
+  },
+  {
+    "name": "Education: Elementary and Middle Years",
+    "length": "11 months",
+    "faculty": "Faculty of Education",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-education/bachelor-education/degree-requirements-elementary-middle-years-teacher-education",
+    "program link": "https://you.ubc.ca/ubc_programs/education-elementary-middle-years/"
+  },
+  {
+    "name": "Education: Secondary",
+    "length": "11 months",
+    "faculty": "Faculty of Education",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-education/bachelor-education/degree-requirements-secondary-teacher-education",
+    "program link": "https://you.ubc.ca/ubc_programs/education-secondary/"
+  },
+  {
+    "name": "Creative Writing",
+    "length": "2 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-fine-arts/creative-writing",
+    "program link": "https://you.ubc.ca/ubc_programs/creative-writing-vancouver/"
+  },
+  {
+    "name": "Film Production",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-fine-arts/film-production",
+    "program link": "https://you.ubc.ca/ubc_programs/film-production/"
+  },
+  {
+    "name": "Theatre: Acting",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-fine-arts/acting",
+    "program link": "https://you.ubc.ca/ubc_programs/theatre-acting/"
+  },
+  {
+    "name": "Theatre: Design and Production",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-fine-arts/design-and-production",
+    "program link": "https://you.ubc.ca/ubc_programs/theatre-design-production/"
+  },
+  {
+    "name": "Visual Art (BFA)",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-fine-arts/visual-art",
+    "program link": "https://you.ubc.ca/ubc_programs/visual-art-bfa/"
+  },
+  {
+    "name": "International Economics",
+    "length": "4 years",
+    "faculty": "Vancouver School of Economics",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/vancouver-school-economics/bachelor-international-economics/degree-requirements-students-who-enter-program-202425-or-later",
+    "program link": "https://you.ubc.ca/ubc_programs/international-economics/"
+  },
+  {
+    "name": "Kinesiology: Multidisciplinary Science",
+    "length": "4 years",
+    "faculty": "School of Kinesiology",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/school-kinesiology/bachelor-kinesiology/multi-disciplinary-science",
+    "program link": "https://you.ubc.ca/ubc_programs/kinesiology-multidisciplinary-science/"
+  },
+  {
+    "name": "Kinesiology: Neuromechanical and Physiological Sciences",
+    "length": "4 years",
+    "faculty": "School of Kinesiology",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/school-kinesiology/bachelor-kinesiology/neuromechanical-and-physiological-sciences",
+    "program link": "https://you.ubc.ca/ubc_programs/kinesiology-neuromechanical-physiological-sciences/"
+  },
+  {
+    "name": "Kinesiology: Social and Behavioural Sciences",
+    "length": "4 years",
+    "faculty": "School of Kinesiology",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/school-kinesiology/bachelor-kinesiology/social-and-behavioural-sciences",
+    "program link": "https://you.ubc.ca/ubc_programs/kinesiology-social-behavioural-sciences/"
+  },
+  {
+    "name": "Media Studies",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-media-studies/degree-requirements-students-entering-program-202324-or-later",
+    "program link": "https://you.ubc.ca/ubc_programs/media-studies/"
+  },
+  {
+    "name": "Medical Laboratory Science",
+    "length": "4 years",
+    "faculty": "Faculty of Medicine",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-medicine/bachelor-medical-laboratory-science/degree-requirements",
+    "program link": "https://you.ubc.ca/ubc_programs/medical-laboratory-science/"
+  },
+  {
+    "name": "Midwifery",
+    "length": "4 years",
+    "faculty": "Faculty of Medicine",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-medicine/bachelor-midwifery",
+    "program link": "https://you.ubc.ca/ubc_programs/midwifery/"
+  },
+  {
+    "name": "Music",
+    "length": "4 years",
+    "faculty": "Faculty of Arts",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-arts/bachelor-arts/music",
+    "program link": "https://you.ubc.ca/ubc_programs/music/"
+  },
+  {
+    "name": "Pharmaceutical Sciences",
+    "length": "4 years",
+    "faculty": "Faculty of Pharmaceutical Sciences",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-pharmaceutical-sciences/bachelor-pharmaceutical-sciences/degree-requirements",
+    "program link": "https://you.ubc.ca/ubc_programs/pharmaceutical-sciences/"
+  },
+  {
+    "name": "Astronomy",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/astronomy",
+    "program link": "https://you.ubc.ca/ubc_programs/astronomy/"
+  },
+  {
+    "name": "Atmospheric Science",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/atmospheric-science",
+    "program link": "https://you.ubc.ca/ubc_programs/atmospheric-science/"
+  },
+  {
+    "name": "Biochemistry",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/biochemistry",
+    "program link": "https://you.ubc.ca/ubc_programs/biochemistry/"
+  },
+  {
+    "name": "Biology",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/biology",
+    "program link": "https://you.ubc.ca/ubc_programs/biology-vancouver/"
+  },
+  {
+    "name": "Biophysics",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/physics",
+    "program link": "https://you.ubc.ca/ubc_programs/biophysics/"
+  },
+  {
+    "name": "Biotechnology",
+    "length": "5 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/biotechnology",
+    "program link": "https://you.ubc.ca/ubc_programs/biotechnology/"
+  },
+  {
+    "name": "Cellular, Anatomical, and Physiological Sciences",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/cellular-and-physiological-sciences",
+    "program link": "https://you.ubc.ca/ubc_programs/cellular-anatomical-physiological-sciences/"
+  },
+  {
+    "name": "Chemistry",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/chemistry",
+    "program link": "https://you.ubc.ca/ubc_programs/chemistry-vancouver/"
+  },
+  {
+    "name": "Cognitive Systems (BSc)",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/cognitive-systems",
+    "program link": "https://you.ubc.ca/ubc_programs/cognitive-systems-bsc/"
+  },
+  {
+    "name": "Combined Major in Science",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/combined-major-science",
+    "program link": "https://you.ubc.ca/ubc_programs/science-combined-major/"
+  },
+  {
+    "name": "Combined Majors in Statistics",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/statistics",
+    "program link": "https://you.ubc.ca/ubc_programs/statistics-combined-majors/"
+  },
+  {
+    "name": "Computer Science (BSc)",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/computer-science",
+    "program link": "https://you.ubc.ca/ubc_programs/computer-science-vancouver-bsc/"
+  },
+  {
+    "name": "Earth and Ocean Sciences",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/earth-and-ocean-sciences",
+    "program link": "https://you.ubc.ca/ubc_programs/earth-ocean-sciences/"
+  },
+  {
+    "name": "Environmental Sciences",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/environmental-sciences",
+    "program link": "https://you.ubc.ca/ubc_programs/environmental-sciences/"
+  },
+  {
+    "name": "Geographical Sciences",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/geographical-sciences",
+    "program link": "https://you.ubc.ca/ubc_programs/geographical-sciences/"
+  },
+  {
+    "name": "Geology",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/geological-sciences",
+    "program link": "https://you.ubc.ca/ubc_programs/geology/"
+  },
+  {
+    "name": "Geophysics",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/geophysics",
+    "program link": "https://you.ubc.ca/ubc_programs/geophysics/"
+  },
+  {
+    "name": "Integrated Sciences",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/integrated-sciences",
+    "program link": "https://you.ubc.ca/ubc_programs/integrated-sciences/"
+  },
+  {
+    "name": "Mathematical Sciences",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "hhttps://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/mathematics",
+    "program link": "https://you.ubc.ca/ubc_programs/mathematical-sciences-vancouver/"
+  },
+  {
+    "name": "Mathematics (BSc)",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/mathematics",
+    "program link": "https://you.ubc.ca/ubc_programs/mathematics-vancouver-bsc/"
+  },
+  {
+    "name": "Mathematics and Economics",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/mathematics",
+    "program link": "https://you.ubc.ca/ubc_programs/mathematics-economics/"
+  },
+  {
+    "name": "Microbiology and Immunology",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/microbiology-and-immunology",
+    "program link": "https://you.ubc.ca/ubc_programs/microbiology-immunology/"
+  },
+  {
+    "name": "Neuroscience",
+    "length": "4.0 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/neuroscience",
+    "program link": "https://you.ubc.ca/ubc_programs/neuroscience/"
+  },
+  {
+    "name": "Oceanography",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/oceanography",
+    "program link": "https://you.ubc.ca/ubc_programs/oceanography/"
+  },
+  {
+    "name": "Pharmacology",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/pharmacology",
+    "program link": "https://you.ubc.ca/ubc_programs/pharmacology/"
+  },
+  {
+    "name": "Physics",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/physics",
+    "program link": "https://you.ubc.ca/ubc_programs/physics-vancouver/"
+  },
+  {
+    "name": "Statistics",
+    "length": "4 years",
+    "faculty": "Faculty of Science",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-science/bachelor-science/statistics",
+    "program link": "https://you.ubc.ca/ubc_programs/statistics-vancouver/"
+  },
+  {
+    "name": "Applied Animal Biology",
+    "length": "4 years",
+    "faculty": "Faculty of Land and Food Systems",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-land-and-food-systems/bsc-applied-biology-apbi/applied-animal-biology-major",
+    "program link": "https://you.ubc.ca/ubc_programs/applied-animal-biology/"
+  },
+  {
+    "name": "Sustainable Agriculture and Environment",
+    "length": "4 years",
+    "faculty": "Faculty of Land and Food Systems",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-land-and-food-systems/bsc-applied-biology-apbi/sustainable-agriculture-and-environment-major",
+    "program link": "https://you.ubc.ca/ubc_programs/sustainable-agriculture-environment/"
+  },
+  {
+    "name": "Business and Markets",
+    "length": "4 years",
+    "faculty": "Faculty of Land and Food Systems",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-land-and-food-systems/bsc-food-and-resource-economics-fre/degree-requirements-major-business-and-markets-students-entering-202425-or-later",
+    "program link": "https://you.ubc.ca/ubc_programs/business-and-markets/"
+  },
+  {
+    "name": "Data Analytics",
+    "length": "4 years",
+    "faculty": "Faculty of Land and Food Systems",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-land-and-food-systems/bsc-food-and-resource-economics-fre/data-analytics-major",
+    "program link": "https://you.ubc.ca/ubc_programs/data-analytics/"
+  },
+  {
+    "name": "Dietetics",
+    "length": "5 years",
+    "faculty": "Faculty of Land and Food Systems",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-land-and-food-systems/bsc-food-nutrition-and-health-fnh/dietetics-major",
+    "program link": "https://you.ubc.ca/ubc_programs/dietetics/"
+  },
+  {
+    "name": "Food Science",
+    "length": "4 years",
+    "faculty": "Faculty of Land and Food Systems",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-land-and-food-systems/bsc-food-nutrition-and-health-fnh/food-science-major",
+    "program link": "https://you.ubc.ca/ubc_programs/food-science/"
+  },
+  {
+    "name": "Nutritional Sciences",
+    "length": "5 years",
+    "faculty": "Faculty of Land and Food Systems",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-land-and-food-systems/bsc-food-nutrition-and-health-fnh/nutritional-sciences-major",
+    "program link": "https://you.ubc.ca/ubc_programs/food-nutritional-sciences/"
+  },
+  {
+    "name": "Food, Nutrition, and Health",
+    "length": "4 years",
+    "faculty": "Faculty of Land and Food Systems",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-land-and-food-systems/bsc-food-nutrition-and-health-fnh/food-nutrition-and-health-major",
+    "program link": "https://you.ubc.ca/ubc_programs/food-nutrition-health/"
+  },
+  {
+    "name": "Nutritional Sciences",
+    "length": "4 years",
+    "faculty": "Faculty of Land and Food Systems",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-land-and-food-systems/bsc-food-nutrition-and-health-fnh/nutritional-sciences-major",
+    "program link": "https://you.ubc.ca/ubc_programs/nutritional-sciences/"
+  },
+  {
+    "name": "Global Resource Systems",
+    "length": "4 years",
+    "faculty": "Faculty of Land and Food Systems",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-land-and-food-systems/bsc-global-resource-systems-grs",
+    "program link": "https://you.ubc.ca/ubc_programs/global-resource-systems/"
+  },
+  {
+      "name": "Bioeconomy Sciences and Technology",
+      "length": "4 years",
+      "faculty": "Faculty of Forestry",
+      "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-forestry/bsc-natural-resources-students-starting-september-2024/bioeconomy-sciences-and-technology",
+      "program link": "https://you.ubc.ca/ubc_programs/bioeconomy-sciences-technology/"
+  },
+  {
+      "name": "Conservation",
+      "length": "4 years",
+      "faculty": "Faculty of Forestry",
+      "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-forestry/bsc-natural-resources-students-starting-september-2024/conservation",
+      "program link": "https://you.ubc.ca/ubc_programs/conservation/"
+  },
+  {
+      "name": "Forest Operations",
+      "length": "4 years",
+      "faculty": "Faculty of Forestry",
+      "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-forestry/bsc-natural-resources-students-starting-september-2024/forest-operations",
+      "program link": "https://you.ubc.ca/ubc_programs/forest-operations/"
+  },
+  {
+      "name": "Forest Sciences",
+      "length": "4 years",
+      "faculty": "Faculty of Forestry",
+      "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-forestry/bsc-natural-resources-students-starting-september-2024/forest-sciences",
+      "program link": "https://you.ubc.ca/ubc_programs/forest-sciences/"
+  },
+  {
+      "name": "Wood Products",
+      "length": "4 years",
+      "faculty": "Faculty of Forestry",
+      "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-forestry/bsc-natural-resources-students-starting-september-2024/wood-products",
+      "program link": "https://you.ubc.ca/ubc_programs/wood-products/"
+  },
+  {
+    "name": "Nursing",
+    "length": "20 months",
+    "faculty": "School of Nursing",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/school-nursing/bachelor-science-nursing/degree-requirements",
+    "program link": "https://you.ubc.ca/ubc_programs/nursing-vancouver/"
+  },
+  {
+    "name": "Social Work",
+    "length": "2 years",
+    "faculty": "School of Social Work",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/school-social-work/bachelor-social-work/degree-requirements",
+    "program link": "https://you.ubc.ca/ubc_programs/social-work/"
+  },
+  {
+    "name": "Urban Forestry",
+    "length": "4 years",
+    "faculty": "Faculty of Forestry",
+    "requirements link": "https://vancouver.calendar.ubc.ca/faculties-colleges-and-schools/faculty-forestry/buf-bachelor-urban-forestry",
+    "program link": "https://you.ubc.ca/ubc_programs/urban-forestry/"
+  }
+]

@@ -18,7 +18,7 @@ export class ProfessorsManager {
             const session = document.getElementById('sessionSelect')?.value || '2023W';
             
             const campusName = campus.toLowerCase() === 'v' ? 'UBCV' : 'UBCO';
-            const response = await fetch(`/instructor-data/${campusName}/${session}.json`);
+            const response = await fetch(`/data/instructor-data/${campusName}/${session}.json`);
             const instructorData = await response.json();
             this.instructorData = instructorData;
 

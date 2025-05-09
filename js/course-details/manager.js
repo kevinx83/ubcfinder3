@@ -42,7 +42,7 @@ export class CourseDetails {
       }
 
       // Load course prerequisite data
-      const response = await fetch('course-data/subjects-prereqs/course-prereqs.json', {
+      const response = await fetch('/data/course-data/subjects-prereqs/course-prereqs.json', {
         cache: 'no-store',
         headers: {
           'Cache-Control': 'no-cache',

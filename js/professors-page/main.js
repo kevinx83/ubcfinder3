@@ -30,14 +30,14 @@ class ProfessorsApp {
         try {
             const session = document.getElementById('sessionSelect')?.value || '2023W';
             const campus = this.currentCampus.toUpperCase();
-            
+
             // Get instructor data from the correct path
-            const response = await fetch(`/instructor-data/${campus === 'V' ? 'UBCV' : 'UBCO'}/${session}.json`);
+            const response = await fetch(`/data/instructor-data/${campus === 'V' ? 'UBCV' : 'UBCO'}/${session}.json`);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            
+
             // Calculate simple average and total students for each professor
             const processedData = data.map(professor => {
                 // Calculate simple average of all courses
@@ -45,10 +45,10 @@ class ProfessorsApp {
                 const overallAverage = validCourses.length > 0
                     ? validCourses.reduce((sum, course) => sum + course.average, 0) / validCourses.length
                     : 0;
-                
+
                 // Calculate total students
                 const totalStudents = professor.courses.reduce((sum, course) => sum + course.reported, 0);
-                
+
                 return {
                     ...professor,
                     overallAverage: overallAverage,
@@ -56,7 +56,7 @@ class ProfessorsApp {
                     numberOfCourses: professor.courses.length
                 };
             });
-            
+
             this.allProfessors = processedData;
 
             const sortBy = document.getElementById('sortBy')?.value || 'name';
@@ -85,7 +85,7 @@ class ProfessorsApp {
             campusToggle.checked = this.currentCampus === 'o';
             campusToggle.addEventListener('change', async (e) => {
                 this.currentCampus = e.target.checked ? 'o' : 'v';
-                
+
                 const urlParams = new URLSearchParams(window.location.search);
                 urlParams.set('campus', this.currentCampus);
                 history.replaceState(null, '', `?${urlParams.toString()}`);
@@ -103,29 +103,44 @@ class ProfessorsApp {
         document.getElementById('searchInput')?.addEventListener('input', () => {
             this.handleFilterChange();
         });
+
+        // Search type select
+        document.getElementById('searchTypeSelect')?.addEventListener('change', (e) => {
+            switch (e.target.value) {
+                case 'course':
+                    window.location.href = 'index.html';
+                    break;
+                case 'program':
+                    window.location.href = 'programs.html';
+                    break;
+                // Stay on professors page for 'professor' option
+                default:
+                    break;
+            }
+        });
     }
 
     handleFilterChange(isPageChange = false) {
         if (!isPageChange) {
             this.tableManager.currentPage = 1;
         }
-    
+
         const sortBy = document.getElementById('sortBy')?.value || 'name';
         const filters = this.filterManager.getSelectedFilters();
         const searchTerm = document.getElementById('searchInput')?.value.toLowerCase() || '';
-    
+
         // Filter professors
         let filteredProfessors = this.allProfessors.filter(professor => {
             // Search filter
             if (searchTerm && !professor.name.toLowerCase().includes(searchTerm)) {
                 return false;
             }
-    
+
             // Faculty filter
             if (filters.faculties.length > 0 && !professor.faculties.some(faculty => filters.faculties.includes(faculty))) {
                 return false;
             }
-    
+
             // Year level filter
             if (filters.yearLevels.length > 0) {
                 const matchesYearLevel = professor.courses.some(course => {
@@ -136,7 +151,7 @@ class ProfessorsApp {
                     return false;
                 }
             }
-    
+
             // Average filter
             if (filters.averageRanges.length > 0) {
                 const avg = professor.overallAverage;
@@ -152,13 +167,13 @@ class ProfessorsApp {
                 });
                 if (!matchesAverage) return false;
             }
-    
+
             return true;
         });
-    
+
         // Sort professors
         filteredProfessors = this.sortProfessors(filteredProfessors, sortBy);
-    
+
         this.updateTotalProfessors(filteredProfessors);
         this.tableManager.populateTable(filteredProfessors, sortBy);
     }

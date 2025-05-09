@@ -17,7 +17,7 @@ class DataService {
       }
 
       console.log('Fetching from server...');
-      const courseResponse = await fetch(`/course-data/post-processed/UBC${campus.toUpperCase()}/${this.currentSession}.json`, {
+      const courseResponse = await fetch(`/data/course-data/post-processed/UBC${campus.toUpperCase()}/${this.currentSession}.json`, {
         cache: 'no-store',
         headers: {
           'Cache-Control': 'no-cache',
@@ -32,7 +32,7 @@ class DataService {
       console.log('Data fetched successfully');
 
       // Load prerequisites data
-      const prereqResponse = await fetch('/course-data/subjects-prereqs/course-prereqs.json', {
+      const prereqResponse = await fetch('/data/course-data/subjects-prereqs/course-prereqs.json', {
         cache: 'no-store',
         headers: {
           'Cache-Control': 'no-cache',

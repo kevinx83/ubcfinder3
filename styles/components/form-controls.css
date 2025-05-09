@@ -284,3 +284,31 @@
     font-size: 0.65rem;
   }
 }
+
+.courses-header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+@media (max-width: 768px) {
+    .courses-header-right {
+        gap: 10px;
+    }
+    
+    /* Adjust select width for mobile */
+    .courses-header-right .filter-select {
+        max-width: 120px;
+    }
+}
+
+.campus-note {
+    color: #8b949e;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+    .campus-note {
+        font-size: 0.75rem;
+    }
+}
