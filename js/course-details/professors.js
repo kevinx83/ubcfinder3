@@ -40,19 +40,12 @@ export class ProfessorsManager {
 
             // Create table structure with sort dropdown
             const tableHtml = `
-                <div class="sort-container">
-                    <select id="professorSort" class="filter-select">
-                        <option value="average-desc" ${this.sortOption === 'average-desc' ? 'selected' : ''}>Average ↓</option>
-                        <option value="average-asc" ${this.sortOption === 'average-asc' ? 'selected' : ''}>Average ↑</option>
-                        <option value="name-asc" ${this.sortOption === 'name-asc' ? 'selected' : ''}>Name</option>
-                    </select>
-                </div>
                 <div class="table-container">
                     <table>
                         <thead>
                             <tr>
                                 <th>Instructor</th>
-                                <th>Grades</th>
+                                <th>View</th>
                                 <th>Avg</th>
                             </tr>
                         </thead>
@@ -72,7 +65,7 @@ export class ProfessorsManager {
                                         <td>
                                             <button class="view-grades-btn" 
                                                     data-professor="${prof.name}"
-                                                    data-course="${courseCode}">View</button>
+                                                    data-course="${courseCode}">🔍</button>
                                         </td>
                                         <td class="${avgClass} monospace">
                                             ${prof.courseData.average.toFixed(2)}
