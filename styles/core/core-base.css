@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scrollbar-gutter: stable;
+  font-size: 16px; /* Base font size for rem units */
+}
+
+body {
+  padding: max(12px, 1vw);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  min-height: 100dvh; /* For mobile browsers with dynamic viewports */
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.2em);
+  font-weight: 700;
+  color: var(--color-text-bright);
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.monospace {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.home-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.home-link:hover {
+  color: inherit;
+  opacity: 0.9;
+}
+
+/* Better tap targets on mobile */
+button, 
+a, 
+select, 
+input {
+  touch-action: manipulation;
+}
+
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-hover);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-thumb);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-thumb-hover);
+}
+
+
+/* Handle notched phones */
+@supports(padding: max(0px)) {
+  body {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+}
+
+.credit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  z-index: 1000;
+}
+
+:root {
+  /* Light theme (default) */
+  --color-bg-primary: #f8f9fa;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #e9ecef;
+  --color-bg-hover: rgba(0, 0, 0, 0.05);
+  --color-bg-active: rgba(0, 0, 0, 0.1);
+  --color-bg-card: rgba(0, 0, 0, 0.03);
+  --color-bg-table-even: rgba(0, 0, 0, 0.02);
+  --color-bg-table-hover: rgba(0, 0, 0, 0.05);
+
+  --color-text-primary: #212529;
+  --color-text-secondary: #6c757d;
+  --color-text-bright: #212529;
+
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-border-hover: rgba(0, 0, 0, 0.2);
+
+  --color-primary: #4361ee;
+  --color-primary-hover: #3651d4;
+
+  --color-grade-excellent: #0052d5;
+  --color-grade-great: #005e0d;
+  --color-grade-good: #029f21;
+  --color-grade-fair: #bba200;
+  --color-grade-bad: #e36e00;
+  --color-grade-horrible: #c51209;
+
+  --color-overlay: rgba(0, 0, 0, 0.2);
+  --color-tooltip-bg: rgba(0, 0, 0, 0.8);
+  --color-box-shadow: rgba(0, 0, 0, 0.1); 
+  --color-gradient-start: #4361ee;
+  --color-gradient-end: #7209b7;
+  --color-gradient-button-start: #4361ee;
+  --color-gradient-button-end: #3730a3;
+  --color-gradient-button-hover-start: #3651d4;
+  --color-gradient-button-hover-end: #2b2589;
+  --color-scrollbar-thumb: rgba(0, 0, 0, 0.2);
+  --color-scrollbar-thumb-hover: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode */
+html[data-theme='light'] {
+  --color-bg-primary: #0d1117;
+  --color-bg-secondary: #1a1f2e;
+  --color-bg-tertiary: #1d242f;
+  --color-bg-hover: rgba(255, 255, 255, 0.05);
+  --color-bg-active: rgba(255, 255, 255, 0.1);
+  --color-bg-card: rgba(255, 255, 255, 0.03);
+  --color-bg-table-even: rgba(255, 255, 255, 0.02);
+  --color-bg-table-hover: rgba(255, 255, 255, 0.05);
+
+  --color-text-primary: #e9e9e9;
+  --color-text-secondary: #8b949e;
+  --color-text-bright: #ffffff;
+
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
+
+  --color-primary: #4361ee;
+  --color-primary-hover: #3651d4;
+
+  --color-grade-excellent: #4361ee;
+  --color-grade-great: #009c1f;
+  --color-grade-good: #79ff00;
+  --color-grade-fair: #ffef00;
+  --color-grade-bad: #f0883e;
+  --color-grade-horrible: #f85149;
+
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-tooltip-bg: rgba(0, 0, 0, 0.9);
+  --color-box-shadow: rgba(0, 0, 0, 0.2);
+  --color-gradient-start: #4361ee;
+  --color-gradient-end: #7209b7;
+  --color-gradient-button-start: #4361ee;
+  --color-gradient-button-end: #3730a3;
+  --color-gradient-button-hover-start: #3651d4;
+  --color-gradient-button-hover-end: #2b2589;
+  --color-scrollbar-thumb: rgba(255, 255, 255, 0.2);
+  --color-scrollbar-thumb-hover: rgba(255, 255, 255, 0.3);
+}

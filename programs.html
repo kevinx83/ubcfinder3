@@ -11,15 +11,28 @@
 
         gtag('config', 'G-SWRZCLZPTZ');
     </script>
-    <meta name="description"
-        content="UBCFinder - Search and compare UBC programs by faculty and requirements">
-    <meta name="keywords"
-        content="ubcfinder, UBC, University of British Columbia, programs, degrees, faculties">
+    <meta name="description" content="UBCFinder - Search and compare UBC programs by faculty and requirements">
+    <meta name="keywords" content="ubcfinder, UBC, University of British Columbia, programs, degrees, faculties">
     <link rel="icon" href="/favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UBCFinder - Program Search</title>
     <link rel="stylesheet" href="/styles/main.css?v=1.2.3">
+
+    <script>
+        // Apply the saved theme immediately to prevent flickering
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else {
+                // Use system preference as default
+                const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const defaultTheme = prefersDarkMode ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', defaultTheme);
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -57,6 +70,7 @@
                     <option value="course">🔍 Course Search</option>
                     <option value="professor">🔍 Professor Search</option>
                     <option value="program" selected>🔍 Program Search</option>
+                    <option value="insights">📊 Course Insights</option>
                 </select>
             </div>
 
@@ -90,11 +104,12 @@
     </div>
 
     <script type="module" src="/js/programs-page/main.js"></script>
+    <script type="module" src="/js/theme.js"></script>
     <!-- Vercel Analytics -->
     <script type="module">
         import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@1.0.0/+esm'
         import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics@1.0.0/+esm'
-        
+
         inject()
         injectSpeedInsights()
     </script>

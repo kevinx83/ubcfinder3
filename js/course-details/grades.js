@@ -1,3 +1,4 @@
+// grades.js
 export class GradesManager {
     constructor() {
         this.gradesContent = document.querySelector('#gradesContent');
@@ -8,7 +9,7 @@ export class GradesManager {
 
         this.urlParams = new URLSearchParams(window.location.search);
         this.currentSession = this.urlParams.get('session') || '2023W';
-        
+
         // Define grade ranges for distribution
         this.gradeRanges = [
             { range: '< 50', key: '<50' },
@@ -30,12 +31,12 @@ export class GradesManager {
             this.showNoCourseMessage();
             return;
         }
-    
+
         // Create the view status text (now a separate element)
-        const viewingText = viewMode === 'overall' 
-            ? '<div class="view-status"><span style="color: #8b949e;">Viewing overall data</span></div>' 
-            : `<div class="view-status"><span style="color: #8b949e;">Viewing data for: ${viewMode}</span> <button id="viewOverallBtn" class="view-grades-btn" style="margin-left: 8px;">View Overall</button></div>`;
-    
+        const viewingText = viewMode === 'overall'
+            ? '<div class="view-status"><span style="color: var(--color-text-secondary);">Viewing overall data</span></div>'
+            : `<div class="view-status"><span style="color: var(--color-text-secondary);">Viewing data for: ${viewMode}</span> <button id="viewOverallBtn" class="view-grades-btn" style="margin-left: 8px;">View Overall</button></div>`;
+
         // Create the stats section with summary data and distribution
         this.gradesContent.innerHTML = `
             <h3>Course Grades</h3>
@@ -43,7 +44,7 @@ export class GradesManager {
             ${this.createStatsSection(course)}
             ${this.createDistributionSection(course)}
         `;
-    
+
         // Add event listener for the View Overall button if it exists
         const viewOverallBtn = document.getElementById('viewOverallBtn');
         if (viewOverallBtn) {
@@ -61,10 +62,10 @@ export class GradesManager {
     showNoCourseMessage() {
         const courseCode = this.urlParams.get('code');
         const currentSession = document.getElementById('sessionSelect').value;
-        
+
         this.gradesContent.innerHTML = `
             <h3>Course Grades</h3>
-            <p style="text-align: center; color: #8b949e; padding: 40px 0; font-size: 0.95rem;">
+            <p style="text-align: center; color: var(--color-text-secondary); padding: 40px 0; font-size: 0.95rem;">
                 ${courseCode} was not offered in this session.
             </p>
         `;
@@ -72,11 +73,11 @@ export class GradesManager {
 
     createStatsSection(course) {
         const stats = [
-            { label: 'Average', value: course.Average, format: 'average', color: this.getAverageColor(course.Average) },
-            { label: 'Enrolled', value: course.Reported, format: 'enrolled', color: '#e9e9e9' },
-            { label: 'Weighted Median', value: course.WeightedMedian, format: 'median', color: this.getAverageColor(course.WeightedMedian) },
-            { label: 'High', value: course.High, format: 'percent', color: '#e9e9e9' },
-            { label: 'Low', value: course.Low, format: 'percent', color: '#e9e9e9' }
+            { label: 'Average', value: course.Average, format: 'average', valueClass: 'average-value' },
+            { label: 'Enrolled', value: course.Reported, format: 'enrolled', valueClass: 'enrolled-value' },
+            { label: 'Weighted Median', value: course.WeightedMedian, format: 'median', valueClass: 'median-value' },
+            { label: 'High', value: course.High, format: 'percent', valueClass: 'high-value' },
+            { label: 'Low', value: course.Low, format: 'percent', valueClass: 'low-value' }
         ];
 
         return `
@@ -88,12 +89,19 @@ export class GradesManager {
         `;
     }
 
-    createStatsBox({ label, value, format, color }) {
+    createStatsBox({ label, value, format, valueClass }) {
         const formattedValue = this.formatValue(value, format);
+        let gradeClass = '';
+
+        // Apply grade-based coloring for average and median values
+        if (format === 'average' || format === 'median') {
+            gradeClass = this.getGradeClass(value);
+        }
+
         return `
             <div class="stats-box">
                 <h4>${label}</h4>
-                <p style="font-size: 1.3em; color: ${color}; font-family: 'JetBrains Mono', monospace;">
+                <p class="stats-value ${valueClass} ${gradeClass}">
                     ${formattedValue}
                 </p>
             </div>
@@ -138,39 +146,44 @@ export class GradesManager {
         return `
             <div class="distribution-bars">
                 ${this.gradeRanges.map((grade, index) => {
-                    const count = course[grade.key] || 0;
-                    const height = maxCount > 0 ? (count / maxCount * 100) : 0;
-                    const percentage = (count / total * 100);
-                    return `
+            const count = course[grade.key] || 0;
+            const height = maxCount > 0 ? (count / maxCount * 100) : 0;
+            const percentage = (count / total * 100);
+            return `
                         <div class="bar-group">
                             <div class="bar-container">
                                 <div class="bar" 
-                                     style="height: ${height}%; 
-                                            background-color: ${this.getBarColor(percentage)};">
+                                     style="height: ${height}%;">
                                     <span class="bar-tooltip">${count} students</span>
                                 </div>
                             </div>
                             <div class="bar-label">${grade.range}</div>
                         </div>
                     `;
-                }).join('')}
+        }).join('')}
             </div>
         `;
     }
 
-    getBarColor(percentage) {
-        if (percentage >= 25) return '#4361ee';
-        if (percentage >= 15) return '#4355ee';
-        if (percentage >= 10) return '#4348ee';
-        return '#433bee';
+    getGradeClass(average) {
+        if (average >= 90) return 'excellent-average';
+        if (average >= 85) return 'great-average';
+        if (average >= 80) return 'good-average';
+        if (average >= 70) return 'fair-average';
+        if (average >= 60) return 'bad-average';
+        return 'horrible-average';
     }
 
-    getAverageColor(average) {
-        if (average >= 90) return '#4361ee';
-        if (average >= 85) return '#009c1f';
-        if (average >= 80) return '#79ff00';
-        if (average >= 70) return '#ffef00';
-        if (average >= 60) return '#f0883e';
-        return '#f85149';
+    // Add this method to your GradesManager class
+    showNoCourseMessage() {
+        const courseCode = this.urlParams.get('code');
+        const currentSession = document.getElementById('sessionSelect')?.value || this.currentSession;
+
+        this.gradesContent.innerHTML = `
+        <h3>Course Grades</h3>
+        <div class="not-found-message-inline">
+            <p>${courseCode} was not offered in ${currentSession}.</p>
+        </div>
+    `;
     }
 }

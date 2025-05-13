@@ -18,6 +18,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UBCFinder - Professor Search</title>
     <link rel="stylesheet" href="/styles/main.css?v=1.2">
+
+    <script>
+        // Apply the saved theme immediately to prevent flickering
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else {
+                // Use system preference as default
+                const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const defaultTheme = prefersDarkMode ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', defaultTheme);
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -35,13 +50,25 @@
 
     <div class="page-container">
         <aside class="sidebar">
-            <div class="campus-toggle">
-                <span class="toggle-label">UBC-V</span>
-                <label class="switch">
-                    <input type="checkbox" id="campusToggle">
-                    <span class="slider round"></span>
-                </label>
-                <span class="toggle-label">UBC-O</span>
+
+            <div class="toggles-container">
+                <div class="campus-toggle">
+                    <span class="toggle-label">UBC-V</span>
+                    <label class="switch">
+                        <input type="checkbox" id="campusToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="toggle-label">UBC-O</span>
+                </div>
+
+                <div class="theme-toggle">
+                    <span class="toggle-label">🌙</span>
+                    <label class="switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="toggle-label">☀️</span>
+                </div>
             </div>
 
             <!-- Always visible filters -->
@@ -81,6 +108,7 @@
                     <option value="course">🔍 Course Search</option>
                     <option value="professor" selected>🔍 Professor Search</option>
                     <option value="program">🔍 Program Search</option>
+                    <option value="insights">📊 Course Insights</option>
                 </select>
             </div>
 
@@ -130,6 +158,7 @@
     </div>
 
     <script type="module" src="/js/professors-page/main.js"></script>
+    <script type="module" src="/js/theme.js"></script>
     <!-- Vercel Analytics -->
     <script type="module">
         import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@1.0.0/+esm'

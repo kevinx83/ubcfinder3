@@ -25,7 +25,7 @@ class ProgramsApp {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const data = await response.json();
-            
+
             this.allPrograms = data;
 
             if (resetFilters) {
@@ -35,7 +35,7 @@ class ProgramsApp {
                     value: faculty,
                     label: faculty
                 }));
-                
+
                 // Initialize faculty filter only
                 const facultyFilters = document.getElementById('facultyFilters');
                 if (facultyFilters) {
@@ -60,6 +60,7 @@ class ProgramsApp {
         });
 
         // Search type select
+        // Search type select
         document.getElementById('searchTypeSelect')?.addEventListener('change', (e) => {
             switch (e.target.value) {
                 case 'course':
@@ -68,7 +69,9 @@ class ProgramsApp {
                 case 'professor':
                     window.location.href = 'professors.html';
                     break;
-                // Stay on programs page for 'program' option
+                case 'insights':
+                    window.location.href = 'data.html';
+                    break;
                 default:
                     break;
             }
@@ -78,22 +81,22 @@ class ProgramsApp {
     handleFilterChange() {
         const filters = this.filterManager.getSelectedFilters();
         const searchTerm = document.getElementById('searchInput')?.value.toLowerCase() || '';
-    
+
         // Filter programs
         let filteredPrograms = this.allPrograms.filter(program => {
             // Search filter
             if (searchTerm && !program.name.toLowerCase().includes(searchTerm)) {
                 return false;
             }
-    
+
             // Faculty filter
             if (filters.faculties.length > 0 && !filters.faculties.includes(program.faculty)) {
                 return false;
             }
-    
+
             return true;
         });
-    
+
         this.updateTotalPrograms(filteredPrograms);
         this.tableManager.populateTable(filteredPrograms);
     }

@@ -2,9 +2,9 @@
 .table-container {
   flex-grow: 1;
   overflow-x: auto;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-border);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px var(--color-box-shadow);
 }
 
 table {
@@ -17,13 +17,13 @@ th,
 td {
   padding: 16px;
   text-align: left;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-border);
 }
 
 th {
-  background-color: #1d242f;
+  background-color: var(--color-bg-tertiary);
   font-weight: 600;
-  color: #fff;
+  color: var(--color-text-bright);
   text-transform: uppercase;
   font-size: 0.95rem;
   letter-spacing: 1px;
@@ -32,63 +32,60 @@ th {
   z-index: 1;
 }
 
-
-
 tbody tr td {
   font-size: 0.95rem;
 }
 
 tbody tr td[colspan="3"] {
-  background-color: #1a1f2e;
+  background-color: var(--color-bg-secondary);
   font-weight: 600;
   font-size: 0.95rem;
   padding: 16px;
-  color: #fff;
+  color: var(--color-text-bright);
   position: sticky;
   top: 39px;
   z-index: 1;
 }
 
 tbody tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color: var(--color-bg-table-even);
 }
 
 tbody tr:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--color-bg-table-hover);
 }
 
-/* Grade Colors */
 
+/* Grade Colors */
 .excellent-average {
-  color: #4361ee;
+  color: var(--color-grade-excellent);
   font-family: 'JetBrains Mono', monospace;
 }
 
 .great-average {
-  color: #009c1f;
+  color: var(--color-grade-great);
   font-family: 'JetBrains Mono', monospace;
 }
 
 .good-average {
-  color: #79ff00;
+  color: var(--color-grade-good);
   font-family: 'JetBrains Mono', monospace;
 }
 
 .fair-average {
-  color: #ffef00;
+  color: var(--color-grade-fair);
   font-family: 'JetBrains Mono', monospace;
 }
 
 .bad-average {
-  color: #f0883e;
+  color: var(--color-grade-bad);
   font-family: 'JetBrains Mono', monospace;
 }
 
 .horrible-average {
-  color: #f85149;
+  color: var(--color-grade-horrible);
   font-family: 'JetBrains Mono', monospace;
 }
-
 
 .excellent-average,
 .great-average,
@@ -100,12 +97,12 @@ tbody tr:hover {
 }
 
 .course-link {
-  text-decoration: underline !important;
+  text-decoration: underline !important; 
   color: inherit;
 }
 
 .course-link:hover {
-  color: #4361ee !important;
+  color: var(--color-primary) !important;
   text-decoration: underline !important;
 }
 
@@ -143,7 +140,7 @@ td:nth-child(4) {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--color-bg-card);
   border-radius: 12px;
   margin-top: 20px;
 }
@@ -155,7 +152,7 @@ td:nth-child(4) {
 }
 
 .pagination-info {
-  color: #8b949e;
+  color: var(--color-text-secondary);
   font-size: 0.95rem;
   margin: 0 12px;
 }
@@ -172,20 +169,19 @@ td:nth-child(4) {
 }
 
 .control-button:disabled:hover {
-  background-color: #1a1f2e;
+  background-color: var(--color-bg-secondary);
   transform: none;
 }
 
 /* Professor's Table */
-
 #professorTable th:nth-child(1),
 #professorTable td:nth-child(1) {
-  width: 20%;
+  width: 25%;
 }
 
 #professorTable th:nth-child(2),
 #professorTable td:nth-child(2) {
-  width: 35%;
+  width: 30%;
 }
 
 #professorTable th:nth-child(3),
@@ -206,7 +202,6 @@ td:nth-child(4) {
 
 /* Mobile Optimizations */
 @media (max-width: 768px) {
-
   /* Adjust column widths for mobile */
   #professorTable th:nth-child(1),
   #professorTable td:nth-child(1) {

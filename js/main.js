@@ -121,6 +121,9 @@ class App {
         case 'program':
           window.location.href = 'programs.html';
           break;
+        case 'insights':
+          window.location.href = 'data.html';
+          break;
         // Stay on courses page for 'course' option
         default:
           break;

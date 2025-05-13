@@ -1,9 +1,9 @@
 /* Container and Table Base Styles */
 .professors-box .table-container {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-border);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px var(--color-box-shadow);
 }
 
 .professors-box table {
@@ -22,8 +22,8 @@
 
 /* Table Header Styles */
 .professors-box th {
-    background-color: #1d242f;
-    color: #fff;
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text-bright);
     font-weight: 600;
     font-size: 0.95rem;
     letter-spacing: 1px;
@@ -39,7 +39,7 @@
 .professors-box td {
     padding: 16px;
     text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-border);
     font-size: 0.95rem;
 }
 
@@ -64,20 +64,12 @@
 
 /* Row Styles */
 .professors-box tbody tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.02);
+    background-color: var(--color-bg-table-even);
 }
 
 .professors-box tbody tr:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: var(--color-bg-table-hover);
 }
-
-/* Grade Colors */
-.excellent-average { color: #4361ee; }
-.great-average { color: #009c1f; }
-.good-average { color: #79ff00; }
-.fair-average { color: #ffef00; }
-.bad-average { color: #f0883e; }
-.horrible-average { color: #f85149; }
 
 /* Link Styles */
 .course-link {
@@ -87,17 +79,17 @@
 }
 
 .course-link:hover {
-    color: #4361ee;
+    color: var(--color-primary);
     text-decoration: underline;
 }
 
 /* View Grades Button */
 .view-grades-btn {
     padding: 6px 8px;
-    background: #1a1f2e;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
     border-radius: 8px;
-    color: #e9e9e9;
+    color: var(--color-text-primary);
     font-size: 0.95rem;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -105,10 +97,10 @@
 }
 
 .view-grades-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-bg-active);
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    color: #ffffff;
+    box-shadow: 0 2px 8px var(--color-box-shadow);
+    color: var(--color-text-bright);
 }
 
 /* Style scrollbar to match the rest of the site */
@@ -117,17 +109,17 @@
 }
 
 .professors-box .box-content::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--color-bg-hover);
     border-radius: 4px;
 }
 
 .professors-box .box-content::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--color-scrollbar-thumb);
     border-radius: 4px;
 }
 
 .professors-box .box-content::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: var(--color-scrollbar-thumb-hover);
 }
 
 /* Responsive Design */

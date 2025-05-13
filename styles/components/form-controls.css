@@ -3,15 +3,15 @@
 .filter-select,
 .control-button {
   padding: 12px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: #1a1f2e;
-  color: #e9e9e9;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
   border-radius: 8px;
   font-size: 0.95rem;
 }
 
 .control-button {
-  text-decoration: none !important;
+  text-decoration: none;
   display: inline-block;
 }
 
@@ -31,30 +31,30 @@
 }
 
 .control-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-bg-active);
   transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  color: #ffffff;
+  box-shadow: 0 2px 8px var(--color-box-shadow);
+  color: var(--color-text-bright);
 }
 
 /* Filter select styles */
 .filter-select:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-bg-active);
   cursor: pointer;
-  color: #ffffff;
+  color: var(--color-text-bright);
 }
 
 .filter-select option {
-  background-color: #1d242f;
-  color: #e9e9e9;
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
 }
 
 /* Collapse button styles */
 .collapse-button {
   margin-right: 12px;
   padding: 4px 8px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background-color: var(--color-bg-active);
+  color: var(--color-text-bright);
   border: none;
   cursor: pointer;
   border-radius: 4px;
@@ -62,14 +62,14 @@
 }
 
 .collapse-button:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--color-bg-hover);
 }
 
 /* Session select styles */
 .session-select {
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: var(--color-text-bright);
   font-size: 0.95rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -84,8 +84,8 @@
 }
 
 .session-select option {
-  background-color: #1d242f;
-  color: #e9e9e9;
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
 }
 
 .back-to-top {
@@ -93,9 +93,9 @@
   bottom: 30px;
   left: 30px;
   padding: 12px 20px;
-  background-color: #1a1f2e;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-bright);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   cursor: pointer;
   font-size: 0.95rem;
@@ -111,25 +111,23 @@
 }
 
 .back-to-top:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-bg-active);
   transform: translateY(-2px);
 }
-
-
 
 .credit-link {
   text-decoration: none;
   font-size: 0.95rem;
-  color: #d9dbdb;
+  color: var(--color-text-primary);
   padding: 6px 10px;
   border-radius: 6px;
   transition: all 0.2s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-border);
 }
 
 .credit-link:hover {
-  background: rgba(255, 255, 255, 0.05);
-  color: #fff;
+  background: var(--color-bg-hover);
+  color: var(--color-text-bright);
 }
 
 .session-control {
@@ -164,12 +162,13 @@
   .filter-select,
   .control-button {
     padding: 9px 9px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: #1a1f2e;
-    color: #e9e9e9;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
     border-radius: 8px;
     font-size: 0.70rem;
   }
+  
   .credit-link {
     text-decoration: none;
     font-size: 0.8rem;
@@ -190,10 +189,10 @@
   left: 0;
   right: 0;
   margin-top: 8px;
-  background: #1d242f;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 20px var(--color-box-shadow);
   z-index: 100;
   max-height: 200px;
   overflow-y: auto;
@@ -206,7 +205,7 @@
   align-items: center;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .suggestion-item:last-child {
@@ -214,30 +213,30 @@
 }
 
 .suggestion-item:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-bg-active);
 }
 
 .suggestion-icon {
   margin-right: 12px;
   font-size: 1rem;
-  color: #4361ee;
+  color: var(--color-primary);
 }
 
 .suggestion-text {
   flex: 1;
-  color: #e9e9e9;
+  color: var(--color-text-primary);
   font-size: 0.9rem;
 }
 
 .suggestion-desc {
   margin-left: 12px;
-  color: #8b949e;
+  color: var(--color-text-secondary);
   font-size: 0.85rem;
   opacity: 0.8;
 }
 
 .suggestion-completion .suggestion-icon {
-  color: #009c1f;
+  color: var(--color-grade-great);
 }
 
 /* Custom scrollbar for the suggestions dropdown */
@@ -246,17 +245,17 @@
 }
 
 .search-suggestions::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-bg-hover);
   border-radius: 4px;
 }
 
 .search-suggestions::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--color-scrollbar-thumb);
   border-radius: 4px;
 }
 
 .search-suggestions::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--color-scrollbar-thumb-hover);
 }
 
 /* Responsive styles */
@@ -303,7 +302,7 @@
 }
 
 .campus-note {
-    color: #8b949e;
+    color: var(--color-text-secondary);
     font-size: 0.95rem;
 }
 

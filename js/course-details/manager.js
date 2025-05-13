@@ -37,7 +37,7 @@ export class CourseDetails {
       const course = courses.find(c => c.Code === courseCode);
 
       if (!course) {
-        this.showNotFound();
+        this.showNotFound(courseCode, session);
         return;
       }
 
@@ -60,7 +60,7 @@ export class CourseDetails {
 
       // Update grades and professors based on current session data
       this.gradesManager.update(course);
-      this.professorsManager.update(course.Professors, course.Code); // Pass the course code here
+      this.professorsManager.update(course.Professors, course.Code);
 
       // Add session change handler
       sessionSelect.addEventListener('change', async (e) => {
@@ -82,14 +82,16 @@ export class CourseDetails {
           console.log('Course found:', !!updatedCourse);
 
           // Update UI
-          this.gradesManager.update(updatedCourse);
-          this.professorsManager.update(updatedCourse ? updatedCourse.Professors : [], courseCode); // Pass the course code here too
+          if (!updatedCourse) {
+            this.showSessionNotFound(courseCode, newSession);
+          } else {
+            this.gradesManager.update(updatedCourse);
+            this.professorsManager.update(updatedCourse.Professors, courseCode);
+          }
           console.log('UI updated');
         } catch (error) {
           console.error('Error during session change:', error);
-          // Try to update UI even if there's an error
-          this.gradesManager.update(null);
-          this.professorsManager.update([], courseCode); // Keep passing the course code
+          this.showSessionNotFound(courseCode, e.target.value);
         }
       });
     } catch (error) {
@@ -118,9 +120,32 @@ export class CourseDetails {
     }
   }
 
-  showNotFound() {
-    document.querySelector('.back-button')?.remove();
-    document.querySelector('.course-header')?.remove();
+  showSessionNotFound(courseCode, session) {
+    // Show not found message for specific session but keep header
+    const gradesContent = document.getElementById('gradesContent');
+    if (gradesContent) {
+      gradesContent.innerHTML = `
+        <h3>Course Grades</h3>
+        <div class="not-found-message">
+          <p>${courseCode} was not offered in ${session}.</p>
+        </div>
+      `;
+    }
+
+    // Clear professors content too
+    const professorsContent = document.getElementById('professorsContent');
+    if (professorsContent) {
+      professorsContent.innerHTML = `
+        <div class="not-found-message">
+          <p>No professor information available for this session.</p>
+        </div>
+      `;
+    }
+  }
+
+  showNotFound(courseCode, session) {
+    // Remove existing course elements
+    document.querySelector('.course-header-wrapper')?.remove();
     document.querySelector('.course-details-container')?.remove();
 
     const mainContent = document.createElement('div');
@@ -128,9 +153,9 @@ export class CourseDetails {
       <div class="not-found-container">
         <div class="not-found-card">
           <div class="not-found-404">404</div>
-          <h2 class="not-found-title">Data Not Available</h2>
+          <h2 class="not-found-title">Course Not Found</h2>
           <p class="not-found-message">
-            The data for this course is currently unavailable.<br>
+            ${courseCode ? `The course ${courseCode} was not found${session ? ` in session ${session}` : ''}.` : 'The requested course data is currently unavailable.'}<br>
           </p>
           <a href="index.html" class="not-found-button">
             ← Back to Course List

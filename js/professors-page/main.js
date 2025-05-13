@@ -105,6 +105,7 @@ class ProfessorsApp {
         });
 
         // Search type select
+        // Search type select
         document.getElementById('searchTypeSelect')?.addEventListener('change', (e) => {
             switch (e.target.value) {
                 case 'course':
@@ -113,7 +114,9 @@ class ProfessorsApp {
                 case 'program':
                     window.location.href = 'programs.html';
                     break;
-                // Stay on professors page for 'professor' option
+                case 'insights':
+                    window.location.href = 'data.html';
+                    break;
                 default:
                     break;
             }

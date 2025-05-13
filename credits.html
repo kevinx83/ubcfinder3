@@ -25,13 +25,26 @@
 
     <title>UBCFinder - Credits</title>
     <link rel="stylesheet" href="/styles/main.css?v=1.2.3">
+    <script>
+        // Apply the saved theme immediately to prevent flickering
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+            } else {
+                // Use system preference as default
+                const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                const defaultTheme = prefersDarkMode ? 'dark' : 'light';
+                document.documentElement.setAttribute('data-theme', defaultTheme);
+            }
+        })();
+    </script>
 
 </head>
 
 <body>
     <div class="credit">
         <a href="index.html" class="credit-link">Back to Home</a>
-        <a href="data.html" class="credit-link">Course Insights</a>
     </div>
 
     <div class="header-container">
@@ -102,18 +115,19 @@
 
             <footer class="credits-footer">
                 <p>Launched: December 4th, 2024</p>
-                <p>Last Updated: March 6th, 2025</p>
+                <p>Last Updated: May 13th, 2025</p>
             </footer>
         </div>
     </div>
+    <script type="module" src="/js/theme.js"></script>
     <!-- Vercel Analytics -->
     <script type="module">
         import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@1.0.0/+esm'
         import { inject } from 'https://cdn.jsdelivr.net/npm/@vercel/analytics@1.0.0/+esm'
-        
+
         inject()
         injectSpeedInsights()
-      </script>
+    </script>
 </body>
 
 </html>

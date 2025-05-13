@@ -6,8 +6,8 @@
 }
 
 .credits-content {
-    background: #1a1f2e;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
     border-radius: 12px;
     padding: 40px;
 }
@@ -22,11 +22,11 @@
 }
 
 .credits-section h2 {
-    color: #fff;
+    color: var(--color-text-bright);
     font-size: 1.5rem;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-border);
 }
 
 /* Developer Card */
@@ -35,7 +35,7 @@
     align-items: center;
     gap: 24px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--color-bg-card);
     border-radius: 8px;
 }
 
@@ -47,13 +47,13 @@
 }
 
 .developer-info h3 {
-    color: #fff;
+    color: var(--color-text-bright);
     font-size: 1.2rem;
     margin-bottom: 4px;
 }
 
 .developer-info p {
-    color: #8b949e;
+    color: var(--color-text-secondary);
     font-size: 0.9rem;
     margin-bottom: 12px;
 }
@@ -76,7 +76,7 @@
     background: rgba(67, 97, 238, 0.1);
     border: 1px solid rgba(67, 97, 238, 0.3);
     border-radius: 20px;
-    color: #4361ee;
+    color: var(--color-primary);
     font-size: 0.9rem;
 }
 
@@ -84,9 +84,9 @@
 .credits-footer {
     margin-top: 60px;
     padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--color-border);
     text-align: center;
-    color: #8b949e;
+    color: var(--color-text-secondary);
     font-size: 0.9rem;
 }
 
@@ -120,24 +120,8 @@
     .tech-stack {
         justify-content: center;
     }
-}
 
-/* Extra small devices */
-@media (max-width: 380px) {
     .credits-section {
-        font-size: 0.7 rem;
-    }
-
-    .credits-container {
-        width: 100%;
-        margin: 10px auto;
-    }
-
-    .credits-content {
-        padding: 15px;
-    }
-
-    .credits-section h2 {
-        font-size: 1.3rem;
+        font-size: 0.7rem;
     }
 }

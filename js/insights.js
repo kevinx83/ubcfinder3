@@ -35,16 +35,16 @@ class InsightsManager {
         }
     }
 
-    formatAverageWithColor(average) {
-        let color;
-        if (average >= 90) color = '#4361ee';      // excellent
-        else if (average >= 85) color = '#009c1f';  // great
-        else if (average >= 80) color = '#79ff00';  // good
-        else if (average >= 70) color = '#ffef00';  // fair
-        else if (average >= 60) color = '#f0883e';  // bad
-        else color = '#f85149';                     // horrible
+    formatAverageWithClass(average) {
+        let gradeClass;
+        if (average >= 90) gradeClass = 'excellent-average';
+        else if (average >= 85) gradeClass = 'great-average';
+        else if (average >= 80) gradeClass = 'good-average';
+        else if (average >= 70) gradeClass = 'fair-average';
+        else if (average >= 60) gradeClass = 'bad-average';
+        else gradeClass = 'horrible-average';
         
-        return `<span style="color: ${color}; font-family: 'JetBrains Mono', monospace;">${average.toFixed(2)}%</span>`;
+        return `<span class="${gradeClass} monospace">${average.toFixed(2)}%</span>`;
     }
 
     displayInsights(courses) {
@@ -61,10 +61,10 @@ class InsightsManager {
         const statsAndFaculty = document.createElement('div');
         statsAndFaculty.innerHTML = `
             <div class="stats-grid">
-                ${this.createStatCard('Highest Average Course', stats.highestAvg.course, this.formatAverageWithColor(stats.highestAvg.value))}
-                ${this.createStatCard('Lowest Average Course', stats.lowestAvg.course, this.formatAverageWithColor(stats.lowestAvg.value))}
+                ${this.createStatCard('Highest Average Course', stats.highestAvg.course, this.formatAverageWithClass(stats.highestAvg.value))}
+                ${this.createStatCard('Lowest Average Course', stats.lowestAvg.course, this.formatAverageWithClass(stats.lowestAvg.value))}
                 ${this.createStatCard('Most Enrolled Course', stats.mostEnrolled.course, stats.mostEnrolled.value + ' Students')}
-                ${this.createStatCard('Overall Average', `Average of every ${campusName} course during ${session}`, this.formatAverageWithColor(stats.overallAvg))}
+                ${this.createStatCard('Overall Average', `Average of every ${campusName} course during ${session}`, this.formatAverageWithClass(stats.overallAvg))}
                 ${this.createStatCard('Total Courses', `Total number of courses offered at ${campusName} during ${session}`, stats.totalCourses)}
                 ${this.createStatCard('Total Enrollments', `Total course enrollments by ${campusName} students during ${session}`, stats.totalStudents.toLocaleString())}
             </div>
@@ -228,7 +228,7 @@ class InsightsManager {
 
     getBaseFaculty(faculty) {
         return faculty.replace(" (Honorary Science Credit)", "");
-      }
+    }
 
     updateFacultyTable(stats, sortBy) {
         const tableBody = document.getElementById('facultyTableBody');
@@ -240,7 +240,7 @@ class InsightsManager {
                 <td>${faculty}</td>
                 <td>${stats.totalCourses}</td>
                 <td>${stats.totalStudents.toLocaleString()}</td>
-                <td>${this.formatAverageWithColor(stats.averageGrade)}</td>
+                <td>${this.formatAverageWithClass(stats.averageGrade)}</td>
             </tr>
         `).join('');
     }
@@ -275,7 +275,7 @@ class InsightsManager {
                                     <td>${faculty}</td>
                                     <td>${stats.totalCourses}</td>
                                     <td>${stats.totalStudents.toLocaleString()}</td>
-                                    <td>${this.formatAverageWithColor(stats.averageGrade)}</td>
+                                    <td>${this.formatAverageWithClass(stats.averageGrade)}</td>
                                 </tr>
                             `).join('')}
                         </tbody>

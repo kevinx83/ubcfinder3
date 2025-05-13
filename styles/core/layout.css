@@ -12,9 +12,9 @@
   top: 20px;
   left: 20px;
   z-index: 1000;
-  background: #1a1f2e;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-bright);
   padding: 8px 16px; 
   border-radius: 8px;
   cursor: pointer;
@@ -23,14 +23,14 @@
 }
 
 .menu-button:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-bg-active);
 }
 
 .credit {
   position: absolute;
   top: 20px;
   right: 20px;
-  color: #8b949e;
+  color: var(--color-text-secondary);
   margin: 20px;
   font-size: 0.85rem;
 }
@@ -65,7 +65,7 @@
   gap: 15px;
   flex-wrap: wrap;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--color-bg-hover);
   border-radius: 12px;
 }
 
@@ -108,7 +108,7 @@
     height: 100vh;
     width: 300px;
     max-width: 80vw;
-    background: #0d1117;
+    background: var(--color-bg-primary);
     padding: 80px 20px 20px 20px;
     transition: left 0.3s ease;
     z-index: 999;
@@ -118,7 +118,7 @@
 
   .sidebar.active {
     left: 0;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px var(--color-box-shadow);
     padding-bottom: 100px; /* Add extra padding at the bottom for scrolling */
   }
 
@@ -129,7 +129,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--color-overlay);
     z-index: 998;
   }
 

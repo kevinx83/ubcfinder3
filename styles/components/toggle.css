@@ -7,7 +7,7 @@
   }
   
   .toggle-label {
-    color: #8b949e;
+    color: var(--color-text-secondary);
     font-size: 0.95rem;
   }
   
@@ -32,8 +32,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #1a1f2e;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
     transition: .4s;
   }
   
@@ -44,7 +44,7 @@
     width: 18px;
     left: 2px;
     bottom: 2px;
-    background-color: #4361ee;
+    background-color: var(--color-primary);
     transition: .4s;
   }
   
@@ -63,22 +63,70 @@
   /* Total Courses Counter */
   .total-courses {
     font-size: 0.95rem;
-    color: #8b949e; 
+    color: var(--color-text-secondary); 
   }
   
   .total-courses .value {
-    color: #fff;
+    color: var(--color-text-bright);
     font-family: 'JetBrains Mono', monospace;
   }
 
   @media (max-width: 768px) {
     .total-courses {
       font-size: 0.75rem;
-      color: #8b949e; 
+      color: var(--color-text-secondary); 
     }
 
     .toggle-label {
-      color: #8b949e;
+      color: var(--color-text-secondary);
       font-size: 0.75rem;
     }
   }
+
+  /* Container for both toggles */
+.toggles-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Campus toggle on the left */
+.campus-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Theme toggle on the right */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: auto; /* This pushes it to the right */
+}
+
+/* Make the switches more compact if needed */
+.theme-toggle .switch {
+    width: 48px;
+    height: 24px;
+}
+
+.theme-toggle .slider:before {
+    height: 18px;
+    width: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .toggles-container {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .theme-toggle {
+        margin-left: 0; /* Reset margin on mobile */
+    }
+}

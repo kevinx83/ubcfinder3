@@ -4,7 +4,7 @@
 }
 
 .prerequisites-box h4 {
-    color: #8b949e;
+    color: var(--color-text-secondary);
     font-size: 0.95rem;
     font-weight: 500;
     margin: 0 0 0px 0;
@@ -13,7 +13,7 @@
 }
 
 .prerequisites-box p {
-    color: #e9e9e9;
+    color: var(--color-text-primary);
     font-size: 0.95rem;
     margin: 0;
     line-height: 1.6;
@@ -27,7 +27,7 @@
 }
 
 .course-link:hover {
-    color: #4361ee;
+    color: var(--color-primary);
 }
 
 /* Space after course link but before comma */
@@ -39,4 +39,4 @@
     max-height: 300px;
     overflow-y: auto;
     padding-right: 5px;
-  }
+}
