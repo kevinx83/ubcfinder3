@@ -136,41 +136,69 @@ export class FilterManager {
   }
 
   initializeFacultyFilter(courses) {
-    const faculties = [...new Set(courses.map(course => this.getBaseFaculty(course.Faculty)))].sort();
+  // Count courses per faculty with a map of original name to [shortName, count]
+  const facultyData = new Map();
+  
+  courses.forEach(course => {
+    const baseFaculty = this.getBaseFaculty(course.Faculty);
+    // First, remove "Faculty of " prefix
+    let shortName = baseFaculty.replace("Faculty of ", "");
     
-    if (!faculties.includes("Faculty of Science")) {
-      faculties.push("Faculty of Science");
-      faculties.sort();
+    // Apply specific name changes
+    if (shortName === "School of Architecture & Landscape Architecture") {
+      shortName = "Architecture";
+    } else if (shortName === "Commerce and Business Administration") {
+      shortName = "Commerce and Business";
+    } else if (shortName === "Faculty Graduate and Postdoctoral Studies") {
+      shortName = "Postdoctoral Studies";
+    } else {
+      // Remove "School of " from any remaining names
+      shortName = shortName.replace("School of ", "");
     }
     
-    const options = faculties.map(faculty => ({
-      value: faculty,
-      label: faculty
-    }));
-    
-    this.createFilterOptions('facultyFilters', options, 'selectAllFaculties');
+    if (facultyData.has(baseFaculty)) {
+      facultyData.get(baseFaculty).count++;
+    } else {
+      facultyData.set(baseFaculty, { shortName, count: 1 });
+    }
+  });
+  
+  // Handle Faculty of Science specially if it's missing
+  if (!facultyData.has("Faculty of Science")) {
+    facultyData.set("Faculty of Science", { shortName: "Science", count: 0 });
   }
+  
+  // Convert to array and sort by course count (descending)
+  const sortedFaculties = Array.from(facultyData.entries())
+    .sort((a, b) => b[1].count - a[1].count)
+    .map(([originalName, data]) => ({
+      value: originalName, // Keep original name as value for filtering
+      label: data.shortName // Display shortened name without course count
+    }));
+  
+  this.createFilterOptions('facultyFilters', sortedFaculties, 'selectAllFaculties');
+}
 
   initializeYearLevelFilter() {
     const yearLevels = [
-      { value: "100", label: "100-level" },
-      { value: "200", label: "200-level" },
-      { value: "300", label: "300-level" },
-      { value: "400", label: "400-level" },
-      { value: "500", label: "500-level" },
-      { value: "600", label: "600-level" }
+      { value: "100", label: "100s" },
+      { value: "200", label: "200s" },
+      { value: "300", label: "300s" },
+      { value: "400", label: "400s" },
+      { value: "500", label: "500s" },
+      { value: "600", label: "600s" }
     ];
     this.createFilterOptions('yearLevelFilters', yearLevels, 'selectAllYears');
   }
 
   initializeAverageFilter() {
     const averageRanges = [
-      { value: "90", label: ">90%" },
-      { value: "85", label: "85-89%" },
-      { value: "80", label: "80-84%" },
-      { value: "70", label: "70-79%" },
-      { value: "60", label: "60-69%" },
-      { value: "0", label: "<60%" }
+      { value: "90", label: ">90" },
+      { value: "85", label: "85-89" },
+      { value: "80", label: "80-84" },
+      { value: "70", label: "70-79" },
+      { value: "60", label: "60-69" },
+      { value: "0", label: "<60" }
     ];
     this.createFilterOptions('averageFilters', averageRanges, 'selectAllAverages');
   }

@@ -125,8 +125,7 @@ export class CourseDetails {
     const gradesContent = document.getElementById('gradesContent');
     if (gradesContent) {
       gradesContent.innerHTML = `
-        <h3>Course Grades</h3>
-        <div class="not-found-message">
+        <div class="not-found-message-inline">
           <p>${courseCode} was not offered in ${session}.</p>
         </div>
       `;
@@ -136,7 +135,7 @@ export class CourseDetails {
     const professorsContent = document.getElementById('professorsContent');
     if (professorsContent) {
       professorsContent.innerHTML = `
-        <div class="not-found-message">
+        <div class="not-found-message-inline">
           <p>No professor information available for this session.</p>
         </div>
       `;

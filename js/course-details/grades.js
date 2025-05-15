@@ -32,14 +32,13 @@ export class GradesManager {
             return;
         }
 
-        // Create the view status text (now a separate element)
+        // Create the view status text with a dedicated class for styling
         const viewingText = viewMode === 'overall'
-            ? '<div class="view-status"><span style="color: var(--color-text-secondary);">Viewing overall data</span></div>'
-            : `<div class="view-status"><span style="color: var(--color-text-secondary);">Viewing data for: ${viewMode}</span> <button id="viewOverallBtn" class="view-grades-btn" style="margin-left: 8px;">View Overall</button></div>`;
+            ? '<div class="view-status">Viewing overall data</div>'
+            : `<div class="view-status">Viewing data for: ${viewMode} <button id="viewOverallBtn" class="view-grades-btn" style="margin-left: 8px;">View Overall</button></div>`;
 
-        // Create the stats section with summary data and distribution
+        // Create the stats section with summary data and distribution - NO heading
         this.gradesContent.innerHTML = `
-            <h3>Course Grades</h3>
             ${viewingText}
             ${this.createStatsSection(course)}
             ${this.createDistributionSection(course)}
@@ -64,10 +63,9 @@ export class GradesManager {
         const currentSession = document.getElementById('sessionSelect').value;
 
         this.gradesContent.innerHTML = `
-            <h3>Course Grades</h3>
-            <p style="text-align: center; color: var(--color-text-secondary); padding: 40px 0; font-size: 0.95rem;">
-                ${courseCode} was not offered in this session.
-            </p>
+            <div class="not-found-message-inline">
+                <p>${courseCode} was not offered in this session.</p>
+            </div>
         `;
     }
 
@@ -172,18 +170,5 @@ export class GradesManager {
         if (average >= 70) return 'fair-average';
         if (average >= 60) return 'bad-average';
         return 'horrible-average';
-    }
-
-    // Add this method to your GradesManager class
-    showNoCourseMessage() {
-        const courseCode = this.urlParams.get('code');
-        const currentSession = document.getElementById('sessionSelect')?.value || this.currentSession;
-
-        this.gradesContent.innerHTML = `
-        <h3>Course Grades</h3>
-        <div class="not-found-message-inline">
-            <p>${courseCode} was not offered in ${currentSession}.</p>
-        </div>
-    `;
     }
 }

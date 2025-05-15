@@ -6,8 +6,13 @@ export class ProfessorsManager {
     }
 
     async update(professors, courseCode) {
+        if (!this.professorsContent) {
+            console.error('professorsContent element not found');
+            return;
+        }
+
         if (!professors || professors.length === 0) {
-            this.professorsContent.innerHTML = '<p>No professor information available</p>';
+            this.professorsContent.innerHTML = '<tr><td colspan="3">No professor information available</td></tr>';
             return;
         }
 
@@ -38,50 +43,37 @@ export class ProfessorsManager {
             // Sort the professors based on current sort option
             this.sortProfessors(courseProfessors);
 
-            // Create table structure with sort dropdown
-            const tableHtml = `
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Instructor</th>
-                                <th>View</th>
-                                <th>Avg</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            ${courseProfessors.map(prof => {
-                                const avgClass = this.getAverageClass(prof.courseData.average);
-                                const searchUrl = `https://www.ratemyprofessors.com/search/professors?q=${encodeURIComponent(prof.name)}`;
-                                
-                                return `
-                                    <tr>
-                                        <td>
-                                            <a href="${searchUrl}" 
-                                               class="course-link" 
-                                               target="_blank" 
-                                               rel="noopener noreferrer">${prof.name}</a>
-                                        </td>
-                                        <td>
-                                            <button class="view-grades-btn" 
-                                                    data-professor="${prof.name}"
-                                                    data-course="${courseCode}">🔍</button>
-                                        </td>
-                                        <td class="${avgClass} monospace">
-                                            ${prof.courseData.average.toFixed(2)}
-                                        </td>
-                                    </tr>
-                                `;
-                            }).join('')}
-                        </tbody>
-                    </table>
-                </div>
-            `;
+            // Clear current content
+            this.professorsContent.innerHTML = '';
 
-            this.professorsContent.innerHTML = tableHtml;
+            // Add each professor row directly
+            courseProfessors.forEach(prof => {
+                const avgClass = this.getAverageClass(prof.courseData.average);
+                const searchUrl = `https://www.ratemyprofessors.com/search/professors?q=${encodeURIComponent(prof.name)}`;
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>
+                        <a href="${searchUrl}" 
+                           class="course-link" 
+                           target="_blank" 
+                           rel="noopener noreferrer">${prof.name}</a>
+                    </td>
+                    <td>
+                        <button class="view-grades-btn" 
+                                data-professor="${prof.name}"
+                                data-course="${courseCode}">🔍</button>
+                    </td>
+                    <td class="${avgClass} monospace">
+                        ${prof.courseData.average.toFixed(2)}
+                    </td>
+                `;
+                
+                this.professorsContent.appendChild(row);
+            });
 
             // Add event listeners for view grades buttons
-            const viewGradesButtons = this.professorsContent.querySelectorAll('.view-grades-btn');
+            const viewGradesButtons = document.querySelectorAll('.view-grades-btn');
             viewGradesButtons.forEach(button => {
                 button.addEventListener('click', (e) => {
                     const profName = e.target.dataset.professor;
@@ -90,21 +82,13 @@ export class ProfessorsManager {
                 });
             });
 
-            // Add event listener for sort dropdown
-            const sortSelect = document.getElementById('professorSort');
-            if (sortSelect) {
-                sortSelect.addEventListener('change', (e) => {
-                    this.sortOption = e.target.value;
-                    this.update(professors, courseCode);
-                });
-            }
-
         } catch (error) {
             console.error('Error loading instructor data:', error);
-            this.professorsContent.innerHTML = '<p>Error loading professor information</p>';
+            this.professorsContent.innerHTML = '<tr><td colspan="3">Error loading professor information</td></tr>';
         }
     }
 
+    // Rest of methods remain the same
     sortProfessors(professors) {
         switch (this.sortOption) {
             case 'average-desc':

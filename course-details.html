@@ -41,6 +41,9 @@
 </head>
 
 <body>
+    <div class="credit">
+        <a href="index.html" class="credit-link">Back to Home</a>
+    </div>
 
     <div class="header-container">
         <h1><a href="index.html" class="home-link">UBCFinder</a></h1>
@@ -51,12 +54,24 @@
                         <h2 id="courseTitle">
                             <span id="courseCode"></span> - <span id="courseName"></span>
                         </h2>
-                        <p id="courseDescription" class="course-description"></p>
-                        <p id="courseSubject" class="course-credits"></p>
-                        <p id="credFacElement" class="course-credits"></p>
+                        <button id="courseDetailsToggle" class="toggle-details-btn">Show Details</button>
+                        <div id="courseDetailsContent" class="course-details-content">
+                            <p id="courseDescription" class="course-description"></p>
+                            <p id="courseSubject" class="course-credits"></p>
+                            <p id="credFacElement" class="course-credits"></p>
+                        </div>
                     </div>
                 </div>
-                <div class="session-selector">
+            </div>
+        </div>
+    </div>
+
+    <div class="course-details-container">
+        <div class="course-details-grid">
+            <!-- Grades Box - Main column -->
+            <div class="details-box grades-box">
+                <div class="grades-header-row">
+                    <h3>Course Grades</h3>
                     <select id="sessionSelect" class="filter-select">
                         <option value="2023W">2023W</option>
                         <option value="2023S">2023S</option>
@@ -66,37 +81,39 @@
                         <option value="2021S">2021S</option>
                     </select>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="course-details-container">
-        <div class="course-details-grid">
-            <!-- Professors Box -->
-            <div class="details-box professors-box">
-                <div class="box-content" id="professorsContent"></div>
-            </div>
-
-            <!-- Grades Box -->
-            <div class="details-box grades-box">
                 <div class="box-content" id="gradesContent"></div>
             </div>
 
-            <!-- Prerequisites Box -->
-            <div class="details-box prerequisites-box">
-                <h3>Course Requirements</h3>
-                <div class="box-content">
-                    <div class="section">
-                        <h4>Prerequisites:</h4>
-                        <div id="prerequisites">None</div>
-                    </div>
-                    <div class="section">
-                        <h4>Corequisites:</h4>
-                        <div id="corequisites">None</div>
-                    </div>
-                    <div class="section">
-                        <h4>Required by:</h4>
-                        <div id="dependencies">None</div>
+            <!-- Right Column with Professors and Prerequisites -->
+            <div class="sidebar-column">
+                <!-- Professors Box -->
+                <table id="professorsTable">
+                    <thead>
+                        <tr>
+                            <th>Instructor</th>
+                            <th>View</th>
+                            <th>Avg</th>
+                        </tr>
+                    </thead>
+                    <tbody id="professorsContent"></tbody>
+                </table>
+
+                <!-- Prerequisites Box -->
+                <div class="details-box prerequisites-box">
+                    <h3>Course Requirements</h3>
+                    <div class="box-content">
+                        <div class="section">
+                            <h4>Prerequisites:</h4>
+                            <div id="prerequisites">None</div>
+                        </div>
+                        <div class="section">
+                            <h4>Corequisites:</h4>
+                            <div id="corequisites">None</div>
+                        </div>
+                        <div class="section">
+                            <h4>Required by:</h4>
+                            <div id="dependencies">None</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -105,6 +122,7 @@
 
     <script type="module" src="js/course-details/manager.js?v=1.2.3"></script>
     <script type="module" src="/js/theme.js"></script>
+    <script type="module" src="/js/infoSettings.js"></script>
     <!-- Vercel Analytics -->
     <script type="module">
         import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@1.0.0/+esm'
@@ -112,6 +130,17 @@
 
         inject()
         injectSpeedInsights()
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggleBtn = document.getElementById('courseDetailsToggle');
+            const detailsContent = document.getElementById('courseDetailsContent');
+
+            toggleBtn.addEventListener('click', function () {
+                detailsContent.classList.toggle('expanded');
+                this.textContent = detailsContent.classList.contains('expanded') ? 'Hide Details' : 'Show Details';
+            });
+        });
     </script>
 </body>
 

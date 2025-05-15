@@ -119,12 +119,12 @@ input {
   --color-primary: #4361ee;
   --color-primary-hover: #3651d4;
 
-  --color-grade-excellent: #0052d5;
+  --color-grade-excellent: #044fc9;
   --color-grade-great: #005e0d;
   --color-grade-good: #029f21;
-  --color-grade-fair: #bba200;
-  --color-grade-bad: #e36e00;
-  --color-grade-horrible: #c51209;
+  --color-grade-fair: #eba503;
+  --color-grade-bad: #e35b00;
+  --color-grade-horrible: #8f0b04;
 
   --color-overlay: rgba(0, 0, 0, 0.2);
   --color-tooltip-bg: rgba(0, 0, 0, 0.8);
@@ -140,7 +140,7 @@ input {
 }
 
 /* Dark mode */
-html[data-theme='light'] {
+html[data-theme='dark'] {
   --color-bg-primary: #0d1117;
   --color-bg-secondary: #1a1f2e;
   --color-bg-tertiary: #1d242f;

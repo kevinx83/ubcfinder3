@@ -36,11 +36,62 @@
 </head>
 
 <body>
-    <div class="credit">
-        <a href="credits.html" class="credit-link">About</a>
-    </div>
     <button class="menu-button">☰ Filters</button>
     <div class="sidebar-overlay"></div>
+
+    <!-- Info/Settings Dropdown -->
+    <div class="info-settings-container">
+        <button id="infoButton" class="info-button" aria-label="Settings">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                </path>
+            </svg>
+        </button>
+
+        <div id="infoDropdown" class="info-dropdown">
+            <!-- About and Insights -->
+            <div class="dropdown-section">
+                <a href="credits.html" class="dropdown-link">About UBCFinder</a>
+                <a href="data.html" class="dropdown-link" style="margin-top: 8px;">Course Insights</a>
+            </div>
+
+            <div class="dropdown-separator"></div>
+
+            <!-- Campus Selection -->
+            <div class="dropdown-section">
+                <h4>Campus</h4>
+                <div class="select-options-container">
+                    <label class="select-option">
+                        <input type="radio" name="campus" value="v" id="campusV" checked>
+                        <span class="select-label">UBC-V</span>
+                    </label>
+                    <label class="select-option">
+                        <input type="radio" name="campus" value="o" id="campusO">
+                        <span class="select-label">UBC-O</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Theme Selection -->
+            <div class="dropdown-section">
+                <h4>Theme</h4>
+                <div class="select-options-container">
+                    <label class="select-option">
+                        <input type="radio" name="theme" value="light" id="themeLight">
+                        <span class="select-label">☀️ Light</span>
+                    </label>
+                    <label class="select-option">
+                        <input type="radio" name="theme" value="dark" id="themeDark">
+                        <span class="select-label">🌙 Dark</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="header-container">
         <h1>
@@ -51,35 +102,15 @@
     <div class="page-container">
         <aside class="sidebar">
 
-            <div class="toggles-container">
-                <div class="campus-toggle">
-                    <span class="toggle-label">UBC-V</span>
-                    <label class="switch">
-                        <input type="checkbox" id="campusToggle">
-                        <span class="slider round"></span>
-                    </label>
-                    <span class="toggle-label">UBC-O</span>
-                </div>
-
-                <div class="theme-toggle">
-                    <span class="toggle-label">🌙</span>
-                    <label class="switch">
-                        <input type="checkbox" id="themeToggle">
-                        <span class="slider round"></span>
-                    </label>
-                    <span class="toggle-label">☀️</span>
-                </div>
-            </div>
-
             <!-- Always visible filters -->
             <div class="filter-group">
                 <div class="filters-row">
                     <div class="filter-section">
-                        <h4>Year Levels</h4>
+                        <h4>Year Level</h4>
                         <div id="yearLevelFilters" class="filter-container"></div>
                     </div>
                     <div class="filter-section">
-                        <h4>Grade Averages</h4>
+                        <h4>Averages</h4>
                         <div id="averageFilters" class="filter-container"></div>
                     </div>
                 </div>
@@ -108,7 +139,6 @@
                     <option value="course">🔍 Course Search</option>
                     <option value="professor" selected>🔍 Professor Search</option>
                     <option value="program">🔍 Program Search</option>
-                    <option value="insights">📊 Course Insights</option>
                 </select>
             </div>
 
@@ -159,6 +189,7 @@
 
     <script type="module" src="/js/professors-page/main.js"></script>
     <script type="module" src="/js/theme.js"></script>
+    <script type="module" src="/js/infoSettings.js"></script>
     <!-- Vercel Analytics -->
     <script type="module">
         import { injectSpeedInsights } from 'https://cdn.jsdelivr.net/npm/@vercel/speed-insights@1.0.0/+esm'

@@ -186,7 +186,7 @@
     .bar-group {
         min-width: 30px;
     }
-    
+
     .bar-label {
         transform: rotate(-60deg);
         font-size: 0.7rem;
@@ -215,6 +215,10 @@
     .bar-label {
         transform: rotate(-75deg);
         font-size: 0.7rem;
+    }
+
+    .stats-value {
+        font-size: 1.0rem;
     }
 }
 

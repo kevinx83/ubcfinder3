@@ -1,10 +1,19 @@
+/* course-details-base.css - Simplified and optimized */
+
+/* Header styling */
+.course-header-wrapper {
+    margin: 24px auto;
+    width: 100%;
+    max-width: 800px;
+}
+
 .course-header-box {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);
     border-radius: 12px;
     padding: 20px;
-    margin: 24px auto;
     width: fit-content;
+    margin: 0 auto;
 }
 
 .course-header {
@@ -19,6 +28,7 @@
     line-height: 1.4;
 }
 
+/* Course info styling */
 .course-description {
     font-size: 0.95rem;
     color: var(--color-text-primary);
@@ -33,40 +43,58 @@
     margin: 4px 0 0 0;
 }
 
-/* Back Button */
-.back-button {
-    position: absolute;
-    top: 25px;
-    left: 25%;
-    padding: 8px 16px;
-    background: var(--color-bg-card);
+/* Toggle details button */
+.toggle-details-btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background: var(--color-bg-secondary);
     border: 1px solid var(--color-border);
     border-radius: 8px;
-    color: var(--color-text-bright);
-    text-decoration: none;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    font-family: inherit;
     font-size: 0.9rem;
-    transition: all 0.2s ease;
 }
 
-.back-button:hover {
-    background: var(--color-bg-hover);
-    transform: translateX(-2px);
+.toggle-details-btn:hover {
+    background: var(--color-bg-active);
+    box-shadow: 0 2px 8px var(--color-box-shadow);
+    color: var(--color-text-bright);
 }
 
-/* Grid Layout */
+/* Collapsible content */
+.course-details-content {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.course-details-content.expanded {
+    max-height: 500px;
+    margin-top: 15px;
+}
+
+/* Layout and grid */
 .course-details-container {
-    max-width: 97%;
+    max-width: 96%; /* Slightly reduced from 97% to fix right margin issues */
     margin: 0 auto;
 }
 
 .course-details-grid {
     display: grid;
-    grid-template-columns: 27% 49% 21%; /* add up to 95 */
+    grid-template-columns: 65% 35%;
     gap: 24px;
     align-items: start;
 }
 
-/* Common Box Styles */
+/* Sidebar column */
+.sidebar-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; 
+    margin-right: 20px; 
+}
+
+/* Common box styling */
 .details-box {
     background: var(--color-bg-card); 
     border: 1px solid var(--color-border);
@@ -83,54 +111,53 @@
     border-bottom: 1px solid var(--color-border);
 }
 
-.details-box h4 {
+/* Grades header with session select */
+.grades-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 12px;
+}
+
+.grades-header-row h3 {
+    color: var(--color-text-bright);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+}
+
+/* Status message */
+.view-status {
     color: var(--color-text-secondary);
     font-size: 0.9rem;
-    font-weight: 500;
-    margin: 0 0 8px 0;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Sidebar Column */
-.sidebar-column {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.prerequisites-box .section {
-    margin-bottom: 20px;
-}
-
-.prerequisites-box .section:last-child {
-    margin-bottom: 0;
+    margin-bottom: 15px;
 }
 
 /* Responsive Design */
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .course-details-grid {
         grid-template-columns: 1fr;
     }
 
-    .back-button {
-        left: 20px;
-    }
-
+    /* When in single column, adjust sidebar */
     .sidebar-column {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
     }
 }
 
 @media (max-width: 768px) {
     .course-details-container {
         max-width: 95%;
-        margin: 0 auto;
     }
+    
     .course-header-box {
         padding: 16px;
-        margin: 16px auto;
     }
 
     .course-header h2 {
@@ -147,5 +174,15 @@
 
     .details-box {
         padding: 16px;
+    }
+    
+    .grades-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    #sessionSelect {
+        width: 100%;
     }
 }

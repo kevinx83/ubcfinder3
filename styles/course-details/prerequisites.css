@@ -1,13 +1,17 @@
-/* Prerequisites Box Specific Styles */
+/* Prerequisites Box Styles */
 .prerequisites-box .section {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+}
+
+.prerequisites-box .section:last-child {
+    margin-bottom: 0;
 }
 
 .prerequisites-box h4 {
     color: var(--color-text-secondary);
     font-size: 0.95rem;
     font-weight: 500;
-    margin: 0 0 0px 0;
+    margin: 0 0 8px 0;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -17,6 +21,13 @@
     font-size: 0.95rem;
     margin: 0;
     line-height: 1.6;
+}
+
+/* Make content area scrollable */
+.prerequisites-box .box-content {
+    height: 283px;
+    overflow-y: auto;
+    padding-right: 5px;
 }
 
 /* Course Link Styles */
@@ -35,8 +46,14 @@
     margin-right: 0.4em;
 }
 
-.prerequisites-box .section:last-child div#dependencies {
-    max-height: 300px;
-    overflow-y: auto;
-    padding-right: 5px;
+/* Responsive styles */
+@media (max-width: 768px) {
+    
+    .prerequisites-box h4 {
+        font-size: 0.85rem;
+    }
+    
+    .prerequisites-box p {
+        font-size: 0.85rem;
+    }
 }

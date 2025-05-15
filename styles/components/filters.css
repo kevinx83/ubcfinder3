@@ -52,7 +52,7 @@
 .filter-options {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 2px;
 }
 
 /* Individual filter option */
@@ -128,7 +128,6 @@
   width: 100%;
   background: var(--color-bg-card);
   border-radius: 12px;
-  transition: all 0.3s ease-in-out;
 }
 
 #collapsibleFilters.expanded {
@@ -152,7 +151,6 @@
   border-radius: 8px;
   color: var(--color-text-primary);
   cursor: pointer;
-  transition: all 0.2s ease;
   font-family: inherit;
   font-size: 0.95rem;
   text-align: center;
@@ -161,7 +159,6 @@
 
 .show-more-filters:hover {
   background: var(--color-bg-active);
-  transform: translateY(-1px);
   box-shadow: 0 2px 8px var(--color-box-shadow);
   color: var(--color-text-bright);
 }

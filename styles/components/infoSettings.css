@@ -1,0 +1,174 @@
+/* Info Button and Dropdown */
+.info-settings-container {
+  position: absolute;
+  top: 50px;
+  right: 34px;
+  z-index: 1000;
+}
+
+.info-button {
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--color-text-secondary);
+}
+
+.info-button:hover {
+  background: var(--color-bg-active);
+  color: var(--color-text-bright);
+  box-shadow: 0 2px 8px var(--color-box-shadow);
+}
+
+.info-dropdown {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 250px;
+  background: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--color-box-shadow);
+  padding: 16px;
+  display: none;
+  z-index: 1001;
+}
+
+.info-dropdown.active {
+  display: block;
+  animation: fadeIn 0.2s ease;
+}
+
+/* Dropdown Content */
+.dropdown-section {
+  margin-bottom: 16px;
+}
+
+.dropdown-section:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-section h4 {
+  color: var(--color-text-bright);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.dropdown-separator {
+  height: 1px;
+  background: var(--color-border);
+  margin: 16px 0;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 8px 12px;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.dropdown-link:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-text-bright);
+}
+
+/* Select Option Styling */
+.select-options-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.select-option {
+  flex: 1 1 auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.select-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.select-label {
+  display: block;
+  text-align: center;
+  background-color: var(--color-bg-tertiary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 3px 3px;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.select-option input[type="radio"]:checked + .select-label {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.select-option:hover .select-label {
+  background-color: var(--color-bg-hover);
+}
+
+.select-option input[type="radio"]:checked:hover + .select-label {
+  background-color: var(--color-primary-hover);
+}
+
+/* Other Components */
+.total-courses {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary); 
+}
+
+.total-courses .value {
+  color: var(--color-text-bright);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .info-settings-container {
+    top: 15px;
+    right: 15px;
+  }
+  
+  .info-button {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .info-dropdown {
+    width: 220px;
+    padding: 12px;
+  }
+  
+  .dropdown-section h4 {
+    font-size: 0.7rem;
+    margin-bottom: 6px;
+  }
+  
+  .dropdown-link {
+    padding: 6px 10px;
+    font-size: 0.65rem;
+  }
+  
+  .select-label {
+    font-size: 0.65rem;
+    padding: 5px 6px;
+  }
+}
