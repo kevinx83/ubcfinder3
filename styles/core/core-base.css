@@ -101,11 +101,11 @@ input {
 :root {
   /* Light theme (default) */
   --color-bg-primary: #f8f9fa;
-  --color-bg-secondary: #ffffff;
+  --color-bg-secondary: #fbfbfb;
   --color-bg-tertiary: #e9ecef;
   --color-bg-hover: rgba(0, 0, 0, 0.05);
   --color-bg-active: rgba(0, 0, 0, 0.1);
-  --color-bg-card: rgba(0, 0, 0, 0.03);
+  --color-bg-card: rgba(64, 16, 0, 0.03);
   --color-bg-table-even: rgba(0, 0, 0, 0.02);
   --color-bg-table-hover: rgba(0, 0, 0, 0.05);
 
@@ -142,11 +142,11 @@ input {
 /* Dark mode */
 html[data-theme='dark'] {
   --color-bg-primary: #0d1117;
-  --color-bg-secondary: #1a1f2e;
+  --color-bg-secondary: #1d2029;
   --color-bg-tertiary: #1d242f;
-  --color-bg-hover: rgba(255, 255, 255, 0.05);
+  --color-bg-hover: rgba(255, 255, 255, 0.05)
   --color-bg-active: rgba(255, 255, 255, 0.1);
-  --color-bg-card: rgba(255, 255, 255, 0.03);
+  --color-bg-card: rgba(255, 255, 255, 0.02);
   --color-bg-table-even: rgba(255, 255, 255, 0.02);
   --color-bg-table-hover: rgba(255, 255, 255, 0.05);
 

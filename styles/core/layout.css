@@ -65,7 +65,7 @@
   gap: 15px;
   flex-wrap: wrap;
   padding: 20px;
-  background: var(--color-bg-hover);
+  background: var(--color-bg-card);
   border-radius: 12px;
 }
 

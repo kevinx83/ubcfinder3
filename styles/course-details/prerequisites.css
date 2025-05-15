@@ -25,7 +25,7 @@
 
 /* Make content area scrollable */
 .prerequisites-box .box-content {
-    height: 283px;
+    max-height: 283px;
     overflow-y: auto;
     padding-right: 5px;
 }

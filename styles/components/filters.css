@@ -1,6 +1,6 @@
 /* Base filter styles */
 .filter-group {
-  background: var(--color-bg-card);
+  background: var(--color-bg-card);;
   border-radius: 12px;
   padding: 20px;
   width: 100%;
@@ -20,7 +20,7 @@
 
 /* Filter section styles */
 .filter-section {
-  background: var(--color-bg-hover);
+  background: var(--color-bg-secondary);
   border-radius: 8px;
   padding: 15px;
   flex: 1;

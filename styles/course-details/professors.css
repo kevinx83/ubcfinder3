@@ -8,7 +8,7 @@
   box-shadow: 0 4px 20px var(--color-box-shadow);
   overflow: hidden;
   margin-bottom: 0;
-  height: 283px; /* Fixed height */
+  max-height: 282.5px; /* Fixed height */
   display: block; /* Use block instead of flex for simpler layout */
   overflow-y: auto; /* Make entire table scrollable */
 }
