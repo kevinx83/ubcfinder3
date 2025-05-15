@@ -4,30 +4,32 @@ class ThemeManager {
   }
 
   initialize() {
-    // Get the theme toggle element
-    const themeToggle = document.getElementById('themeToggle');
-    if (!themeToggle) return;
-
     // Check for saved theme preference
     const savedTheme = localStorage.getItem('theme');
     
-    // Update the toggle state to match the current theme
     if (savedTheme) {
-      themeToggle.checked = savedTheme === 'light';
+      // Apply the saved theme
+      document.documentElement.setAttribute('data-theme', savedTheme);
     } else {
       // Use system preference as default
       const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      themeToggle.checked = !prefersDarkMode;
+      const defaultTheme = prefersDarkMode ? 'dark' : 'light';
       
       // Save the initial preference
-      localStorage.setItem('theme', prefersDarkMode ? 'dark' : 'light');
+      localStorage.setItem('theme', defaultTheme);
+      
+      // Apply the default theme
+      document.documentElement.setAttribute('data-theme', defaultTheme);
     }
-
-    // Add event listener for toggle change
-    themeToggle.addEventListener('change', (e) => {
-      const newTheme = e.target.checked ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
+    
+    // Add listener for system theme preference changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      // Only update if the user hasn't set a theme preference
+      if (!localStorage.getItem('theme')) {
+        const newTheme = e.matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      }
     });
   }
 }
