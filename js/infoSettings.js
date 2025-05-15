@@ -41,6 +41,31 @@ class InfoSettingsManager {
 
         // Add event listeners for dropdown controls
         this.setupDropdownListeners();
+        
+        // Ensure default theme is set (add this to handle case where no theme is saved)
+        this.ensureDefaultTheme();
+    }
+    
+    // Add this new method to ensure a default theme
+    ensureDefaultTheme() {
+        // Check if a theme is set in localStorage
+        const savedTheme = localStorage.getItem('theme');
+        
+        // If no theme is set, use light mode as default
+        if (!savedTheme) {
+            localStorage.setItem('theme', 'light');
+            document.documentElement.setAttribute('data-theme', 'light');
+            
+            // Update the radio button state
+            if (this.themeLightRadio) {
+                this.themeLightRadio.checked = true;
+            }
+            
+            // Update favicon if that function exists
+            if (typeof updateFavicon === 'function') {
+                updateFavicon('light');
+            }
+        }
     }
 
     toggleDropdown() {
