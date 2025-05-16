@@ -168,6 +168,25 @@
   .credit-link {
     text-decoration: none;
   }
+  
+  /* Make control panel keep elements on same line */
+  .control-panel {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  
+  /* Make search input more flexible */
+  .search-input {
+    min-width: 0;
+    padding-left: 30px;
+    flex: 1;
+  }
+  
+  /* Make dropdown narrower */
+  #searchTypeSelect {
+    width: auto;
+    min-width: 120px;
+  }
 }
 
 .search-suggestions {

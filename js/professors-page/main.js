@@ -9,11 +9,25 @@ class ProfessorsApp {
         this.currentCampus = urlParams.get('campus') || 'v';
         this.allProfessors = [];
 
+        // Check if we need to clear session storage (for page reload)
+        if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+            this.clearFilterSessionStorage();
+        }
+
         this.tableManager = new ProfessorsTableManager();
         this.uiManager = new UIManager();
         this.filterManager = new FilterManager(() => this.handleFilterChange());
 
         this.initialize();
+    }
+
+    clearFilterSessionStorage() {
+        sessionStorage.removeItem('facultyFilters');
+        sessionStorage.removeItem('yearLevelFilters');
+        sessionStorage.removeItem('averageFilters');
+        sessionStorage.removeItem('studentFilters');
+        sessionStorage.removeItem('creditFilters');
+        sessionStorage.removeItem('searchTerm');
     }
 
     async initialize() {
@@ -22,8 +36,29 @@ class ProfessorsApp {
             await this.loadInitialData(false);
         });
 
+        // Add event listeners to UBCFinder logo links to clear filters
+        const logoLinks = document.querySelectorAll('.home-link, a[href="index.html"]');
+        logoLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // If clicking to go to index page or reloading professors page
+                if (link.getAttribute('href') === 'index.html' ||
+                    (window.location.pathname.includes('professors.html') && link.getAttribute('href') === 'professors.html')) {
+                    this.clearFilterSessionStorage();
+                }
+            });
+        });
+
         await this.loadInitialData(true);
         this.setupEventListeners();
+        // Check if we need to apply saved filters
+        const hasSessionFilters = sessionStorage.getItem('facultyFilters') ||
+            sessionStorage.getItem('yearLevelFilters') ||
+            sessionStorage.getItem('averageFilters') ||
+            sessionStorage.getItem('searchTerm');
+        if (hasSessionFilters) {
+            // Apply filters after a short delay to ensure DOM is fully ready
+            setTimeout(() => this.handleFilterChange(), 100);
+        }
     }
 
     async loadInitialData(resetFilters = true) {
@@ -71,6 +106,13 @@ class ProfessorsApp {
             this.updateTotalProfessors(sortedData);
             this.tableManager.populateTable(sortedData, sortBy);
 
+            // Apply search term if it exists in session storage
+            const searchTerm = sessionStorage.getItem('searchTerm');
+            if (searchTerm) {
+                document.getElementById('searchInput').value = searchTerm;
+                this.handleFilterChange();
+            }
+
         } catch (error) {
             console.error('Failed to load initial data:', error);
             this.allProfessors = [];
@@ -82,13 +124,13 @@ class ProfessorsApp {
     initializeFacultyFilter(professors) {
         // Count professors per faculty with a map of original name to [shortName, count]
         const facultyData = new Map();
-        
+
         // Collect all unique faculties across all professors
         professors.forEach(professor => {
             professor.faculties.forEach(faculty => {
                 // First, remove "Faculty of " prefix
                 let shortName = faculty.replace("Faculty of ", "");
-                
+
                 // Apply specific name changes
                 if (shortName === "School of Architecture & Landscape Architecture") {
                     shortName = "Architecture";
@@ -100,7 +142,7 @@ class ProfessorsApp {
                     // Remove "School of " from any remaining names
                     shortName = shortName.replace("School of ", "");
                 }
-                
+
                 if (facultyData.has(faculty)) {
                     facultyData.get(faculty).count++;
                 } else {
@@ -108,12 +150,12 @@ class ProfessorsApp {
                 }
             });
         });
-        
+
         // Handle Faculty of Science specially if it's missing
         if (!facultyData.has("Faculty of Science")) {
             facultyData.set("Faculty of Science", { shortName: "Science", count: 0 });
         }
-        
+
         // Convert to array and sort by count (descending)
         const sortedFaculties = Array.from(facultyData.entries())
             .sort((a, b) => b[1].count - a[1].count)
@@ -121,7 +163,7 @@ class ProfessorsApp {
                 value: originalName, // Keep original name as value for filtering
                 label: data.shortName // Display shortened name without course count
             }));
-        
+
         this.filterManager.createFilterOptions('facultyFilters', sortedFaculties, 'selectAllFaculties');
     }
 
@@ -147,7 +189,9 @@ class ProfessorsApp {
         });
 
         // Search input
-        document.getElementById('searchInput')?.addEventListener('input', () => {
+        document.getElementById('searchInput')?.addEventListener('input', (e) => {
+            // Save search term to session storage
+            sessionStorage.setItem('searchTerm', e.target.value);
             this.handleFilterChange();
         });
 

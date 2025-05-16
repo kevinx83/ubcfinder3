@@ -3,6 +3,7 @@ export class FilterManager {
     this.onFilterChange = onFilterChange;
     this.setupFilterListeners();
     this.setupMoreFiltersToggle();
+    this.loadFilterState(); // Add this to load filters from session storage
   }
 
   setupMoreFiltersToggle() {
@@ -47,6 +48,8 @@ export class FilterManager {
             }
           }
 
+          // Save filter state after changes
+          this.saveFilterState();
           this.onFilterChange();
         });
       }
@@ -54,7 +57,11 @@ export class FilterManager {
 
     const searchInput = document.getElementById('searchInput');
     if (searchInput) {
-      searchInput.addEventListener('input', () => this.onFilterChange());
+      searchInput.addEventListener('input', () => {
+        // Save search term to session storage
+        sessionStorage.setItem('searchTerm', searchInput.value);
+        this.onFilterChange();
+      });
     }
   }
 
@@ -115,17 +122,27 @@ export class FilterManager {
     const container = document.createElement('div');
     container.className = 'filter-options';
 
+    // Get saved filter values from session storage
+    const savedFilters = JSON.parse(sessionStorage.getItem(containerId) || '[]');
+    const hasFilters = savedFilters.length > 0;
+    
+    // Default select all to checked if no filters saved
+    const selectAllChecked = !hasFilters;
+
     container.innerHTML = `
       <label class="filter-option">
-        <input type="checkbox" id="${selectAllId}" checked>
+        <input type="checkbox" id="${selectAllId}" ${selectAllChecked ? 'checked' : ''}>
         <span>Select All</span>
       </label>
-      ${options.map(option => `
+      ${options.map(option => {
+        // Check if this specific option should be checked
+        const isChecked = selectAllChecked || savedFilters.includes(option.value);
+        return `
         <label class="filter-option">
-          <input type="checkbox" value="${option.value}" checked>
+          <input type="checkbox" value="${option.value}" ${isChecked ? 'checked' : ''}>
           <span>${option.label}</span>
         </label>
-      `).join('')}
+      `}).join('')}
     `;
 
     const filterContainer = document.getElementById(containerId);
@@ -135,49 +152,101 @@ export class FilterManager {
     }
   }
 
-  initializeFacultyFilter(courses) {
-  // Count courses per faculty with a map of original name to [shortName, count]
-  const facultyData = new Map();
-  
-  courses.forEach(course => {
-    const baseFaculty = this.getBaseFaculty(course.Faculty);
-    // First, remove "Faculty of " prefix
-    let shortName = baseFaculty.replace("Faculty of ", "");
-    
-    // Apply specific name changes
-    if (shortName === "School of Architecture & Landscape Architecture") {
-      shortName = "Architecture";
-    } else if (shortName === "Commerce and Business Administration") {
-      shortName = "Commerce and Business";
-    } else if (shortName === "Faculty Graduate and Postdoctoral Studies") {
-      shortName = "Postdoctoral Studies";
-    } else {
-      // Remove "School of " from any remaining names
-      shortName = shortName.replace("School of ", "");
-    }
-    
-    if (facultyData.has(baseFaculty)) {
-      facultyData.get(baseFaculty).count++;
-    } else {
-      facultyData.set(baseFaculty, { shortName, count: 1 });
-    }
-  });
-  
-  // Handle Faculty of Science specially if it's missing
-  if (!facultyData.has("Faculty of Science")) {
-    facultyData.set("Faculty of Science", { shortName: "Science", count: 0 });
+  // Save current filter state to session storage
+  saveFilterState() {
+    const filterContainers = [
+      'facultyFilters',
+      'yearLevelFilters',
+      'averageFilters',
+      'studentFilters',
+      'creditFilters'
+    ];
+
+    filterContainers.forEach(containerId => {
+      const container = document.getElementById(containerId);
+      if (container) {
+        const selectedValues = this.getSelectedValues(containerId);
+        sessionStorage.setItem(containerId, JSON.stringify(selectedValues));
+      }
+    });
   }
-  
-  // Convert to array and sort by course count (descending)
-  const sortedFaculties = Array.from(facultyData.entries())
-    .sort((a, b) => b[1].count - a[1].count)
-    .map(([originalName, data]) => ({
-      value: originalName, // Keep original name as value for filtering
-      label: data.shortName // Display shortened name without course count
-    }));
-  
-  this.createFilterOptions('facultyFilters', sortedFaculties, 'selectAllFaculties');
-}
+
+  // Load filter state from session storage
+  loadFilterState() {
+    // This will be called after filters are initialized
+    // No need to implement specific loading logic here as filters will be loaded
+    // when createFilterOptions is called
+    
+    // Restore search term
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+      const savedSearch = sessionStorage.getItem('searchTerm');
+      if (savedSearch) {
+        searchInput.value = savedSearch;
+      }
+    }
+  }
+
+  // Method to check if we should be using saved filters
+  shouldLoadSavedFilters() {
+    // Check the URL params to see if we're coming from a direct reload
+    const urlParams = new URLSearchParams(window.location.search);
+    const resetFilters = urlParams.get('resetFilters');
+    
+    // If resetFilters param exists, remove it and return false
+    if (resetFilters) {
+      urlParams.delete('resetFilters');
+      const newUrl = window.location.pathname + (urlParams.toString() ? `?${urlParams.toString()}` : '');
+      history.replaceState(null, '', newUrl);
+      return false;
+    }
+    
+    return true;
+  }
+
+  initializeFacultyFilter(courses) {
+    // Count courses per faculty with a map of original name to [shortName, count]
+    const facultyData = new Map();
+    
+    courses.forEach(course => {
+      const baseFaculty = this.getBaseFaculty(course.Faculty);
+      // First, remove "Faculty of " prefix
+      let shortName = baseFaculty.replace("Faculty of ", "");
+      
+      // Apply specific name changes
+      if (shortName === "School of Architecture & Landscape Architecture") {
+        shortName = "Architecture";
+      } else if (shortName === "Commerce and Business Administration") {
+        shortName = "Commerce and Business";
+      } else if (shortName === "Faculty Graduate and Postdoctoral Studies") {
+        shortName = "Postdoctoral Studies";
+      } else {
+        // Remove "School of " from any remaining names
+        shortName = shortName.replace("School of ", "");
+      }
+      
+      if (facultyData.has(baseFaculty)) {
+        facultyData.get(baseFaculty).count++;
+      } else {
+        facultyData.set(baseFaculty, { shortName, count: 1 });
+      }
+    });
+    
+    // Handle Faculty of Science specially if it's missing
+    if (!facultyData.has("Faculty of Science")) {
+      facultyData.set("Faculty of Science", { shortName: "Science", count: 0 });
+    }
+    
+    // Convert to array and sort by course count (descending)
+    const sortedFaculties = Array.from(facultyData.entries())
+      .sort((a, b) => b[1].count - a[1].count)
+      .map(([originalName, data]) => ({
+        value: originalName, // Keep original name as value for filtering
+        label: data.shortName // Display shortened name without course count
+      }));
+    
+    this.createFilterOptions('facultyFilters', sortedFaculties, 'selectAllFaculties');
+  }
 
   initializeYearLevelFilter() {
     const yearLevels = [
@@ -223,31 +292,6 @@ export class FilterManager {
       { value: "0", label: "Unknown" }
     ];
     this.createFilterOptions('creditFilters', creditRanges, 'selectAllCredits');
-  }
-
-  initializeProfessorFilters(professors) {
-    // Clear existing filters first
-    this.clearFilters();
-
-    // Initialize faculty filters
-    const faculties = [...new Set(professors.flatMap(prof => prof.faculties))].sort();
-    this.createFilterOptions('facultyFilters',
-      faculties.map(faculty => ({ value: faculty, label: faculty })),
-      'selectAllFaculties'
-    );
-
-    // Initialize year level filters
-    this.initializeYearLevelFilter();
-
-    // Initialize average range filters
-    this.createFilterOptions('averageFilters', [
-      { value: "90", label: ">90%" },
-      { value: "85", label: "85-89%" },
-      { value: "80", label: "80-84%" },
-      { value: "70", label: "70-79%" },
-      { value: "60", label: "60-69%" },
-      { value: "0", label: "<60%" }
-    ], 'selectAllAverages');
   }
 
   getBaseFaculty(faculty) {

@@ -136,3 +136,8 @@
     display: block;
   }
 }
+@media (max-width: 768px) {
+  .header-container {
+    margin-top: 50px;
+  }
+}

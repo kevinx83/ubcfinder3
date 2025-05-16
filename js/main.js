@@ -17,11 +17,25 @@ class App {
       localStorage.setItem('selectedCampus', this.currentCampus);
     }
 
+    // Check if we need to clear session storage (for page reload)
+    if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
+      this.clearFilterSessionStorage();
+    }
+
     this.tableManager = new TableManager();
     this.uiManager = new UIManager();
     this.filterManager = new FilterManager(() => this.handleFilterChange());
 
     this.initialize();
+  }
+
+  clearFilterSessionStorage() {
+    sessionStorage.removeItem('facultyFilters');
+    sessionStorage.removeItem('yearLevelFilters');
+    sessionStorage.removeItem('averageFilters');
+    sessionStorage.removeItem('studentFilters');
+    sessionStorage.removeItem('creditFilters');
+    sessionStorage.removeItem('searchTerm');
   }
 
   async initialize() {
@@ -31,8 +45,38 @@ class App {
       await this.loadInitialData(false);
     });
 
+    // Add event listeners to UBCFinder logo links to clear filters
+    const logoLinks = document.querySelectorAll('.home-link, a[href="index.html"]');
+    logoLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        // Only for same-page navigation (index.html to index.html)
+        if (window.location.pathname.includes('index.html') && link.getAttribute('href') === 'index.html') {
+          e.preventDefault();
+          this.clearFilterSessionStorage();
+          window.location.reload();
+        }
+      });
+    });
+
     await this.loadInitialData(true);
     this.setupEventListeners();
+    
+    // Check if we need to apply saved filters
+    const hasSessionFilters = this.hasSessionFilters();
+    if (hasSessionFilters) {
+      // Apply filters after a short delay to ensure DOM is fully ready
+      setTimeout(() => this.handleFilterChange(), 100);
+    }
+  }
+  
+  // Helper method to check if there are any saved filters
+  hasSessionFilters() {
+    return sessionStorage.getItem('facultyFilters') ||
+           sessionStorage.getItem('yearLevelFilters') ||
+           sessionStorage.getItem('averageFilters') ||
+           sessionStorage.getItem('studentFilters') ||
+           sessionStorage.getItem('creditFilters') ||
+           sessionStorage.getItem('searchTerm');
   }
 
   async loadInitialData(resetFilters = true) {
@@ -56,6 +100,15 @@ class App {
 
       updateTotalCourses(data);
       this.tableManager.populateTable(sortedData, sortBy);
+      
+      // Apply search term if it exists in session storage
+      const searchTerm = sessionStorage.getItem('searchTerm');
+      if (searchTerm) {
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+          searchInput.value = searchTerm;
+        }
+      }
     } catch (error) {
       console.error('Failed to load initial data:', error);
     }
