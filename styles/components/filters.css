@@ -1,6 +1,7 @@
 /* Base filter styles */
 .filter-group {
-  background: var(--color-bg-card);;
+  background: var(--color-bg-card);
+  ;
   border-radius: 12px;
   padding: 20px;
   width: 100%;
@@ -14,7 +15,7 @@
 }
 
 /* Add spacing between filter rows in collapsible section */
-#collapsibleFilters .filters-row + .filters-row {
+#collapsibleFilters .filters-row+.filters-row {
   margin-top: 15px;
 }
 
@@ -32,7 +33,7 @@
 .filter-section h4,
 .filter-group h3 {
   color: var(--color-text-bright);
-  font-size: 0.85rem;
+  font-size: var(--font-size-small);
   margin-bottom: 15px;
   font-weight: 600;
   text-transform: uppercase;
@@ -61,7 +62,7 @@
   align-items: center;
   gap: 8px;
   color: var(--color-text-primary);
-  font-size: 0.85rem;
+  font-size: var(--font-size-small);
   cursor: pointer;
   padding: 6px 8px;
   border-radius: 4px;
@@ -133,10 +134,12 @@
 #collapsibleFilters.expanded {
   opacity: 1;
   max-height: 1000px;
-  margin-top: 0px; /* Reduced from 12px */
+  margin-top: 0px;
+  /* Reduced from 12px */
   padding: 20px;
 }
-#collapsibleFilters .filters-row + .filters-row {
+
+#collapsibleFilters .filters-row+.filters-row {
   margin-top: 15px;
 }
 
@@ -145,14 +148,15 @@
   width: fit-content;
   min-width: 140px;
   padding: 8px 16px;
-  margin: 0px auto 0; /* Reduced from 12px */
+  margin: 0px auto 0;
+  /* Reduced from 12px */
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   color: var(--color-text-primary);
   cursor: pointer;
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: var(--font-size-small);
   text-align: center;
   display: block;
 }
@@ -164,7 +168,7 @@
 }
 
 /* Responsive design */
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   #collapsibleFilters {
     opacity: 1;
     max-height: none;
@@ -176,30 +180,41 @@
   .show-more-filters {
     display: none;
   }
+
   .filter-group {
-      min-width: unset; /* Remove min-width for mobile */
+    min-width: unset;
+    /* Remove min-width for mobile */
   }
 
   .filters-row {
-      flex-direction: column;
-      gap: 15px;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .filter-section {
-      width: 100%;
-      min-width: 100%;
+    width: 100%;
+    min-width: 100%;
   }
 
   #collapsibleFilters .filters-row {
-      margin-bottom: 15px;
+    margin-bottom: 15px;
   }
 
   #collapsibleFilters .filters-row:last-child {
-      margin-bottom: 0;
+    margin-bottom: 0;
   }
-  
+
   .show-more-filters {
-      width: 100%;
-      max-width: none;
+    width: 100%;
+    max-width: none;
+  }
+
+  .filter-section h4,
+  .filter-group h3 {
+    font-size: var(--font-size-base)
+  }
+
+  .filter-option {
+    font-size: var(--font-size-base)
   }
 }

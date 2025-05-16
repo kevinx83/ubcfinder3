@@ -21,7 +21,7 @@
 }
 
 .course-header h2 {
-    font-size: 1.4rem;
+    font-size: var(--font-size-large);
     color: var(--color-text-bright);
     margin: 0;
     font-weight: 500;
@@ -30,7 +30,7 @@
 
 /* Course info styling */
 .course-description {
-    font-size: 0.95rem;
+    font-size: var(--font-size-base);
     color: var(--color-text-primary);
     margin: 8px auto;
     line-height: 1.5;
@@ -38,7 +38,7 @@
 }
 
 .course-credits {
-    font-size: 0.80rem;
+    font-size: var(--font-size-small);
     color: var(--color-text-secondary);
     margin: 4px 0 0 0;
 }
@@ -53,7 +53,7 @@
     color: var(--color-text-primary);
     cursor: pointer;
     font-family: inherit;
-    font-size: 0.9rem;
+    font-size: var(--font-size-base);
 }
 
 .toggle-details-btn:hover {
@@ -104,7 +104,7 @@
 
 .details-box h3 {
     color: var(--color-text-bright);
-    font-size: 1.1rem;
+    font-size: var(--font-size-large);
     font-weight: 600;
     margin: 0 0 20px 0;
     padding-bottom: 12px;
@@ -123,7 +123,7 @@
 
 .grades-header-row h3 {
     color: var(--color-text-bright);
-    font-size: 1.1rem;
+    font-size: var(--font-size-large);
     font-weight: 600;
     margin: 0;
     padding: 0;
@@ -133,7 +133,7 @@
 /* Status message */
 .view-status {
     color: var(--color-text-secondary);
-    font-size: 0.9rem;
+    font-size: var(--font-size-base);
     margin-bottom: 15px;
 }
 
@@ -158,10 +158,6 @@
     
     .course-header-box {
         padding: 16px;
-    }
-
-    .course-header h2 {
-        font-size: 1.3rem;
     }
 
     .course-details-grid {

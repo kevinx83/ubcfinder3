@@ -29,23 +29,23 @@
 
 .stat-card h3 {
     color: var(--color-text-secondary);
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: 12px;
 }
 
 .stat-value {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: var(--font-size-large);
     margin: 8px 0;
 }
 
 .stat-subtitle {
     color: var(--color-text-secondary);
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     margin: 0;
-    line-height: 1.4;
+    line-height: var(--line-height-normal);
 }
 
 /* Table Styles */
@@ -82,10 +82,10 @@
 
 .insights-table th {
     background-color: var(--color-bg-tertiary);
-    font-weight: 600;
+    font-weight: var(--font-weight-semibold);
     color: var(--color-text-bright);
     text-transform: uppercase;
-    font-size: 0.95rem;
+    font-size: var(--font-size-small);
     letter-spacing: 1px;
     position: sticky;
     top: 0;
@@ -128,7 +128,7 @@
 .insights-table td:nth-child(2),
 .insights-table td:nth-child(3),
 .insights-table td:nth-child(4) {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
 }
 
 /* Top List Styles */
@@ -154,8 +154,8 @@
 }
 
 .rank {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: var(--font-size-large);
     color: var(--color-primary);
     min-width: 30px;
 }
@@ -166,19 +166,19 @@
 
 .item-name {
     color: var(--color-text-bright);
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     margin-bottom: 4px;
 }
 
 .item-value {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 1.1rem;
+    font-family: var(--font-mono);
+    font-size: var(--font-size-base);
     margin-bottom: 2px;
 }
 
 .item-subtext {
     color: var(--color-text-secondary);
-    font-size: 0.85rem;
+    font-size: var(--font-size-small);
 }
 
 /* Mobile Optimizations */
@@ -199,35 +199,9 @@
         border-radius: 8px;
     }
 
-    .insights-table {
-        font-size: 0.95rem;
-    }
-
-    .stat-value {
-        font-family: 'JetBrains Mono', monospace;
-        font-size: 1.5rem;
-        margin: 8px 0;
-    }
-
-    .stat-subtitle {
-        color: var(--color-text-secondary);
-        font-size: 0.75rem;
-        margin: 0;
-        line-height: 1.4;
-    }
-
-    .stat-card h3 {
-        color: var(--color-text-secondary);
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 12px;
-    }
-
     .insights-table th,
     .insights-table td {
         padding: 12px 8px;
-        font-size: 0.95rem;
     }
 
     /* Adjust column widths for mobile */
@@ -251,13 +225,6 @@
         width: 15%;
     }
 
-    /* Make headers more compact */
-    .insights-table th {
-        padding: 12px 8px;
-        font-size: 0.65rem;
-        letter-spacing: 0;
-    }
-
     /* Override center alignment for mobile */
     .insights-table th:nth-child(2),
     .insights-table td:nth-child(2),
@@ -275,17 +242,8 @@
         word-break: break-word;
     }
 
-    /* Reduce font size for better mobile fit */
-    .insights-table td {
-        font-size: 0.65rem;
-    }
-
     .top-item {
         padding: 12px;
-    }
-
-    .item-name {
-        font-size: 0.9rem;
     }
     
     .insights-container {
@@ -294,13 +252,5 @@
 
     .insights-content {
         padding: 15px;
-    }
-
-    .insights-table th {
-        font-size: 0.7rem;
-    }
-
-    .insights-table td {
-        font-size: 0.8rem;
     }
 }

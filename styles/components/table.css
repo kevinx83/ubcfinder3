@@ -25,7 +25,7 @@ th {
   font-weight: 600;
   color: var(--color-text-bright);
   text-transform: uppercase;
-  font-size: 0.95rem;
+  font-size: var(--font-size-base);
   letter-spacing: 1px;
   position: sticky;
   top: 0;
@@ -33,13 +33,13 @@ th {
 }
 
 tbody tr td {
-  font-size: 0.95rem;
+  font-size: var(--font-size-base);
 }
 
 tbody tr td[colspan="3"] {
   background-color: var(--color-bg-secondary);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: var(--font-size-base);
   padding: 16px;
   color: var(--color-text-bright);
   position: sticky;
@@ -153,7 +153,7 @@ td:nth-child(4) {
 
 .pagination-info {
   color: var(--color-text-secondary);
-  font-size: 0.95rem;
+  font-size: var(--font-size-base);
   margin: 0 12px;
 }
 
@@ -235,13 +235,8 @@ td:nth-child(4) {
   /* Make headers more compact */
   #professorTable th {
     padding: 10px 6px;
-    font-size: 0.7rem;
     letter-spacing: 0;
     text-transform: none;
-  }
-
-  table {
-    font-size: 0.95rem;
   }
 
   th,
@@ -252,28 +247,27 @@ td:nth-child(4) {
   /* Adjust column widths for mobile */
   th:nth-child(1),
   td:nth-child(1) {
-    width: 32%;
+    width: 30%;
   }
 
   th:nth-child(2),
   td:nth-child(2) {
-    width: 100%;
+    width: 50%;
   }
 
   th:nth-child(3),
   td:nth-child(3) {
-    width: 15%;
+    width: 10%;
   }
 
   th:nth-child(4),
   td:nth-child(4) {
-    width: 15%;
+    width: 10%;
   }
 
   /* Make headers more compact */
   th {
     padding: 8px 8px;
-    font-size: 0.65rem;
     letter-spacing: 0;
   }
 
@@ -283,22 +277,15 @@ td:nth-child(4) {
     word-break: break-word;
   }
 
-  /* Reduce font size for better mobile fit */
-  tbody tr td {
-    font-size: 0.65rem;
-  }
-
   /* Further reduce font size */
   #professorTable td,
   #professorTable th {
-    font-size: 0.65rem;
     padding: 8px 8px;
   }
 
   /* Adjust course row spacing */
   .course-row {
     margin-bottom: 3px;
-    font-size: 0.65rem;
   }
 
   /* Adjust pagination for mobile */
@@ -317,7 +304,6 @@ td:nth-child(4) {
 
   .pagination-info {
     text-align: center;
-    font-size: 0.65rem;
     margin: 0 8px;
   }
 }

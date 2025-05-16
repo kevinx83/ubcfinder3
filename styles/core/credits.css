@@ -23,7 +23,7 @@
 
 .credits-section h2 {
     color: var(--color-text-bright);
-    font-size: 1.5rem;
+    font-size: var(--font-size-xlarge);
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 1px solid var(--color-border);
@@ -48,13 +48,13 @@
 
 .developer-info h3 {
     color: var(--color-text-bright);
-    font-size: 1.2rem;
+    font-size: var(--font-size-base);
     margin-bottom: 4px;
 }
 
 .developer-info p {
     color: var(--color-text-secondary);
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
     margin-bottom: 12px;
 }
 
@@ -77,7 +77,6 @@
     border: 1px solid rgba(67, 97, 238, 0.3);
     border-radius: 20px;
     color: var(--color-primary);
-    font-size: 0.9rem;
 }
 
 /* Footer */
@@ -87,7 +86,7 @@
     border-top: 1px solid var(--color-border);
     text-align: center;
     color: var(--color-text-secondary);
-    font-size: 0.9rem;
+    font-size: var(--font-size-small);
 }
 
 .credits-footer p {
@@ -119,9 +118,5 @@
 
     .tech-stack {
         justify-content: center;
-    }
-
-    .credits-section {
-        font-size: 0.7rem;
     }
 }

@@ -25,7 +25,7 @@
 
 .not-found-404 {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 2.5rem;
+  font-size: var(--font-size-huge);
   font-weight: bold;
   background: linear-gradient(135deg, var(--color-gradient-start), var(--color-gradient-end));
   -webkit-background-clip: text;
@@ -34,7 +34,7 @@
 }
 
 .not-found-title {
-  font-size: 1.8rem;
+  font-size: var(--font-size-xlarge);
   color: var(--color-text-bright);
   margin-bottom: 16px;
   font-weight: 600;
@@ -42,7 +42,7 @@
 
 .not-found-message {
   color: var(--color-text-secondary);
-  font-size: 1.1rem;
+  font-size: var(--font-size-base);
   line-height: 1.6;
   margin-bottom: 32px;
 }
@@ -56,7 +56,7 @@
   color: #ffffff !important; /* Always white text, with !important to ensure it overrides */
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -83,17 +83,5 @@
 @media (max-width: 768px) {
   .not-found-card {
     padding: 30px 20px;
-  }
-  
-  .not-found-404 {
-    font-size: 2rem;
-  }
-  
-  .not-found-title {
-    font-size: 1.5rem;
-  }
-  
-  .not-found-message {
-    font-size: 1rem;
   }
 }

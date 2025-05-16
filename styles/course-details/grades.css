@@ -21,7 +21,7 @@
 
 .grades-box .stats-box h4 {
     color: var(--color-text-secondary);
-    font-size: 0.75rem;
+    font-size: var(--font-size-small);
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -134,7 +134,7 @@
 
 /* Labels and Tooltips */
 .bar-label {
-    font-size: 0.75rem;
+    font-size: var(--font-size-small);
     color: var(--color-text-bright);
     position: absolute;
     bottom: -25px;
@@ -154,7 +154,7 @@
     background: var(--color-tooltip-bg);
     color: var(--color-text-bright);
     border-radius: 6px;
-    font-size: 0.8rem;
+    font-size: var(--font-size-small);
     white-space: nowrap;
     pointer-events: none;
     z-index: 10;
@@ -163,34 +163,6 @@
 
 .bar:hover .bar-tooltip {
     visibility: visible;
-}
-
-/* Responsive Design */
-@media (max-width: 1400px) {
-    .bar-group {
-        min-width: 35px;
-    }
-}
-
-@media (max-width: 1500px) {
-    .bar-label {
-        transform: rotate(-45deg);
-        transform-origin: top right;
-        bottom: -35px;
-        right: 50%;
-        width: auto;
-    }
-}
-
-@media (max-width: 1200px) {
-    .bar-group {
-        min-width: 30px;
-    }
-
-    .bar-label {
-        transform: rotate(-60deg);
-        font-size: 0.7rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -210,15 +182,6 @@
 
     .bar-group {
         min-width: 25px;
-    }
-
-    .bar-label {
-        transform: rotate(-75deg);
-        font-size: 0.7rem;
-    }
-
-    .stats-value {
-        font-size: 1.0rem;
     }
 }
 
@@ -240,7 +203,6 @@
         transform-origin: right;
         bottom: -30px;
         right: 50%;
-        font-size: 0.65rem;
         width: auto;
     }
 }

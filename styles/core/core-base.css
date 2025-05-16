@@ -4,101 +4,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  scrollbar-gutter: stable;
-  font-size: 16px; /* Base font size for rem units */
-}
-
-body {
-  padding: max(12px, 1vw);
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
-  line-height: 1.6;
-  min-height: 100vh;
-  min-height: 100dvh; /* For mobile browsers with dynamic viewports */
-  overflow-x: hidden;
-  text-rendering: optimizeLegibility;
-}
-
-h1 {
-  font-size: clamp(2rem, 5vw, 3.2em);
-  font-weight: 700;
-  color: var(--color-text-bright);
-  letter-spacing: -0.5px;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.monospace {
-  font-family: 'JetBrains Mono', monospace;
-}
-
-.home-link {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-.home-link:hover {
-  color: inherit;
-  opacity: 0.9;
-}
-
-/* Better tap targets on mobile */
-button, 
-a, 
-select, 
-input {
-  touch-action: manipulation;
-}
-
-/* Hide scrollbar but keep functionality */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-bg-hover);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-scrollbar-thumb);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-scrollbar-thumb-hover);
-}
-
-
-/* Handle notched phones */
-@supports(padding: max(0px)) {
-  body {
-    padding-left: max(12px, env(safe-area-inset-left));
-    padding-right: max(12px, env(safe-area-inset-right));
-  }
-}
-
-.credit {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 10px;
-  z-index: 1000;
-}
-
 :root {
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Font sizes (desktop default, mobile overridden in media query) */
+  --font-size-small: 0.85rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-xlarge: 1.75rem;
+  --font-size-huge: 3.2rem;
+
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.6;
+
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
   /* Light theme (default) */
   --color-bg-primary: #f8f9fa;
   --color-bg-secondary: #fbfbfb;
@@ -128,7 +60,7 @@ input {
 
   --color-overlay: rgba(0, 0, 0, 0.2);
   --color-tooltip-bg: rgba(0, 0, 0, 0.8);
-  --color-box-shadow: rgba(0, 0, 0, 0.1); 
+  --color-box-shadow: rgba(0, 0, 0, 0.1);
   --color-gradient-start: #4361ee;
   --color-gradient-end: #7209b7;
   --color-gradient-button-start: #4361ee;
@@ -139,12 +71,126 @@ input {
   --color-scrollbar-thumb-hover: rgba(0, 0, 0, 0.3);
 }
 
+html {
+  scrollbar-gutter: stable;
+  font-size: 16px;
+}
+
+body {
+  padding: max(12px, 1vw);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-normal);
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  font-size: var(--font-size-base);
+}
+
+h1 {
+  font-size: var(--font-size-huge);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-bright);
+  letter-spacing: -0.5px;
+  line-height: var(--line-height-tight);
+  margin: 0;
+}
+
+h2 {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+h3 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+h4 {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+}
+
+.monospace {
+  font-family: var(--font-mono);
+}
+
+.home-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.home-link:hover {
+  color: inherit;
+  opacity: 0.9;
+}
+
+button, a, select, input {
+  touch-action: manipulation;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-hover);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-scrollbar-thumb);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-scrollbar-thumb-hover);
+}
+
+@supports(padding: max(0px)) {
+  body {
+    padding-left: max(12px, env(safe-area-inset-left));
+    padding-right: max(12px, env(safe-area-inset-right));
+  }
+}
+
+.credit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --font-size-small: 0.6rem;
+    --font-size-base: 0.75rem;
+    --font-size-large: 0.95rem;
+    --font-size-xlarge: 1.25rem;
+    --font-size-huge: 2rem;
+  }
+}
+
+/* Theming continues below this block, but omitted for brevity */
+
+
 /* Dark theme */
 html[data-theme='dark'] {
   --color-bg-primary: #0d1117;
   --color-bg-secondary: #1d2029;
   --color-bg-tertiary: #1d242f;
-  --color-bg-hover: rgba(255, 255, 255, 0.05)
+  --color-bg-hover: rgba(255, 255, 255, 0.05);
   --color-bg-active: rgba(255, 255, 255, 0.1);
   --color-bg-card: rgba(255, 255, 255, 0.02);
   --color-bg-table-even: rgba(255, 255, 255, 0.02);
@@ -223,7 +269,7 @@ html[data-theme='ocean'] {
 
 /* Sunset theme */
 html[data-theme='sunset'] {
-  --color-bg-primary: #2b2139;
+  --color-bg-primary: #261d32;
   --color-bg-secondary: #382b4a;
   --color-bg-tertiary: #453654;
   --color-bg-hover: rgba(255, 160, 100, 0.05);
@@ -303,7 +349,7 @@ html[data-theme='forest'] {
   --color-scrollbar-thumb-hover: rgba(76, 152, 65, 0.3);
 }
 
-
+/* Nebula theme */
 html[data-theme='nebula'] {
   --color-bg-primary: #0b1526;
   --color-bg-secondary: #111e30;

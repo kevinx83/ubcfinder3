@@ -6,9 +6,16 @@ import { updateTotalCourses } from './helpers.js';
 
 class App {
   constructor() {
-    // Initialize campus from URL parameter
+    // Initialize campus from URL parameter or localStorage
     const urlParams = new URLSearchParams(window.location.search);
-    this.currentCampus = urlParams.get('campus') || 'v';
+    const urlCampus = urlParams.get('campus');
+    const storedCampus = localStorage.getItem('selectedCampus');
+    this.currentCampus = urlCampus || storedCampus || 'v';
+    
+    // Ensure localStorage is updated
+    if (!storedCampus || storedCampus !== this.currentCampus) {
+      localStorage.setItem('selectedCampus', this.currentCampus);
+    }
 
     this.tableManager = new TableManager();
     this.uiManager = new UIManager();
@@ -58,15 +65,11 @@ class App {
     // Campus toggle
     const campusToggle = document.getElementById('campusToggle');
     if (campusToggle) {
-      // Set initial state from localStorage or URL
-      const savedCampus = localStorage.getItem('selectedCampus');
-      const urlParams = new URLSearchParams(window.location.search);
-      this.currentCampus = savedCampus || urlParams.get('campus') || 'v';
-
-      // Set toggle state
+      // Set initial state based on currentCampus
       campusToggle.checked = this.currentCampus === 'o';
 
-      // Update URL to match saved state
+      // Update URL to match the current state
+      const urlParams = new URLSearchParams(window.location.search);
       urlParams.set('campus', this.currentCampus);
       history.replaceState(null, '', `?${urlParams.toString()}`);
 
@@ -86,6 +89,7 @@ class App {
         this.handleFilterChange();
       });
     }
+
     // Sort selection
     document.getElementById('sortBy')?.addEventListener('change', () => {
       this.handleFilterChange();
@@ -172,7 +176,7 @@ class SubjectSuggestionSystem {
     this.subjects = [];
     this.isLoaded = false;
     this.searchInput = document.getElementById('searchInput');
-    this.currentCampus = 'v'; // Default to Vancouver
+    this.currentCampus = localStorage.getItem('selectedCampus') || 'v'; // Get from localStorage
     this.initialize();
   }
 
@@ -221,14 +225,8 @@ class SubjectSuggestionSystem {
 
   async loadSubjects() {
     try {
-      // Get current campus from toggle or URL
-      const urlParams = new URLSearchParams(window.location.search);
-      const urlCampus = urlParams.get('campus');
-      if (urlCampus) {
-        this.currentCampus = urlCampus.toLowerCase();
-      } else if (document.getElementById('campusToggle')) {
-        this.currentCampus = document.getElementById('campusToggle').checked ? 'o' : 'v';
-      }
+      // Get current campus from localStorage (most reliable source)
+      this.currentCampus = localStorage.getItem('selectedCampus') || 'v';
 
       // Fetch the appropriate subjects file
       const campus = this.currentCampus.toUpperCase();

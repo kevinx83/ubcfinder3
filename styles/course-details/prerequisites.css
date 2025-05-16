@@ -9,7 +9,7 @@
 
 .prerequisites-box h4 {
     color: var(--color-text-secondary);
-    font-size: 0.95rem;
+    font-size: var(--font-size-base);
     font-weight: 500;
     margin: 0 0 8px 0;
     text-transform: uppercase;
@@ -18,14 +18,14 @@
 
 .prerequisites-box p {
     color: var(--color-text-primary);
-    font-size: 0.95rem;
+    font-size: var(--font-size-base);
     margin: 0;
     line-height: 1.6;
 }
 
 /* Make content area scrollable */
 .prerequisites-box .box-content {
-    max-height: 283px;
+    max-height: 271px;
     overflow-y: auto;
     padding-right: 5px;
 }
@@ -44,16 +44,4 @@
 /* Space after course link but before comma */
 .course-link+.comma {
     margin-right: 0.4em;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    
-    .prerequisites-box h4 {
-        font-size: 0.85rem;
-    }
-    
-    .prerequisites-box p {
-        font-size: 0.85rem;
-    }
 }

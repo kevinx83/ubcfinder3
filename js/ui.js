@@ -29,17 +29,27 @@ export class UIManager {
 
   initializeCampusToggle() {
     const campusToggle = document.getElementById('campusToggle');
+    const campusVRadio = document.getElementById('campusV');
+    const campusORadio = document.getElementById('campusO');
+    
     if (campusToggle) {
-      // Remove any existing campus selection from localStorage
-      localStorage.removeItem('selectedCampus');
+      // Get campus from localStorage only, ignoring URL
+      const storedCampus = localStorage.getItem('selectedCampus') || 'v';
       
-      // Always set to Vancouver (unchecked) when initializing
-      campusToggle.checked = false;
-      
-      // Update URL to reflect Vancouver campus
-      const urlParams = new URLSearchParams(window.location.search);
-      urlParams.set('campus', 'v');
-      history.replaceState(null, '', `?${urlParams.toString()}`);
+      // Set toggle state
+      campusToggle.checked = storedCampus === 'o';
+    }
+    
+    // Also initialize radio buttons if they exist
+    if (campusVRadio && campusORadio) {
+      const storedCampus = localStorage.getItem('selectedCampus') || 'v';
+      if (storedCampus === 'o') {
+        campusORadio.checked = true;
+        campusVRadio.checked = false;
+      } else {
+        campusVRadio.checked = true;
+        campusORadio.checked = false;
+      }
     }
   }
 
@@ -62,7 +72,8 @@ export class UIManager {
   }
 
   setupCampusToggle() {
-    return document.getElementById('campusToggle')?.checked ? 'o' : 'v';
+    // Get campus directly from localStorage
+    return localStorage.getItem('selectedCampus') === 'o' ? 'o' : 'v';
   }
 
   updateToggleButtonVisibility(sortBy) {

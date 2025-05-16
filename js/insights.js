@@ -6,16 +6,67 @@ class InsightsManager {
     }
 
     async initialize() {
-        // Set up event listeners
+        // Set up event listeners for session select
         document.getElementById('sessionSelect')?.addEventListener('change', () => this.loadData());
-        document.getElementById('campusToggle')?.addEventListener('change', () => this.loadData());
+        
+        // Get initial campus value from URL or localStorage (same as other pages)
+        const urlParams = new URLSearchParams(window.location.search);
+        const campusParam = urlParams.get('campus');
+        const storedCampus = localStorage.getItem('selectedCampus');
+        this.currentCampus = campusParam || storedCampus || 'v';
+        
+        // Find and set up campus radio buttons in the info dropdown
+        const campusVRadio = document.getElementById('campusV');
+        const campusORadio = document.getElementById('campusO');
+        
+        if (campusVRadio && campusORadio) {
+            // Set initial state based on current campus
+            if (this.currentCampus === 'o') {
+                campusORadio.checked = true;
+                campusVRadio.checked = false;
+            } else {
+                campusVRadio.checked = true;
+                campusORadio.checked = false;
+            }
+            
+            // Add event listeners to campus radio buttons
+            campusVRadio.addEventListener('change', () => {
+                if (campusVRadio.checked) {
+                    this.currentCampus = 'v';
+                    localStorage.setItem('selectedCampus', 'v');
+                    
+                    // Update URL
+                    const urlParams = new URLSearchParams(window.location.search);
+                    urlParams.set('campus', 'v');
+                    const newUrl = window.location.pathname + '?' + urlParams.toString();
+                    history.replaceState(null, '', newUrl);
+                    
+                    this.loadData();
+                }
+            });
+            
+            campusORadio.addEventListener('change', () => {
+                if (campusORadio.checked) {
+                    this.currentCampus = 'o';
+                    localStorage.setItem('selectedCampus', 'o');
+                    
+                    // Update URL
+                    const urlParams = new URLSearchParams(window.location.search);
+                    urlParams.set('campus', 'o');
+                    const newUrl = window.location.pathname + '?' + urlParams.toString();
+                    history.replaceState(null, '', newUrl);
+                    
+                    this.loadData();
+                }
+            });
+        }
 
         // Initial data load
         await this.loadData();
     }
 
     getCampusName() {
-        return document.getElementById('campusToggle')?.checked ? 'UBCO' : 'UBCV';
+        return this.currentCampus === 'o' ? 'UBCO' : 'UBCV';
     }
 
     getSession() {
@@ -23,12 +74,11 @@ class InsightsManager {
     }
 
     async loadData() {
-        const campus = document.getElementById('campusToggle')?.checked ? 'o' : 'v';
         const session = this.getSession();
         
         try {
             dataService.setSession(session);
-            const courses = await dataService.loadCourseData(campus);
+            const courses = await dataService.loadCourseData(this.currentCampus);
             this.displayInsights(courses);
         } catch (error) {
             console.error('Error loading data:', error);
@@ -53,11 +103,10 @@ class InsightsManager {
         const campusName = this.getCampusName();
         const session = this.getSession();
         
-        // Store current controls state
-        const currentToggleState = document.getElementById('campusToggle')?.checked;
+        // Store current session
         const currentSession = document.getElementById('sessionSelect')?.value;
         
-        // Update stats and faculty section only
+        // Create content with session selector but WITHOUT campus toggle
         const statsAndFaculty = document.createElement('div');
         statsAndFaculty.innerHTML = `
             <div class="stats-grid">
@@ -74,17 +123,9 @@ class InsightsManager {
             </div>
         `;
 
-        // Update only the content after the controls
+        // Update only the content with session selector
         container.innerHTML = `
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
-                <div class="campus-toggle">
-                    <span class="toggle-label">UBC-V</span>
-                    <label class="switch">
-                        <input type="checkbox" id="campusToggle">
-                        <span class="slider round"></span>
-                    </label>
-                    <span class="toggle-label">UBC-O</span>
-                </div>
+            <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 30px;">
                 <select id="sessionSelect" class="filter-select">
                     <option value="2023W">2023W</option>
                     <option value="2023S">2023S</option>
@@ -97,14 +138,8 @@ class InsightsManager {
         `;
         container.appendChild(statsAndFaculty);
 
-        // Restore control states and reattach listeners
-        const toggleInput = document.getElementById('campusToggle');
+        // Restore session select value and reattach listener
         const sessionSelect = document.getElementById('sessionSelect');
-        
-        if (toggleInput) {
-            toggleInput.checked = currentToggleState ?? (this.getCampusName() === 'UBCO');
-            toggleInput.addEventListener('change', () => this.loadData());
-        }
         
         if (sessionSelect) {
             sessionSelect.value = currentSession ?? session;
