@@ -175,7 +175,7 @@ button, a, select, input {
 @media (max-width: 768px) {
   :root {
     --font-size-small: 0.6rem;
-    --font-size-base: 0.75rem;
+    --font-size-base: 0.7rem;
     --font-size-large: 0.95rem;
     --font-size-xlarge: 1.25rem;
     --font-size-huge: 2rem;
