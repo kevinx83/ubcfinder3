@@ -198,6 +198,13 @@
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+
+  .total-courses {
+    font-size: var(--font-size-small);
+  }
+}
+
 /* Responsive adjustment for smaller screens */
 @media (max-width: 480px) {
   .select-options-grid {

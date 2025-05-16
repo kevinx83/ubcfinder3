@@ -164,24 +164,24 @@
     color: var(--color-text-primary);
     border-radius: 8px;
   }
-  
+
   .credit-link {
     text-decoration: none;
   }
-  
+
   /* Make control panel keep elements on same line */
   .control-panel {
     flex-wrap: nowrap;
     gap: 10px;
   }
-  
+
   /* Make search input more flexible */
   .search-input {
     min-width: 0;
     padding-left: 30px;
     flex: 1;
   }
-  
+
   /* Make dropdown narrower */
   #searchTypeSelect {
     width: auto;
@@ -270,11 +270,11 @@
     margin-top: 6px;
     max-height: 250px;
   }
-  
+
   .suggestion-item {
     padding: 10px 12px;
   }
-  
+
   .suggestion-icon {
     margin-right: 8px;
   }
@@ -282,26 +282,30 @@
   .suggestion-desc {
     margin-left: 8px;
   }
+
+  .filter-select {
+    font-size: var(--font-size-small);
+  }
 }
 
 .courses-header-right {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 @media (max-width: 768px) {
-    .courses-header-right {
-        gap: 10px;
-    }
-    
-    /* Adjust select width for mobile */
-    .courses-header-right .filter-select {
-        max-width: 120px;
-    }
+  .courses-header-right {
+    gap: 10px;
+  }
+
+  /* Adjust select width for mobile */
+  .courses-header-right .filter-select {
+    max-width: 120px;
+  }
 }
 
 .campus-note {
-    color: var(--color-text-secondary);
-    font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
 }

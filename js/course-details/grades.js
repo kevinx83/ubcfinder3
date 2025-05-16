@@ -73,7 +73,7 @@ export class GradesManager {
         const stats = [
             { label: 'Average', value: course.Average, format: 'average', valueClass: 'average-value' },
             { label: 'Enrolled', value: course.Reported, format: 'enrolled', valueClass: 'enrolled-value' },
-            { label: 'Weighted Median', value: course.WeightedMedian, format: 'median', valueClass: 'median-value' },
+            { label: 'Median', value: course.WeightedMedian, format: 'median', valueClass: 'median-value' },
             { label: 'High', value: course.High, format: 'percent', valueClass: 'high-value' },
             { label: 'Low', value: course.Low, format: 'percent', valueClass: 'low-value' }
         ];

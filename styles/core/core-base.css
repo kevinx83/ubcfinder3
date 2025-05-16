@@ -351,12 +351,12 @@ html[data-theme='forest'] {
 
 /* Nebula theme */
 html[data-theme='nebula'] {
-  --color-bg-primary: #0b1526;
-  --color-bg-secondary: #111e30;
+  --color-bg-primary: #080f1b;
+  --color-bg-secondary: #0c1623;
   --color-bg-tertiary: #17263a;
   --color-bg-hover: rgba(74, 116, 158, 0.05);
   --color-bg-active: rgba(74, 116, 158, 0.1);
-  --color-bg-card: rgba(74, 116, 158, 0.03);
+  --color-bg-card: rgba(86, 136, 186, 0.03);
   --color-bg-table-even: rgba(74, 116, 158, 0.03);
   --color-bg-table-hover: rgba(74, 116, 158, 0.06);
 
