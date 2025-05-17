@@ -31,7 +31,7 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  /* Light theme (default) */
+  /* Light theme 1 (default) */
   --color-bg-primary: #f8f9fa;
   --color-bg-secondary: #fbfbfb;
   --color-bg-tertiary: #e9ecef;
@@ -182,11 +182,8 @@ button, a, select, input {
   }
 }
 
-/* Theming continues below this block, but omitted for brevity */
-
-
-/* Dark theme */
-html[data-theme='dark'] {
+/* Dark theme 1 */
+html[data-theme='dark-1'] {
   --color-bg-primary: #0d1117;
   --color-bg-secondary: #1d2029;
   --color-bg-tertiary: #1d242f;
@@ -226,8 +223,8 @@ html[data-theme='dark'] {
   --color-scrollbar-thumb-hover: rgba(255, 255, 255, 0.3);
 }
 
-/* Ocean theme */
-html[data-theme='ocean'] {
+/* Light theme 2 (Reef) */
+html[data-theme='light-2'] {
   --color-bg-primary: #e6f5fb;
   --color-bg-secondary: #f0faff;
   --color-bg-tertiary: #dbf0fa;
@@ -267,26 +264,26 @@ html[data-theme='ocean'] {
   --color-scrollbar-thumb-hover: rgba(0, 149, 199, 0.3);
 }
 
-/* Sunset theme */
-html[data-theme='sunset'] {
-  --color-bg-primary: #261d32;
-  --color-bg-secondary: #382b4a;
-  --color-bg-tertiary: #453654;
+/* Dark theme 2 (Dusk) */
+html[data-theme='dark-2'] {
+  --color-bg-primary: #201829;
+  --color-bg-secondary: #322642;
+  --color-bg-tertiary: #3d304a;
   --color-bg-hover: rgba(255, 160, 100, 0.05);
   --color-bg-active: rgba(255, 160, 100, 0.1);
-  --color-bg-card: rgba(255, 160, 100, 0.02);
-  --color-bg-table-even: rgba(255, 160, 100, 0.02);
+  --color-bg-card: rgba(255, 100, 255, 0.02);
+  --color-bg-table-even: rgba(255, 160, 100, 0.03);
   --color-bg-table-hover: rgba(255, 160, 100, 0.05);
 
-  --color-text-primary: #ffecd9;
-  --color-text-secondary: #dba79c;
-  --color-text-bright: #fffdfa;
+  --color-text-primary: #f9ecde;
+  --color-text-secondary: #eab7a2;
+  --color-text-bright: #f9ecde;
 
   --color-border: rgba(255, 160, 100, 0.1);
   --color-border-hover: rgba(255, 160, 100, 0.2);
 
-  --color-primary: #9a58b4;
-  --color-primary-hover: #7d4792;
+  --color-primary: #f78652;
+  --color-primary-hover: #eb6344;
 
   --color-grade-excellent: #a744cf;
   --color-grade-great: #21891c;
@@ -308,8 +305,8 @@ html[data-theme='sunset'] {
   --color-scrollbar-thumb-hover: rgba(255, 160, 100, 0.3);
 }
 
-/* Forest theme */
-html[data-theme='forest'] {
+/* Light theme 3 (Meadow) */
+html[data-theme='light-3'] {
   --color-bg-primary: #f0f5ef;
   --color-bg-secondary: #f8fdf7;
   --color-bg-tertiary: #e6eee4;
@@ -321,12 +318,12 @@ html[data-theme='forest'] {
 
   --color-text-primary: #224022;
   --color-text-secondary: #4a734a;
-  --color-text-bright: #0a4b03;
+  --color-text-bright: #0a4e14;
 
   --color-border: rgba(76, 152, 65, 0.15);
   --color-border-hover: rgba(76, 152, 65, 0.25);
 
-  --color-primary: #4b9143;
+  --color-primary: #489b58;
   --color-primary-hover: #47a93a;
 
   --color-grade-excellent: #2a507c;
@@ -349,8 +346,8 @@ html[data-theme='forest'] {
   --color-scrollbar-thumb-hover: rgba(76, 152, 65, 0.3);
 }
 
-/* Nebula theme */
-html[data-theme='nebula'] {
+/* Dark theme 3 (Galaxy) */
+html[data-theme='dark-3'] {
   --color-bg-primary: #080f1b;
   --color-bg-secondary: #0c1623;
   --color-bg-tertiary: #17263a;
@@ -388,4 +385,85 @@ html[data-theme='nebula'] {
   --color-gradient-button-hover-end: #355478;
   --color-scrollbar-thumb: rgba(74, 116, 158, 0.2);
   --color-scrollbar-thumb-hover: rgba(74, 116, 158, 0.3);
+}
+/* Light theme 4 (Sakura)*/
+html[data-theme='light-4'] {
+  --color-bg-primary: #fffbfc;
+  --color-bg-secondary: #fffdfe;
+  --color-bg-tertiary: #fff3f7;
+  --color-bg-hover: rgba(252, 164, 191, 0.05);
+  --color-bg-active: rgba(252, 164, 191, 0.1);
+  --color-bg-card: rgba(247, 122, 160, 0.04);
+  --color-bg-table-even: rgba(252, 164, 191, 0.04);
+  --color-bg-table-hover: rgba(252, 164, 191, 0.08);
+
+  --color-text-primary: #733146;
+  --color-text-secondary: #a15576;
+  --color-text-bright: #5e2839;
+
+  --color-border: rgba(252, 164, 191, 0.15);
+  --color-border-hover: rgba(252, 164, 191, 0.25);
+
+  --color-primary: #fca4bf;
+  --color-primary-hover: #f472b6;
+
+  --color-grade-excellent: #4118be;
+  --color-grade-great: #077a4c;
+  --color-grade-good: #10b95f;
+  --color-grade-fair: #f59e0b;
+  --color-grade-bad: #e1471d;
+  --color-grade-horrible: #aa1c1c;
+
+  --color-overlay: rgba(115, 49, 70, 0.2);
+  --color-tooltip-bg: rgba(115, 49, 70, 0.8);
+  --color-box-shadow: rgba(115, 49, 70, 0.1);
+  --color-gradient-start: #fca4bf;
+  --color-gradient-end: #fde7ef;
+  --color-gradient-button-start: #fca4bf;
+  --color-gradient-button-end: #fb7eae;
+  --color-gradient-button-hover-start: #f472b6;
+  --color-gradient-button-hover-end: #e85d9f;
+  --color-scrollbar-thumb: rgba(252, 164, 191, 0.2);
+  --color-scrollbar-thumb-hover: rgba(252, 164, 191, 0.3);
+}
+
+/* Dark theme 4 (Aurora) */
+html[data-theme='dark-4'] {
+  --color-bg-primary: #0b1219;
+  --color-bg-secondary: #111b25;
+  --color-bg-tertiary: #182635;
+  --color-bg-hover: rgba(16, 185, 129, 0.08);
+  --color-bg-active: rgba(16, 185, 129, 0.15);
+  --color-bg-card: rgba(99, 102, 241, 0.03);
+  --color-bg-table-even: rgba(139, 92, 246, 0.02);
+  --color-bg-table-hover: rgba(59, 130, 246, 0.06);
+
+  --color-text-primary: #d8e1ef;
+  --color-text-secondary: #94a3b8;
+  --color-text-bright: #f1f5f9;
+
+  --color-border: rgba(29, 75, 61, 0.15);
+  --color-border-hover: rgba(76, 210, 167, 0.3);
+
+  --color-primary: #10b981;
+  --color-primary-hover: #059669;
+
+  --color-grade-excellent: #6366f1;
+  --color-grade-great: #0c9863;
+  --color-grade-good: #34d399;
+  --color-grade-fair: #f59e0b;
+  --color-grade-bad: #f4573f;
+  --color-grade-horrible: #881337;
+
+  --color-overlay: rgba(11, 18, 25, 0.75);
+  --color-tooltip-bg: rgba(11, 18, 25, 0.9);
+  --color-box-shadow: rgba(0, 0, 0, 0.25);
+  --color-gradient-start: #10b981;
+  --color-gradient-end: #3b82f6;
+  --color-gradient-button-start: #10b981;
+  --color-gradient-button-end: #0d9488;
+  --color-gradient-button-hover-start: #059669;
+  --color-gradient-button-hover-end: #0f766e;
+  --color-scrollbar-thumb: rgba(16, 185, 129, 0.25);
+  --color-scrollbar-thumb-hover: rgba(16, 185, 129, 0.35);
 }

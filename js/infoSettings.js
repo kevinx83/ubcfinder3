@@ -5,13 +5,15 @@ class InfoSettingsManager {
         this.campusVRadio = document.getElementById('campusV');
         this.campusORadio = document.getElementById('campusO');
         
-        // Get all theme radio buttons
-        this.themeLightRadio = document.getElementById('themeLight');
-        this.themeDarkRadio = document.getElementById('themeDark');
-        this.themeOceanRadio = document.getElementById('themeOcean');
-        this.themeSunsetRadio = document.getElementById('themeSunset');
-        this.themeForestRadio = document.getElementById('themeForest');
-        this.themeNebulaRadio = document.getElementById('themeNebula'); 
+        // Get all theme radio buttons with the new naming convention
+        this.themeLight1Radio = document.getElementById('themeLight1');
+        this.themeDark1Radio = document.getElementById('themeDark1');
+        this.themeLight2Radio = document.getElementById('themeLight2');
+        this.themeDark2Radio = document.getElementById('themeDark2');
+        this.themeLight3Radio = document.getElementById('themeLight3');
+        this.themeDark3Radio = document.getElementById('themeDark3');
+        this.themeLight4Radio = document.getElementById('themeLight4');
+        this.themeDark4Radio = document.getElementById('themeDark4');
 
         this.initialize();
     }
@@ -42,30 +44,33 @@ class InfoSettingsManager {
         // Add event listeners for dropdown controls
         this.setupDropdownListeners();
         
-        // Ensure default theme is set (add this to handle case where no theme is saved)
+        // Ensure default theme is set
         this.ensureDefaultTheme();
     }
     
-    // Add this new method to ensure a default theme
+    // Ensure a default theme is set
     ensureDefaultTheme() {
         // Check if a theme is set in localStorage
         const savedTheme = localStorage.getItem('theme');
         
-        // If no theme is set, use light mode as default
+        // If no theme is set, check system preference or use light-1 as default
         if (!savedTheme) {
-            localStorage.setItem('theme', 'light');
-            document.documentElement.setAttribute('data-theme', 'light');
+            const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const defaultTheme = prefersDarkMode ? 'dark-1' : 'light-1';
+            
+            localStorage.setItem('theme', defaultTheme);
+            document.documentElement.setAttribute('data-theme', defaultTheme);
             
             // Update the radio button state
-            if (this.themeLightRadio) {
-                this.themeLightRadio.checked = true;
-            }
-            
-            // Update favicon if that function exists
-            if (typeof updateFavicon === 'function') {
-                updateFavicon('light');
+            const defaultThemeRadio = document.getElementById(`theme${this.capitalizeFirstLetter(defaultTheme.replace('-', ''))}`);
+            if (defaultThemeRadio) {
+                defaultThemeRadio.checked = true;
             }
         }
+    }
+
+    capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
     }
 
     toggleDropdown() {
@@ -94,7 +99,7 @@ class InfoSettingsManager {
         }
 
         // For theme, check localStorage
-        const savedTheme = localStorage.getItem('theme') || 'light';
+        const savedTheme = localStorage.getItem('theme') || 'light-1';
         
         // Get all theme radio buttons
         const themeRadios = document.querySelectorAll('input[name="theme"]');
@@ -105,12 +110,18 @@ class InfoSettingsManager {
         });
         
         // Check the correct theme radio
-        const selectedThemeRadio = document.getElementById(`theme${savedTheme.charAt(0).toUpperCase() + savedTheme.slice(1)}`);
+        // Convert theme name like 'light-1' to 'Light1' for the element ID
+        const themeForId = savedTheme.replace('-', '');
+        const capitalizedTheme = this.capitalizeFirstLetter(themeForId);
+        const selectedThemeRadio = document.getElementById(`theme${capitalizedTheme}`);
+        
         if (selectedThemeRadio) {
             selectedThemeRadio.checked = true;
         } else {
-            // Default to light if the theme is not found
-            this.themeLightRadio.checked = true;
+            // Default to light-1 if the theme is not found
+            this.themeLight1Radio.checked = true;
+            document.documentElement.setAttribute('data-theme', 'light-1');
+            localStorage.setItem('theme', 'light-1');
         }
     }
 
@@ -162,13 +173,15 @@ class InfoSettingsManager {
             }
         };
 
-        // Set up listeners for all themes
-        setupThemeListener(this.themeLightRadio, 'light');
-        setupThemeListener(this.themeDarkRadio, 'dark');
-        setupThemeListener(this.themeOceanRadio, 'ocean');
-        setupThemeListener(this.themeSunsetRadio, 'sunset');
-        setupThemeListener(this.themeForestRadio, 'forest');
-        setupThemeListener(this.themeNebulaRadio, 'nebula');
+        // Set up listeners for all themes with the new naming convention
+        setupThemeListener(this.themeLight1Radio, 'light-1');
+        setupThemeListener(this.themeDark1Radio, 'dark-1');
+        setupThemeListener(this.themeLight2Radio, 'light-2');
+        setupThemeListener(this.themeDark2Radio, 'dark-2');
+        setupThemeListener(this.themeLight3Radio, 'light-3');
+        setupThemeListener(this.themeDark3Radio, 'dark-3');
+        setupThemeListener(this.themeLight4Radio, 'light-4');
+        setupThemeListener(this.themeDark4Radio, 'dark-4');
     }
 }
 
