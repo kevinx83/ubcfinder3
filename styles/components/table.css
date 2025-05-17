@@ -97,7 +97,7 @@ tbody tr:hover {
 }
 
 .course-link {
-  text-decoration: underline !important; 
+  text-decoration: underline !important;
   color: inherit;
 }
 
@@ -201,132 +201,141 @@ td:nth-child(4) {
 }
 
 /* Mobile Optimizations */
+/* Mobile optimizations for table column widths */
 @media (max-width: 768px) {
-  /* Adjust column widths for mobile */
-  #professorTable th:nth-child(1),
-  #professorTable td:nth-child(1) {
+
+  /* COURSE TABLE - Index page */
+  /* Give more space to course name, less to students/average */
+  #courseTable th:nth-child(1),
+  #courseTable td:nth-child(1) {
     width: 20%;
+    /* Course code - slightly reduced */
   }
 
-  #professorTable th:nth-child(2),
-  #professorTable td:nth-child(2) {
-    display: none;
-    visibility: collapse;
-    padding: 0;
-    font-size: 0rem;
-  }
-
-  #professorTable th:nth-child(3),
-  #professorTable td:nth-child(3) {
-    width: 100%;
-  }
-
-  #professorTable th:nth-child(4),
-  #professorTable td:nth-child(4) {
-    width: 10%;
-    text-align: center;
-  }
-
-  #professorTable th:nth-child(5),
-  #professorTable td:nth-child(5) {
-    width: 10%;
-  }
-
-  /* Make headers more compact */
-  #professorTable th {
-    padding: 10px 6px;
-    letter-spacing: 0;
-    text-transform: none;
-  }
-
-  th,
-  td {
-    padding: 12px 8px;
-  }
-
-  /* Adjust column widths for mobile */
-  th:nth-child(1),
-  td:nth-child(1) {
-    width: 30%;
-  }
-
-  th:nth-child(2),
-  td:nth-child(2) {
+  #courseTable th:nth-child(2),
+  #courseTable td:nth-child(2) {
     width: 50%;
+    /* Course name - increased for better readability */
   }
 
-  th:nth-child(3),
-  td:nth-child(3) {
+  #courseTable th:nth-child(3),
+  #courseTable td:nth-child(3) {
+    width: 15%;
+    /* Students - reduced */
+    padding-right: 3px;
+  }
+
+  #courseTable th:nth-child(4),
+  #courseTable td:nth-child(4) {
+    width: 15%;
+    /* Average - reduced */
+    padding-left: 3px;
+  }
+
+  /* PROGRAM TABLE - Program search page */
+  /* Give more space to program name and faculty, less to length/courses */
+  #programTable th:nth-child(1),
+  #programTable td:nth-child(1) {
+    width: 40%;
+    /* Program name - increased slightly */
+  }
+
+  #programTable th:nth-child(2),
+  #programTable td:nth-child(2) {
+    width: 40%;
+    /* Faculty - increased slightly */
+  }
+
+  #programTable th:nth-child(3),
+  #programTable td:nth-child(3) {
     width: 10%;
-  }
-
-  th:nth-child(4),
-  td:nth-child(4) {
-    width: 10%;
-  }
-
-  /* Make headers more compact */
-  th {
-    padding: 8px 8px;
-    letter-spacing: 0;
-  }
-
-  /* Make course names wrap properly */
-  td:nth-child(2) {
-    white-space: normal;
-    word-break: break-word;
-  }
-
-  /* Further reduce font size */
-  #professorTable td,
-  #professorTable th {
-    padding: 8px 8px;
-  }
-
-  /* Adjust course row spacing */
-  .course-row {
-    margin-bottom: 3px;
-  }
-
-  /* Adjust pagination for mobile */
-  .pagination-controls {
-    flex-direction: column;
-    gap: 15px;
-    padding: 8px;
-    margin-top: 8px;
-  }
-
-  .pagination-buttons {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .pagination-info {
+    /* Length - reduced */
+    padding-left: 2px;
+    padding-right: 2px;
     text-align: center;
-    margin: 0 8px;
+  }
+
+  #programTable th:nth-child(4),
+  #programTable td:nth-child(4) {
+    width: 10%;
+    /* Courses - reduced */
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+  }
+
+  /* General table cell styling for mobile */
+  table th,
+  table td {
+    padding: 10px 5px;
+    font-size: var(--font-size-small);
+  }
+
+  /* Ensure text wrapping for better readability */
+  table td:nth-child(1),
+  table td:nth-child(2) {
+    word-break: break-word;
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+
+  /* Optimize header text */
+  table th {
+    font-weight: 600;
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  /* Adjust numeric values for better readability at small sizes */
+  .excellent-average,
+  .great-average,
+  .good-average,
+  .fair-average,
+  .bad-average,
+  .horrible-average {
+    font-weight: 600;
+  }
+
+  /* Make sort dropdown smaller too */
+  #sortBy {
+    font-size: var(--font-size-small);
+    padding: 6px 8px;
+    max-width: 110px;
+  }
+
+  /* Reduce spacing between elements in header */
+  .courses-header-right {
+    gap: 6px;
+  }
+
+  #sessionSelect {
+    min-width: 70px;
+    max-width: 80px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 
 /* Program Table Column Widths */
 #programTable th:nth-child(1),
 #programTable td:nth-child(1) {
-    width: 35%;
+  width: 35%;
 }
 
 #programTable th:nth-child(2),
 #programTable td:nth-child(2) {
-    width: 35%;
+  width: 35%;
 }
 
 #programTable th:nth-child(3),
 #programTable td:nth-child(3) {
-    width: 15%;
-    text-align: center;
+  width: 15%;
+  text-align: center;
 }
 
 #programTable th:nth-child(4),
 #programTable td:nth-child(4) {
-    width: 15%;
-    text-align: center;
+  width: 15%;
+  text-align: center;
 }

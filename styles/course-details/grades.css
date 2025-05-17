@@ -193,12 +193,6 @@
         justify-content: space-between;
         align-items: center;
     }
-
-    #sessionSelect {
-        width: auto;
-        min-width: 110px;
-        margin-left: auto;
-    }
 }
 
 @media (max-width: 500px) {

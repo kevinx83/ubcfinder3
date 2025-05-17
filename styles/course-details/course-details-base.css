@@ -177,8 +177,4 @@
         align-items: flex-start;
         gap: 10px;
     }
-    
-    #sessionSelect {
-        width: 100%;
-    }
 }
