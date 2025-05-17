@@ -315,6 +315,16 @@ td:nth-child(4) {
     white-space: nowrap;
     overflow: hidden;
   }
+
+  table td,
+  #courseTable td,
+  #programTable td,
+  #professorTable td {
+    hyphens: none;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: normal;
+  }
 }
 
 /* Program Table Column Widths */
