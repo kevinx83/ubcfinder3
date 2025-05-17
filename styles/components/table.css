@@ -208,13 +208,13 @@ td:nth-child(4) {
   /* Give more space to course name, less to students/average */
   #courseTable th:nth-child(1),
   #courseTable td:nth-child(1) {
-    width: 20%;
+    width: 22%;
     /* Course code - slightly reduced */
   }
 
   #courseTable th:nth-child(2),
   #courseTable td:nth-child(2) {
-    width: 50%;
+    width: 48%;
     /* Course name - increased for better readability */
   }
 
