@@ -232,7 +232,7 @@
     .insights-table td:nth-child(3),
     .insights-table th:nth-child(4),
     .insights-table td:nth-child(4) {
-        text-align: right;
+        text-align: center;
         padding-right: 8px;
     }
 

@@ -32,53 +32,53 @@ export class ProfessorsTableManager {
 
     createProfessorRow(professor) {
         const row = document.createElement("tr");
-        
+
         // Create RateMyProfessors search URL
         const searchUrl = `https://www.ratemyprofessors.com/search/professors?q=${encodeURIComponent(professor.name)}`;
-    
+
         // Calculate total students for this professor
         const totalStudents = professor.courses.reduce((sum, course) => sum + course.reported, 0);
-    
+
         // Create vertical list of courses and their averages
         const coursesHtml = professor.courses.map(course => {
             const urlParams = new URLSearchParams(window.location.search);
             const currentCampus = urlParams.get('campus') || 'v';
             const currentSession = document.getElementById('sessionSelect')?.value || '2023W';
             const avgClass = this.getAverageClass(course.average);
-            
+
             return `<div class="course-row">
-                        <a href="/course-details.html?code=${encodeURIComponent(course.code)}&campus=${currentCampus}&session=${currentSession}" 
-                        class="course-link" 
-                        title="${course.title}">${course.code}</a>
-                    </div>`;
+                    <a href="/course-details.html?code=${encodeURIComponent(course.code)}&campus=${currentCampus}&session=${currentSession}" 
+                    class="course-link" 
+                    title="${course.title}">${course.code}</a>
+                </div>`;
         }).join('');
-    
+
         const averagesHtml = professor.courses.map(course => {
             const avgClass = this.getAverageClass(course.average);
             return `<div class="course-row">
-                        <span class="${avgClass} monospace">${course.average.toFixed(2)}</span>
-                    </div>`;
+                    <span class="${avgClass} monospace">${course.average.toFixed(2)}</span>
+                </div>`;
         }).join('');
 
         const studentsHtml = professor.courses.map(course => {
             return `<div class="course-row">
-                        <span class="monospace">${course.reported}</span>
-                    </div>`;
+                    <span class="monospace">${course.reported}</span>
+                </div>`;
         }).join('');
-    
+
         row.innerHTML = `
-            <td>
-                <a href="${searchUrl}" 
-                    class="course-link" 
-                    target="_blank" 
-                    rel="noopener noreferrer">${professor.name}</a>
-            </td>
-            <td>${professor.faculties.join(', ')}</td>
-            <td>${coursesHtml}</td>
-            <td>${studentsHtml}</td>
-            <td>${averagesHtml}</td>
-        `;
-    
+        <td>
+            <a href="${searchUrl}" 
+                class="course-link" 
+                target="_blank" 
+                rel="noopener noreferrer">${professor.name}</a>
+        </td>
+        <!-- Remove this line: <td>${professor.faculties.join(', ')}</td> -->
+        <td>${coursesHtml}</td>
+        <td>${studentsHtml}</td>
+        <td>${averagesHtml}</td>
+    `;
+
         this.tableBody.appendChild(row);
     }
 

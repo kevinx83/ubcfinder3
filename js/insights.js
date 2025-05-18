@@ -300,7 +300,7 @@ class InsightsManager {
                             <tr>
                                 <th>Faculty</th>
                                 <th>Courses</th>
-                                <th>Course Enrollments</th>
+                                <th>Enrollments</th>
                                 <th>Average</th>
                             </tr>
                         </thead>
