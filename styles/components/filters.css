@@ -217,4 +217,20 @@
   .filter-option {
     font-size: var(--font-size-base)
   }
+
+  .filters-row {
+  flex-direction: row !important;
+  gap: 10px;
+}
+
+.filter-section {
+  min-width: calc(50% - 5px) !important;
+  width: calc(50% - 5px) !important;
+  padding: 10px;
+}
+
+.sidebar.active {
+  width: 90vw;
+  max-width: 90vw;
+}
 }
