@@ -4,7 +4,7 @@ class InfoSettingsManager {
         this.infoDropdown = document.getElementById('infoDropdown');
         this.campusVRadio = document.getElementById('campusV');
         this.campusORadio = document.getElementById('campusO');
-        
+
         // Get all theme radio buttons with the new naming convention
         this.themeLight1Radio = document.getElementById('themeLight1');
         this.themeDark1Radio = document.getElementById('themeDark1');
@@ -43,24 +43,24 @@ class InfoSettingsManager {
 
         // Add event listeners for dropdown controls
         this.setupDropdownListeners();
-        
+
         // Ensure default theme is set
         this.ensureDefaultTheme();
     }
-    
+
     // Ensure a default theme is set
     ensureDefaultTheme() {
         // Check if a theme is set in localStorage
         const savedTheme = localStorage.getItem('theme');
-        
+
         // If no theme is set, check system preference or use light-1 as default
         if (!savedTheme) {
             const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
             const defaultTheme = prefersDarkMode ? 'dark-1' : 'light-1';
-            
+
             localStorage.setItem('theme', defaultTheme);
             document.documentElement.setAttribute('data-theme', defaultTheme);
-            
+
             // Update the radio button state
             const defaultThemeRadio = document.getElementById(`theme${this.capitalizeFirstLetter(defaultTheme.replace('-', ''))}`);
             if (defaultThemeRadio) {
@@ -100,21 +100,21 @@ class InfoSettingsManager {
 
         // For theme, check localStorage
         const savedTheme = localStorage.getItem('theme') || 'light-1';
-        
+
         // Get all theme radio buttons
         const themeRadios = document.querySelectorAll('input[name="theme"]');
-        
+
         // Uncheck all theme radios first
         themeRadios.forEach(radio => {
             radio.checked = false;
         });
-        
+
         // Check the correct theme radio
         // Convert theme name like 'light-1' to 'Light1' for the element ID
         const themeForId = savedTheme.replace('-', '');
         const capitalizedTheme = this.capitalizeFirstLetter(themeForId);
         const selectedThemeRadio = document.getElementById(`theme${capitalizedTheme}`);
-        
+
         if (selectedThemeRadio) {
             selectedThemeRadio.checked = true;
         } else {
@@ -168,6 +168,11 @@ class InfoSettingsManager {
                     if (radioElement.checked) {
                         document.documentElement.setAttribute('data-theme', themeName);
                         localStorage.setItem('theme', themeName);
+
+                        // Add this line to update the favicon
+                        if (typeof window.updateFavicon === 'function') {
+                            window.updateFavicon(themeName);
+                        }
                     }
                 });
             }

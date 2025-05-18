@@ -295,11 +295,11 @@ html[data-theme='dark-2'] {
   --color-overlay: rgba(0, 0, 0, 0.5);
   --color-tooltip-bg: rgba(0, 0, 0, 0.9);
   --color-box-shadow: rgba(0, 0, 0, 0.2);
-  --color-gradient-start: #ff7e67;
+  --color-gradient-start: #da77ec;
   --color-gradient-end: #ac4dbc;
-  --color-gradient-button-start: #ff7e67;
+  --color-gradient-button-start: #da77ec;
   --color-gradient-button-end: #ac4dbc;
-  --color-gradient-button-hover-start: #fa6e5a;
+  --color-gradient-button-hover-start: #da77ec;
   --color-gradient-button-hover-end: #9744a8;
   --color-scrollbar-thumb: rgba(255, 160, 100, 0.2);
   --color-scrollbar-thumb-hover: rgba(255, 160, 100, 0.3);
@@ -427,43 +427,43 @@ html[data-theme='light-4'] {
   --color-scrollbar-thumb-hover: rgba(252, 164, 191, 0.3);
 }
 
-/* Dark theme 4 (Aurora) */
+/* Dark theme 4 (Forest) */
 html[data-theme='dark-4'] {
-  --color-bg-primary: #0c1a1a;
-  --color-bg-secondary: #122424;
-  --color-bg-tertiary: #1a3232;
-  --color-bg-hover: rgba(45, 212, 191, 0.08);
-  --color-bg-active: rgba(45, 212, 191, 0.15);
-  --color-bg-card: rgba(45, 212, 191, 0.04);
-  --color-bg-table-even: rgba(45, 212, 191, 0.03);
-  --color-bg-table-hover: rgba(45, 212, 191, 0.07);
+  --color-bg-primary: #121212;
+  --color-bg-secondary: #1e1e1e;
+  --color-bg-tertiary: #2c2c2c;
+  --color-bg-hover: rgba(255, 255, 255, 0.07);
+  --color-bg-active: rgba(255, 255, 255, 0.12);
+  --color-bg-card: rgba(255, 255, 255, 0.03);
+  --color-bg-table-even: rgba(255, 255, 255, 0.04);
+  --color-bg-table-hover: rgba(255, 255, 255, 0.08);
 
-  --color-text-primary: #d8f2f0;
-  --color-text-secondary: #94ccc8;
-  --color-text-bright: #ecfffe;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #a0a0a0;
+  --color-text-bright: #ffffff;
 
-  --color-border: rgba(45, 212, 191, 0.20);
-  --color-border-hover: rgba(45, 212, 191, 0.30);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border-hover: rgba(255, 255, 255, 0.24);
 
-  --color-primary: #2dd462;
-  --color-primary-hover: #129c5c;
+  --color-primary: #ff5f40;
+  --color-primary-hover: #ff7a5f;
 
-  --color-grade-excellent: #2d38d4;
-  --color-grade-great: #0e884f;
-  --color-grade-good: #34d399;
-  --color-grade-fair: #f59e0b;
-  --color-grade-bad: #ef4444;
-  --color-grade-horrible: #dc2626;
+  --color-grade-excellent: #314fd2;
+  --color-grade-great: #048b1f;
+  --color-grade-good: #79ff00;
+  --color-grade-fair: #ffef00;
+  --color-grade-bad: #f0883e;
+  --color-grade-horrible: #f85149;
 
-  --color-overlay: rgba(12, 26, 26, 0.75);
-  --color-tooltip-bg: rgba(12, 26, 26, 0.92);
+  --color-overlay: rgba(0, 0, 0, 0.6);
+  --color-tooltip-bg: rgba(30, 30, 30, 0.95);
   --color-box-shadow: rgba(0, 0, 0, 0.3);
-  --color-gradient-start: #2dd4bf;
-  --color-gradient-end: #0f766e;
-  --color-gradient-button-start: #2dd4bf;
-  --color-gradient-button-end: #0d9488;
-  --color-gradient-button-hover-start: #14b8a6;
-  --color-gradient-button-hover-end: #0f766e;
-  --color-scrollbar-thumb: rgba(45, 212, 191, 0.25);
-  --color-scrollbar-thumb-hover: rgba(45, 212, 191, 0.4);
+  --color-gradient-start: #ff5f40;
+  --color-gradient-end: #8338ec;
+  --color-gradient-button-start: #ff5f40;
+  --color-gradient-button-end: #fb8b24;
+  --color-gradient-button-hover-start: #ff7a5f;
+  --color-gradient-button-hover-end: #fd9e40;
+  --color-scrollbar-thumb: rgba(255, 95, 64, 0.5);
+  --color-scrollbar-thumb-hover: rgba(255, 95, 64, 0.7);
 }
