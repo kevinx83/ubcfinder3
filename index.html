@@ -66,17 +66,8 @@
 
                 <div class="dropdown-separator"></div>
                 <!-- New search type select moved here from main interface -->
-                <div class="search-type-container" style="margin-top: 12px;">
-                    <h4>Search Type</h4>
-                    <select id="searchTypeSelect" class="filter-select dropdown-select">
-                        <option value="course" selected>🔍 Course Search</option>
-                        <option value="professor">🔍 Professor Search</option>
-                        <option value="program">🔍 Program Search</option>
-                    </select>
-                </div>
             </div>
 
-            <div class="dropdown-separator"></div>
 
             <!-- Campus Selection -->
             <div class="dropdown-section">
@@ -187,6 +178,12 @@
         <main class="main-content">
             <div class="control-panel">
                 <input type="text" id="searchInput" class="search-input" placeholder="Search by course or subject">
+
+                <select id="searchTypeSelect" class="filter-select dropdown-select">
+                    <option value="course" selected>🔍 Course Search</option>
+                    <option value="professor">🔍 Professor Search</option>
+                    <option value="program">🔍 Program Search</option>
+                </select>
             </div>
 
             <div class="courses-header">
@@ -197,6 +194,7 @@
                 </div>
 
                 <div class="courses-header-right">
+
                     <select id="sortBy" class="filter-select">
                         <option value="students">Sort by Students ↓</option>
                         <option value="students-asc">Sort by Students ↑</option>
