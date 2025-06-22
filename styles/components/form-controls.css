@@ -294,9 +294,7 @@
   }
 
   .ubcplanner-link {
-    position: fixed;
-    top: 100px;
-    left: 24px;
+    font-size: 0;
   }
 }
 
