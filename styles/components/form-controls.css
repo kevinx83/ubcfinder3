@@ -264,6 +264,12 @@
   background: var(--color-scrollbar-thumb-hover);
 }
 
+.ubcplanner-link {
+  position: fixed;
+  top: 50px;
+  left: 34px;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .search-suggestions {
@@ -285,6 +291,12 @@
 
   .filter-select {
     font-size: var(--font-size-small);
+  }
+
+  .ubcplanner-link {
+    position: fixed;
+    top: 100px;
+    left: 24px;
   }
 }
 
