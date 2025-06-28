@@ -6,18 +6,19 @@ import { updateTotalCourses } from './helpers.js';
 
 class App {
   constructor() {
-    // Initialize campus from URL parameter or localStorage
     const urlParams = new URLSearchParams(window.location.search);
     const urlCampus = urlParams.get('campus');
     const storedCampus = localStorage.getItem('selectedCampus');
     this.currentCampus = urlCampus || storedCampus || 'v';
-    
-    // Ensure localStorage is updated
+
     if (!storedCampus || storedCampus !== this.currentCampus) {
       localStorage.setItem('selectedCampus', this.currentCampus);
     }
 
-    // Check if we need to clear session storage (for page reload)
+    if (!localStorage.getItem('selectedSession')) {
+      localStorage.setItem('selectedSession', '2024W');
+    }
+
     if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
       this.clearFilterSessionStorage();
     }
@@ -39,17 +40,15 @@ class App {
   }
 
   async initialize() {
-    // Add session change listener
     document.getElementById('sessionSelect')?.addEventListener('change', async (e) => {
+      localStorage.setItem('selectedSession', e.target.value);
       dataService.setSession(e.target.value);
       await this.loadInitialData(false);
     });
 
-    // Add event listeners to UBCFinder logo links to clear filters
     const logoLinks = document.querySelectorAll('.home-link, a[href="index.html"]');
     logoLinks.forEach(link => {
       link.addEventListener('click', (e) => {
-        // Only for same-page navigation (index.html to index.html)
         if (window.location.pathname.includes('index.html') && link.getAttribute('href') === 'index.html') {
           e.preventDefault();
           this.clearFilterSessionStorage();
@@ -60,16 +59,12 @@ class App {
 
     await this.loadInitialData(true);
     this.setupEventListeners();
-    
-    // Check if we need to apply saved filters
-    const hasSessionFilters = this.hasSessionFilters();
-    if (hasSessionFilters) {
-      // Apply filters after a short delay to ensure DOM is fully ready
+
+    if (this.hasSessionFilters()) {
       setTimeout(() => this.handleFilterChange(), 100);
     }
   }
-  
-  // Helper method to check if there are any saved filters
+
   hasSessionFilters() {
     return sessionStorage.getItem('facultyFilters') ||
            sessionStorage.getItem('yearLevelFilters') ||
@@ -81,13 +76,13 @@ class App {
 
   async loadInitialData(resetFilters = true) {
     try {
-      if (resetFilters) {
-        this.filterManager.clearFilters();
-      }
+      if (resetFilters) this.filterManager.clearFilters();
+
+      const session = localStorage.getItem('selectedSession') || '2024W';
+      dataService.setSession(session);
+
       const data = await dataService.loadCourseData(this.currentCampus);
-
       const sortBy = document.getElementById('sortBy')?.value || 'code';
-
       const sortedData = dataService.sortCourses(data, sortBy);
 
       if (resetFilters) {
@@ -100,8 +95,7 @@ class App {
 
       updateTotalCourses(data);
       this.tableManager.populateTable(sortedData, sortBy);
-      
-      // Apply search term if it exists in session storage
+
       const searchTerm = sessionStorage.getItem('searchTerm');
       if (searchTerm) {
         const searchInput = document.getElementById('searchInput');
@@ -115,24 +109,18 @@ class App {
   }
 
   setupEventListeners() {
-    // Campus toggle
     const campusToggle = document.getElementById('campusToggle');
     if (campusToggle) {
-      // Set initial state based on currentCampus
       campusToggle.checked = this.currentCampus === 'o';
 
-      // Update URL to match the current state
       const urlParams = new URLSearchParams(window.location.search);
       urlParams.set('campus', this.currentCampus);
       history.replaceState(null, '', `?${urlParams.toString()}`);
 
       campusToggle.addEventListener('change', async (e) => {
         this.currentCampus = e.target.checked ? 'o' : 'v';
-
-        // Save to localStorage
         localStorage.setItem('selectedCampus', this.currentCampus);
 
-        // Update URL
         const urlParams = new URLSearchParams(window.location.search);
         urlParams.set('campus', this.currentCampus);
         history.replaceState(null, '', `?${urlParams.toString()}`);
@@ -143,33 +131,23 @@ class App {
       });
     }
 
-    // Sort selection
     document.getElementById('sortBy')?.addEventListener('change', () => {
       this.handleFilterChange();
     });
 
-    // Toggle all sections
     document.getElementById('toggleAll')?.addEventListener('click', () => {
       this.tableManager.toggleAllSections();
     });
 
-    // Search input
     document.getElementById('searchInput')?.addEventListener('input', (e) => {
-      // Get the search input value
       const searchText = e.target.value.trim();
-
-      // If user is typing something and the current sort isn't 'code'
       const sortBySelect = document.getElementById('sortBy');
       if (searchText.length > 0 && sortBySelect && sortBySelect.value !== 'code') {
-        // Change to 'code' sorting
         sortBySelect.value = 'code';
       }
-
-      // Always trigger filter change to update the table
       this.handleFilterChange();
     });
 
-    // Search type select
     document.getElementById('searchTypeSelect')?.addEventListener('change', (e) => {
       switch (e.target.value) {
         case 'professor':
@@ -178,7 +156,6 @@ class App {
         case 'program':
           window.location.href = 'programs.html';
           break;
-        // Stay on courses page for 'course' option
         default:
           break;
       }
@@ -187,7 +164,7 @@ class App {
 
   async handleCampusChange() {
     try {
-      this.filterManager.clearFilters(); // Clear existing filters first
+      this.filterManager.clearFilters();
       dataService.clearCache();
       const data = await dataService.loadCourseData(this.currentCampus);
       this.filterManager.initializeFacultyFilter(data);
@@ -211,7 +188,6 @@ class App {
     filteredCourses = dataService.sortCourses(filteredCourses, sortBy);
 
     this.uiManager.updateToggleButtonVisibility(sortBy);
-    // Only update total count when filters change, not during pagination
     if (!isPageChange) {
       updateTotalCourses(filteredCourses);
     }
@@ -222,30 +198,22 @@ class App {
 const app = new App();
 window.app = app;
 
-// Add this to your main.js file to implement subject code suggestions
-
 class SubjectSuggestionSystem {
   constructor() {
     this.subjects = [];
     this.isLoaded = false;
     this.searchInput = document.getElementById('searchInput');
-    this.currentCampus = localStorage.getItem('selectedCampus') || 'v'; // Get from localStorage
+    this.currentCampus = localStorage.getItem('selectedCampus') || 'v';
     this.initialize();
   }
 
   async initialize() {
-    // Create suggestion container
     this.createSuggestionContainer();
-
-    // Set up event listeners
     this.setupEventListeners();
-
-    // Initial load of subjects
     await this.loadSubjects();
   }
 
   createSuggestionContainer() {
-    // Create the suggestion container if it doesn't exist
     if (!document.getElementById('searchSuggestions')) {
       const searchParent = this.searchInput.parentElement;
       const suggestionContainer = document.createElement('div');
@@ -258,17 +226,14 @@ class SubjectSuggestionSystem {
   }
 
   setupEventListeners() {
-    // Listen for input changes
     this.searchInput?.addEventListener('input', () => this.handleInput());
 
-    // Listen for campus changes
     const campusToggle = document.getElementById('campusToggle');
     campusToggle?.addEventListener('change', (e) => {
       this.currentCampus = e.target.checked ? 'o' : 'v';
-      this.loadSubjects(); // Reload subjects when campus changes
+      this.loadSubjects();
     });
 
-    // Close suggestions when clicking elsewhere
     document.addEventListener('click', (e) => {
       if (e.target !== this.searchInput && e.target !== this.suggestionsContainer) {
         this.hideSuggestions();
@@ -278,17 +243,10 @@ class SubjectSuggestionSystem {
 
   async loadSubjects() {
     try {
-      // Get current campus from localStorage (most reliable source)
       this.currentCampus = localStorage.getItem('selectedCampus') || 'v';
-
-      // Fetch the appropriate subjects file
       const campus = this.currentCampus.toUpperCase();
       const response = await fetch(`/data/course-data/subjects-prereqs/UBC${campus}-subjects.json`);
-
-      if (!response.ok) {
-        throw new Error(`Failed to load subjects: ${response.status}`);
-      }
-
+      if (!response.ok) throw new Error(`Failed to load subjects: ${response.status}`);
       this.subjects = await response.json();
       this.isLoaded = true;
       console.log(`Loaded ${this.subjects.length} subjects for UBC${campus}`);
@@ -300,14 +258,11 @@ class SubjectSuggestionSystem {
 
   handleInput() {
     const searchText = this.searchInput.value.trim().toUpperCase();
-
-    // If no text or subjects not loaded, hide suggestions
     if (!searchText || !this.isLoaded) {
       this.hideSuggestions();
       return;
     }
 
-    // Check if the search text matches a subject code
     const matchingSubjects = this.subjects.filter(subject =>
       subject.code.toUpperCase() === searchText ||
       subject.code.toUpperCase().startsWith(searchText)
@@ -321,13 +276,9 @@ class SubjectSuggestionSystem {
   }
 
   showSuggestions(subjects, searchText) {
-    // Clear previous suggestions
     this.suggestionsContainer.innerHTML = '';
-
-    // Create suggestion items
     subjects.forEach(subject => {
       if (subject.code.toUpperCase() === searchText) {
-        // Exact match - show "View only" suggestion
         const suggestionItem = document.createElement('div');
         suggestionItem.className = 'suggestion-item';
         suggestionItem.innerHTML = `
@@ -335,22 +286,16 @@ class SubjectSuggestionSystem {
           <span class="suggestion-text">View only <strong>${subject.code}</strong> courses</span>
           <span class="suggestion-desc">${subject.title}</span>
         `;
-
-        // Add click handler
         suggestionItem.addEventListener('click', () => {
           this.searchInput.value = subject.code + '  ';
           this.searchInput.focus();
           this.hideSuggestions();
-
-          // Trigger search/filter
           this.searchInput.dispatchEvent(new Event('input'));
         });
-
         this.suggestionsContainer.appendChild(suggestionItem);
       }
     });
 
-    // Show the container if there are suggestions
     if (this.suggestionsContainer.children.length > 0) {
       this.suggestionsContainer.style.display = 'block';
     } else {
@@ -364,8 +309,8 @@ class SubjectSuggestionSystem {
     }
   }
 }
+
 function initSubjectSuggestions() {
-  // Initialize the suggestion system after the app is fully loaded
   window.subjectSuggestions = new SubjectSuggestionSystem();
 }
 initSubjectSuggestions();

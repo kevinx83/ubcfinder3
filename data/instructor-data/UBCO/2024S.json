@@ -1,0 +1,2994 @@
+[
+  {
+    "name": "A K M Amanat Ullah",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 36,
+        "title": "Human Computer Interaction",
+        "average": 85.3,
+        "median": 88.0,
+        "percentile25": 86.0,
+        "percentile75": 92.0,
+        "high": 96,
+        "low": 0,
+        "<50": 1,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 3,
+        "76-79": 2,
+        "80-84": 1,
+        "85-89": 13,
+        "90-100": 16,
+        "code": "COSC 341",
+        "subject": "Computer Science"
+      }
+    ],
+    "totalStudents": 36,
+    "overallAverage": 85.3,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Abdallah Mohamed",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 43,
+        "title": "Computer Programming I",
+        "average": 64.9,
+        "median": 70.0,
+        "percentile25": 49.5,
+        "percentile75": 80.0,
+        "high": 100,
+        "low": 0,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "COSC 111",
+        "subject": "Computer Science"
+      }
+    ],
+    "totalStudents": 43,
+    "overallAverage": 64.9,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Ahmad Rahmzadeh Gharehghanat",
+    "faculties": [
+      "Faculty of Applied Science"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 34,
+        "title": "Dynamics",
+        "average": 54.2,
+        "median": 58.0,
+        "percentile25": 45.3,
+        "percentile75": 66.0,
+        "high": 84,
+        "low": 0,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "APSC 181",
+        "subject": "Applied Science"
+      }
+    ],
+    "totalStudents": 34,
+    "overallAverage": 54.2,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Allison Hargreaves",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 14,
+        "title": "Indigenous Narrative",
+        "average": 73.4,
+        "median": 82.0,
+        "percentile25": 76.3,
+        "percentile75": 84.8,
+        "high": 90,
+        "low": 0,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ENGL 154",
+        "subject": "English"
+      }
+    ],
+    "totalStudents": 14,
+    "overallAverage": 73.4,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Alwyn Spies",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 50,
+        "title": "Introduction to Intercultural Communication",
+        "average": 87.7,
+        "median": 90.0,
+        "percentile25": 85.3,
+        "percentile75": 91.8,
+        "high": 97,
+        "low": 23,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "WRLD 150",
+        "subject": "World Literature"
+      }
+    ],
+    "totalStudents": 50,
+    "overallAverage": 87.7,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Amanda Tregilges",
+    "faculties": [
+      "Faculty of Health and Social Development"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 63,
+        "title": "Nursing Lab Practice IV",
+        "average": 82.1,
+        "median": 83.0,
+        "percentile25": 78.0,
+        "percentile75": 85.0,
+        "high": 90,
+        "low": 73,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "NRSG 301",
+        "subject": "Nursing"
+      }
+    ],
+    "totalStudents": 63,
+    "overallAverage": 82.1,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Anahita Shokrkon",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 47,
+        "title": "Introduction to Research Methods and Design",
+        "average": 84.4,
+        "median": 88.0,
+        "percentile25": 81.5,
+        "percentile75": 92.5,
+        "high": 100,
+        "low": 42,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "PSYO 270",
+        "subject": "Psychology"
+      }
+    ],
+    "totalStudents": 47,
+    "overallAverage": 84.4,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Andrea Routley",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 22,
+        "title": "Introduction to Writing Fiction and Drama",
+        "average": 84.0,
+        "median": 87.0,
+        "percentile25": 82.5,
+        "percentile75": 92.5,
+        "high": 96,
+        "low": 33,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "CRWR 160",
+        "subject": "Creative Writing"
+      }
+    ],
+    "totalStudents": 22,
+    "overallAverage": 84.0,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Anne Tseu",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 31,
+        "title": "CULT & PSYO",
+        "average": 81.5,
+        "median": 84.0,
+        "percentile25": 71.5,
+        "percentile75": 91.0,
+        "high": 99,
+        "low": 59,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "PSYO 380L",
+        "subject": "Psychology"
+      }
+    ],
+    "totalStudents": 31,
+    "overallAverage": 81.5,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Asfiya Taji",
+    "faculties": [
+      "Faculty of Management"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 37,
+        "title": "Introduction to Management Thought and Social Responsibility",
+        "average": 62.2,
+        "median": 67.0,
+        "percentile25": 55.0,
+        "percentile75": 79.0,
+        "high": 96,
+        "low": 0,
+        "<50": 6,
+        "50-54": 3,
+        "55-59": 3,
+        "60-63": 4,
+        "64-67": 4,
+        "68-71": 4,
+        "72-75": 3,
+        "76-79": 2,
+        "80-84": 5,
+        "85-89": 2,
+        "90-100": 1,
+        "code": "MGMT 110",
+        "subject": "Management"
+      }
+    ],
+    "totalStudents": 37,
+    "overallAverage": 62.2,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Carley Paterson",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 34,
+        "title": "INTRPERSONAL REL",
+        "average": 79.5,
+        "median": 84.5,
+        "percentile25": 73.3,
+        "percentile75": 88.8,
+        "high": 100,
+        "low": 49,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "PSYO 380M",
+        "subject": "Psychology"
+      }
+    ],
+    "totalStudents": 34,
+    "overallAverage": 79.5,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Carmen Miranda-Barrios",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 22,
+        "title": "Beginners' Spanish II",
+        "average": 83.8,
+        "median": 86.0,
+        "percentile25": 84.0,
+        "percentile75": 88.0,
+        "high": 92,
+        "low": 55,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "SPAN 102",
+        "subject": "Spanish"
+      },
+      {
+        "section": "1",
+        "reported": 19,
+        "title": "Advanced Beginners' Spanish II",
+        "average": 87.5,
+        "median": 88.0,
+        "percentile25": 84.5,
+        "percentile75": 91.0,
+        "high": 97,
+        "low": 68,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "SPAN 202",
+        "subject": "Spanish"
+      }
+    ],
+    "totalStudents": 41,
+    "overallAverage": 85.51,
+    "numberOfCourses": 2
+  },
+  {
+    "name": "Catherine Kyle",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 133,
+        "title": "Human Geography: Space, Place, and Community",
+        "average": 78.5,
+        "median": 80.0,
+        "percentile25": 74.0,
+        "percentile75": 85.0,
+        "high": 94,
+        "low": 30,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "GEOG 128",
+        "subject": "Geography"
+      },
+      {
+        "section": "1",
+        "reported": 140,
+        "title": "Human Geography: Resources, Development, and Society",
+        "average": 80.3,
+        "median": 81.5,
+        "percentile25": 77.0,
+        "percentile75": 86.0,
+        "high": 97,
+        "low": 12,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "GEOG 129",
+        "subject": "Geography"
+      }
+    ],
+    "totalStudents": 273,
+    "overallAverage": 79.42,
+    "numberOfCourses": 2
+  },
+  {
+    "name": "Christopher Blake",
+    "faculties": [
+      "Faculty of Applied Science"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 12,
+        "title": "Electricity, Magnetism, and Waves",
+        "average": 56.8,
+        "median": 55.5,
+        "percentile25": 44.8,
+        "percentile75": 67.3,
+        "high": 87,
+        "low": 19,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "APSC 178",
+        "subject": "Applied Science"
+      }
+    ],
+    "totalStudents": 12,
+    "overallAverage": 56.8,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Christopher Gordon",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 33,
+        "title": "Elementary French I",
+        "average": 85.0,
+        "median": 88.0,
+        "percentile25": 79.0,
+        "percentile75": 93.0,
+        "high": 97,
+        "low": 61,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "FREN 101",
+        "subject": "French"
+      },
+      {
+        "section": "1",
+        "reported": 29,
+        "title": "ELEM FREN II",
+        "average": 82.6,
+        "median": 86.0,
+        "percentile25": 78.0,
+        "percentile75": 91.0,
+        "high": 97,
+        "low": 57,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "FREN 102",
+        "subject": "French"
+      }
+    ],
+    "totalStudents": 62,
+    "overallAverage": 83.88,
+    "numberOfCourses": 2
+  },
+  {
+    "name": "Claude Hurtubise",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 44,
+        "title": "Differential Calculus with Applications to Physical Sciences and Engineering",
+        "average": 57.3,
+        "median": 58.0,
+        "percentile25": 43.5,
+        "percentile75": 73.5,
+        "high": 96,
+        "low": 1,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "MATH 100",
+        "subject": "Mathematics"
+      }
+    ],
+    "totalStudents": 44,
+    "overallAverage": 57.3,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Cynthia Hern\u00e1ndez Garcia",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 20,
+        "title": "Advanced Beginners' Spanish I",
+        "average": 86.6,
+        "median": 89.5,
+        "percentile25": 83.5,
+        "percentile75": 91.3,
+        "high": 98,
+        "low": 66,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "SPAN 201",
+        "subject": "Spanish"
+      }
+    ],
+    "totalStudents": 20,
+    "overallAverage": 86.6,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "David Boutillier",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 46,
+        "title": "Introduction to Logic and Critical Thinking",
+        "average": 78.8,
+        "median": 80.0,
+        "percentile25": 73.0,
+        "percentile75": 89.0,
+        "high": 95,
+        "low": 47,
+        "<50": 1,
+        "50-54": 2,
+        "55-59": 2,
+        "60-63": 1,
+        "64-67": 0,
+        "68-71": 1,
+        "72-75": 9,
+        "76-79": 4,
+        "80-84": 8,
+        "85-89": 7,
+        "90-100": 11,
+        "code": "PHIL 120",
+        "subject": "Philosophy"
+      }
+    ],
+    "totalStudents": 46,
+    "overallAverage": 78.8,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "David Doody",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 20,
+        "title": "Public Art: Mural Painting",
+        "average": 88.4,
+        "median": 90.5,
+        "percentile25": 86.8,
+        "percentile75": 92.0,
+        "high": 94,
+        "low": 69,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "VISA 285A",
+        "subject": "Visual Arts"
+      }
+    ],
+    "totalStudents": 20,
+    "overallAverage": 88.4,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Derrick Wirtz",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 174,
+        "title": "Introduction to Psychology: Personal Functioning",
+        "average": 82.6,
+        "median": 85.0,
+        "percentile25": 79.0,
+        "percentile75": 89.8,
+        "high": 99,
+        "low": 14,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "PSYO 121",
+        "subject": "Psychology"
+      }
+    ],
+    "totalStudents": 174,
+    "overallAverage": 82.6,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Ethan Guagliardo",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 26,
+        "title": "Introduction to Popular Narrative",
+        "average": 78.8,
+        "median": 80.5,
+        "percentile25": 71.8,
+        "percentile75": 88.0,
+        "high": 96,
+        "low": 53,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ENGL 231A",
+        "subject": "English"
+      }
+    ],
+    "totalStudents": 26,
+    "overallAverage": 78.8,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Evan Habkirk",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 100,
+        "title": "Introduction to Decolonization: Indigenous Studies",
+        "average": 91.7,
+        "median": 94.0,
+        "percentile25": 90.0,
+        "percentile75": 95.0,
+        "high": 99,
+        "low": 57,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "INDG 100",
+        "subject": "Indigenous Studies"
+      }
+    ],
+    "totalStudents": 100,
+    "overallAverage": 91.7,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Faran Razi",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 25,
+        "title": "Introductory Physics for the Life Sciences II",
+        "average": 67.6,
+        "median": 71.0,
+        "percentile25": 61.0,
+        "percentile75": 79.0,
+        "high": 86,
+        "low": 0,
+        "<50": 2,
+        "50-54": 0,
+        "55-59": 4,
+        "60-63": 4,
+        "64-67": 1,
+        "68-71": 2,
+        "72-75": 1,
+        "76-79": 5,
+        "80-84": 4,
+        "85-89": 2,
+        "90-100": 0,
+        "code": "PHYS 122",
+        "subject": "Physics"
+      }
+    ],
+    "totalStudents": 25,
+    "overallAverage": 67.6,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Felix Amoh-Siaw",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 20,
+        "title": "Politics of sub-Saharan Africa",
+        "average": 76.6,
+        "median": 79.5,
+        "percentile25": 72.8,
+        "percentile75": 82.5,
+        "high": 95,
+        "low": 54,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "POLI 317",
+        "subject": "Political Science"
+      }
+    ],
+    "totalStudents": 20,
+    "overallAverage": 76.6,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Frazer Atkinson",
+    "faculties": [
+      "Faculty of Health and Social Development"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 118,
+        "title": "Sport Psychology",
+        "average": 80.9,
+        "median": 83.0,
+        "percentile25": 75.3,
+        "percentile75": 89.0,
+        "high": 96,
+        "low": 34,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "HES 382",
+        "subject": "Health & Exercise Sciences"
+      }
+    ],
+    "totalStudents": 118,
+    "overallAverage": 80.9,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Gizem Keskin Boyaci",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 60,
+        "title": "ATTM ACROSS LSP",
+        "average": 85.5,
+        "median": 88.0,
+        "percentile25": 82.0,
+        "percentile75": 94.0,
+        "high": 100,
+        "low": 12,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "PSYO 380F",
+        "subject": "Psychology"
+      }
+    ],
+    "totalStudents": 60,
+    "overallAverage": 85.5,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Gordon Lovegrove",
+    "faculties": [
+      "Faculty of Applied Science"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 45,
+        "title": "Engineering Economic Analysis",
+        "average": 83.8,
+        "median": 86.0,
+        "percentile25": 80.0,
+        "percentile75": 92.0,
+        "high": 96,
+        "low": 28,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ENGR 305",
+        "subject": "Engineering"
+      },
+      {
+        "section": "1",
+        "reported": 7,
+        "title": "Railway Systems Engineering",
+        "average": 79.6,
+        "median": 80.0,
+        "percentile25": 75.0,
+        "percentile75": 84.5,
+        "high": 90,
+        "low": 68,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ENGR 437",
+        "subject": "Engineering"
+      }
+    ],
+    "totalStudents": 52,
+    "overallAverage": 83.23,
+    "numberOfCourses": 2
+  },
+  {
+    "name": "Grace Fan",
+    "faculties": [
+      "Faculty of Management"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 14,
+        "title": "Introduction to Business",
+        "average": 83.0,
+        "median": 85.0,
+        "percentile25": 77.5,
+        "percentile75": 86.8,
+        "high": 91,
+        "low": 73,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "MGMT 100",
+        "subject": "Management"
+      }
+    ],
+    "totalStudents": 14,
+    "overallAverage": 83.0,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Grant Burt",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 13,
+        "title": "ASSESS/TREATMENT",
+        "average": 74.8,
+        "median": 77.0,
+        "percentile25": 68.0,
+        "percentile75": 81.0,
+        "high": 87,
+        "low": 59,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "PSYO 480F",
+        "subject": "Psychology"
+      }
+    ],
+    "totalStudents": 13,
+    "overallAverage": 74.8,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Jeannette Armstrong",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 20,
+        "title": "Traditional Ecological Knowledge",
+        "average": 83.3,
+        "median": 90.5,
+        "percentile25": 83.0,
+        "percentile75": 93.3,
+        "high": 98,
+        "low": 25,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "INDG 307",
+        "subject": "Indigenous Studies"
+      }
+    ],
+    "totalStudents": 20,
+    "overallAverage": 83.3,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Jennifer Ingle",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 57,
+        "title": "COMP ETHICS",
+        "average": 76.2,
+        "median": 77.0,
+        "percentile25": 73.0,
+        "percentile75": 80.0,
+        "high": 85,
+        "low": 58,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "PHIL 331",
+        "subject": "Philosophy"
+      }
+    ],
+    "totalStudents": 57,
+    "overallAverage": 76.2,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Jennifer Payson",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 24,
+        "title": "Studies in Composition",
+        "average": 71.3,
+        "median": 72.5,
+        "percentile25": 68.3,
+        "percentile75": 82.5,
+        "high": 94,
+        "low": 31,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ENGL 112",
+        "subject": "English"
+      }
+    ],
+    "totalStudents": 24,
+    "overallAverage": 71.3,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Jessica Dennis",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 24,
+        "title": "Introduction to Digital Media I",
+        "average": 87.9,
+        "median": 88.5,
+        "percentile25": 86.8,
+        "percentile75": 90.3,
+        "high": 96,
+        "low": 72,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "VISA 106",
+        "subject": "Visual Arts"
+      },
+      {
+        "section": "1",
+        "reported": 30,
+        "title": "Studies in Photography",
+        "average": 82.1,
+        "median": 87.0,
+        "percentile25": 78.3,
+        "percentile75": 89.8,
+        "high": 98,
+        "low": 34,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "VISA 110",
+        "subject": "Visual Arts"
+      }
+    ],
+    "totalStudents": 54,
+    "overallAverage": 84.68,
+    "numberOfCourses": 2
+  },
+  {
+    "name": "Joanna Cockerline",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 36,
+        "title": "Personal and Professional Identity and Interpersonal Communication",
+        "average": 82.2,
+        "median": 83.0,
+        "percentile25": 80.8,
+        "percentile75": 85.3,
+        "high": 90,
+        "low": 59,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 1,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 1,
+        "72-75": 1,
+        "76-79": 3,
+        "80-84": 17,
+        "85-89": 10,
+        "90-100": 3,
+        "code": "CORH 321",
+        "subject": "Communications and Rhetoric"
+      }
+    ],
+    "totalStudents": 36,
+    "overallAverage": 82.2,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Jodey Castricano",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 29,
+        "title": "THE GOTHIC",
+        "average": 76.9,
+        "median": 78.0,
+        "percentile25": 73.0,
+        "percentile75": 82.0,
+        "high": 90,
+        "low": 48,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ENGL 364G",
+        "subject": "English"
+      }
+    ],
+    "totalStudents": 29,
+    "overallAverage": 76.9,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "John Ward",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 27,
+        "title": "International Organizations",
+        "average": 81.4,
+        "median": 83.0,
+        "percentile25": 78.0,
+        "percentile75": 84.5,
+        "high": 91,
+        "low": 72,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 4,
+        "76-79": 4,
+        "80-84": 12,
+        "85-89": 6,
+        "90-100": 1,
+        "code": "POLI 364",
+        "subject": "Political Science"
+      }
+    ],
+    "totalStudents": 27,
+    "overallAverage": 81.4,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Jon Vickery",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 28,
+        "title": "Readings in Narrative",
+        "average": 78.1,
+        "median": 83.5,
+        "percentile25": 77.8,
+        "percentile75": 87.3,
+        "high": 93,
+        "low": 0,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ENGL 153",
+        "subject": "English"
+      }
+    ],
+    "totalStudents": 28,
+    "overallAverage": 78.1,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Jose Teixeira",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 9,
+        "title": "Geographies of Migration and Settlement",
+        "average": 91.4,
+        "median": 91.0,
+        "percentile25": 91.0,
+        "percentile75": 92.0,
+        "high": 93,
+        "low": 90,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "GEOG 353",
+        "subject": "Geography"
+      }
+    ],
+    "totalStudents": 9,
+    "overallAverage": 91.4,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Kara Malcolm",
+    "faculties": [
+      "Faculty of Health and Social Development"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 27,
+        "title": "HLTH CHILDB FAM",
+        "average": 81.6,
+        "median": 83.0,
+        "percentile25": 78.0,
+        "percentile75": 87.0,
+        "high": 91,
+        "low": 59,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "NRSG 328",
+        "subject": "Nursing"
+      },
+      {
+        "section": "1",
+        "reported": 66,
+        "title": "Leadership",
+        "average": 95.3,
+        "median": 96.0,
+        "percentile25": 94.0,
+        "percentile75": 98.0,
+        "high": 100,
+        "low": 83,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "NRSG 422",
+        "subject": "Nursing"
+      }
+    ],
+    "totalStudents": 93,
+    "overallAverage": 91.32,
+    "numberOfCourses": 2
+  },
+  {
+    "name": "Ken Chidlow",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 63,
+        "title": "Computer Programming II",
+        "average": 68.4,
+        "median": 70.0,
+        "percentile25": 61.5,
+        "percentile75": 77.5,
+        "high": 96,
+        "low": 29,
+        "<50": 7,
+        "50-54": 1,
+        "55-59": 6,
+        "60-63": 6,
+        "64-67": 8,
+        "68-71": 7,
+        "72-75": 6,
+        "76-79": 10,
+        "80-84": 5,
+        "85-89": 4,
+        "90-100": 3,
+        "code": "COSC 121",
+        "subject": "Computer Science"
+      }
+    ],
+    "totalStudents": 63,
+    "overallAverage": 68.4,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Kirthana Ganesh",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 29,
+        "title": "INTRO QUAL RES",
+        "average": 84.8,
+        "median": 90.0,
+        "percentile25": 80.0,
+        "percentile75": 95.0,
+        "high": 100,
+        "low": 41,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "PSYO 380G",
+        "subject": "Psychology"
+      }
+    ],
+    "totalStudents": 29,
+    "overallAverage": 84.8,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Laura Mercer",
+    "faculties": [
+      "Faculty of Health and Social Development"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 67,
+        "title": "Capstone Review",
+        "average": 81.5,
+        "median": 82.0,
+        "percentile25": 77.5,
+        "percentile75": 86.5,
+        "high": 92,
+        "low": 59,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "NRSG 421",
+        "subject": "Nursing"
+      }
+    ],
+    "totalStudents": 67,
+    "overallAverage": 81.5,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Laura Mudde",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 48,
+        "title": "Sociology of Punishment and Captivity",
+        "average": 91.5,
+        "median": 95.0,
+        "percentile25": 88.5,
+        "percentile75": 97.0,
+        "high": 99,
+        "low": 69,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "SOCI 373",
+        "subject": "Sociology"
+      }
+    ],
+    "totalStudents": 48,
+    "overallAverage": 91.5,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Laura Patterson",
+    "faculties": [
+      "Faculty of Applied Science"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 27,
+        "title": "Technical Communication",
+        "average": 74.3,
+        "median": 73.0,
+        "percentile25": 70.0,
+        "percentile75": 82.5,
+        "high": 86,
+        "low": 47,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "APSC 201",
+        "subject": "Applied Science"
+      }
+    ],
+    "totalStudents": 27,
+    "overallAverage": 74.3,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Lauren Airth",
+    "faculties": [
+      "Faculty of Health and Social Development"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 46,
+        "title": "Advanced Community Health Nursing",
+        "average": 92.5,
+        "median": 94.0,
+        "percentile25": 91.3,
+        "percentile75": 96.8,
+        "high": 99,
+        "low": 77,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "NRSG 428",
+        "subject": "Nursing"
+      }
+    ],
+    "totalStudents": 46,
+    "overallAverage": 92.5,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Layla Cameron",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 54,
+        "title": "Gender, Race, Sexuality, and Power I: An Introduction",
+        "average": 72.6,
+        "median": 75.0,
+        "percentile25": 69.0,
+        "percentile75": 80.8,
+        "high": 89,
+        "low": 0,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "GWST 100",
+        "subject": "Gender, Women and Sexuality Studies"
+      }
+    ],
+    "totalStudents": 54,
+    "overallAverage": 72.6,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Leslie Shayer",
+    "faculties": [
+      "Faculty of Education"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 33,
+        "title": "MATH FOR ARTS ED",
+        "average": 90.5,
+        "median": 94.0,
+        "percentile25": 94.0,
+        "percentile75": 97.0,
+        "high": 100,
+        "low": 27,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "EDUC 160",
+        "subject": "Education"
+      }
+    ],
+    "totalStudents": 33,
+    "overallAverage": 90.5,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Lindsay Kennedy",
+    "faculties": [
+      "Faculty of Health and Social Development"
+    ],
+    "courses": [
+      {
+        "section": "1, 2",
+        "reported": 109,
+        "title": "Health & Healing IV",
+        "average": 80.21,
+        "median": 80.47,
+        "percentile25": 75.31,
+        "percentile75": 86.47,
+        "high": 96,
+        "low": 57,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "NRSG 326",
+        "subject": "Nursing"
+      },
+      {
+        "section": "1",
+        "reported": 43,
+        "title": "Advanced Clinical Reasoning for Care of the Complex Client",
+        "average": 87.8,
+        "median": 88.0,
+        "percentile25": 86.0,
+        "percentile75": 92.0,
+        "high": 98,
+        "low": 71,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "NRSG 423",
+        "subject": "Nursing"
+      }
+    ],
+    "totalStudents": 152,
+    "overallAverage": 82.36,
+    "numberOfCourses": 2
+  },
+  {
+    "name": "Maggie Weninger",
+    "faculties": [
+      "Faculty of Health and Social Development"
+    ],
+    "courses": [
+      {
+        "section": "2",
+        "reported": 33,
+        "title": "CHILD HLTH",
+        "average": 83.3,
+        "median": 84.0,
+        "percentile25": 81.0,
+        "percentile75": 86.0,
+        "high": 90,
+        "low": 76,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "NRSG 329",
+        "subject": "Nursing"
+      }
+    ],
+    "totalStudents": 33,
+    "overallAverage": 83.3,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Mayu Takasaki",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 9,
+        "title": "Japanese Food Culture",
+        "average": 81.1,
+        "median": 88.0,
+        "percentile25": 84.0,
+        "percentile75": 95.0,
+        "high": 98,
+        "low": 14,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "JPST 370",
+        "subject": "Japanese Studies"
+      }
+    ],
+    "totalStudents": 9,
+    "overallAverage": 81.1,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Meilan Ehlert",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 23,
+        "title": "Introduction to Intercultural Communication",
+        "average": 85.0,
+        "median": 87.0,
+        "percentile25": 79.5,
+        "percentile75": 91.0,
+        "high": 100,
+        "low": 61,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 1,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 2,
+        "76-79": 3,
+        "80-84": 4,
+        "85-89": 4,
+        "90-100": 9,
+        "code": "WRLD 150",
+        "subject": "World Literature"
+      }
+    ],
+    "totalStudents": 23,
+    "overallAverage": 85.0,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Mohamed Shehata",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 62,
+        "title": "Data Structures",
+        "average": 77.4,
+        "median": 78.5,
+        "percentile25": 70.3,
+        "percentile75": 86.8,
+        "high": 100,
+        "low": 41,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "COSC 222",
+        "subject": "Computer Science"
+      }
+    ],
+    "totalStudents": 62,
+    "overallAverage": 77.4,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Mohammad Tiznobaik",
+    "faculties": [
+      "Faculty of Applied Science"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 133,
+        "title": "Law and Ethics for Engineers",
+        "average": 80.9,
+        "median": 83.0,
+        "percentile25": 73.0,
+        "percentile75": 88.0,
+        "high": 99,
+        "low": 45,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ENGR 413",
+        "subject": "Engineering"
+      }
+    ],
+    "totalStudents": 133,
+    "overallAverage": 80.9,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Monica Good",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 12,
+        "title": "MEX LANGCULTTERR",
+        "average": 94.6,
+        "median": 100.0,
+        "percentile25": 96.3,
+        "percentile75": 100.0,
+        "high": 100,
+        "low": 70,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 1,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 1,
+        "85-89": 1,
+        "90-100": 9,
+        "code": "WRLD 399P",
+        "subject": "World Literature"
+      }
+    ],
+    "totalStudents": 12,
+    "overallAverage": 94.6,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Mostafa Mohamed",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 56,
+        "title": "INTRO DATABASES",
+        "average": 89.7,
+        "median": 93.0,
+        "percentile25": 87.0,
+        "percentile75": 99.0,
+        "high": 100,
+        "low": 0,
+        "<50": 1,
+        "50-54": 0,
+        "55-59": 1,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 1,
+        "72-75": 0,
+        "76-79": 4,
+        "80-84": 5,
+        "85-89": 6,
+        "90-100": 38,
+        "code": "COSC 304",
+        "subject": "Computer Science"
+      },
+      {
+        "section": "1",
+        "reported": 46,
+        "title": "Introduction to Data Analytics",
+        "average": 87.2,
+        "median": 88.0,
+        "percentile25": 82.3,
+        "percentile75": 92.8,
+        "high": 100,
+        "low": 62,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "DATA 301",
+        "subject": "Data Science"
+      }
+    ],
+    "totalStudents": 102,
+    "overallAverage": 88.57,
+    "numberOfCourses": 2
+  },
+  {
+    "name": "Nathalie Hager",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 18,
+        "title": "Art and Visual Cultures of the World I",
+        "average": 79.5,
+        "median": 77.0,
+        "percentile25": 73.5,
+        "percentile75": 85.8,
+        "high": 95,
+        "low": 65,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ARTH 101",
+        "subject": "Art History and Visual Culture"
+      }
+    ],
+    "totalStudents": 18,
+    "overallAverage": 79.5,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Nicole de Bosch Kemper",
+    "faculties": [
+      "Faculty of Health and Social Development"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 20,
+        "title": "CHILD HLTH",
+        "average": 81.3,
+        "median": 82.0,
+        "percentile25": 79.5,
+        "percentile75": 84.0,
+        "high": 88,
+        "low": 73,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "NRSG 329",
+        "subject": "Nursing"
+      }
+    ],
+    "totalStudents": 20,
+    "overallAverage": 81.3,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Nima Eslami",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 70,
+        "title": "Integral Calculus with Applications to Physical Sciences and Engineering",
+        "average": 64.3,
+        "median": 66.5,
+        "percentile25": 51.0,
+        "percentile75": 74.0,
+        "high": 100,
+        "low": 0,
+        "<50": 12,
+        "50-54": 9,
+        "55-59": 5,
+        "60-63": 5,
+        "64-67": 5,
+        "68-71": 8,
+        "72-75": 11,
+        "76-79": 2,
+        "80-84": 2,
+        "85-89": 3,
+        "90-100": 8,
+        "code": "MATH 101",
+        "subject": "Mathematics"
+      }
+    ],
+    "totalStudents": 70,
+    "overallAverage": 64.3,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Nina Langton",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 10,
+        "title": "LIT TO FILM",
+        "average": 74.5,
+        "median": 77.0,
+        "percentile25": 75.3,
+        "percentile75": 81.5,
+        "high": 91,
+        "low": 31,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "JPST 395B",
+        "subject": "Japanese Studies"
+      }
+    ],
+    "totalStudents": 10,
+    "overallAverage": 74.5,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Omid Niksan",
+    "faculties": [
+      "Faculty of Applied Science"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 46,
+        "title": "System Dynamics",
+        "average": 76.5,
+        "median": 81.5,
+        "percentile25": 65.5,
+        "percentile75": 88.5,
+        "high": 97,
+        "low": 33,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "APSC 246",
+        "subject": "Applied Science"
+      }
+    ],
+    "totalStudents": 46,
+    "overallAverage": 76.5,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Palak Goyal",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 50,
+        "title": "Introductory Physics for the Life Sciences I",
+        "average": 74.7,
+        "median": 77.0,
+        "percentile25": 68.0,
+        "percentile75": 83.5,
+        "high": 94,
+        "low": 43,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "PHYS 112",
+        "subject": "Physics"
+      }
+    ],
+    "totalStudents": 50,
+    "overallAverage": 74.7,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Paul Davies",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 148,
+        "title": "Introduction to Social Psychology",
+        "average": 82.2,
+        "median": 84.0,
+        "percentile25": 75.8,
+        "percentile75": 90.0,
+        "high": 99,
+        "low": 46,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "PSYO 252",
+        "subject": "Psychology"
+      }
+    ],
+    "totalStudents": 148,
+    "overallAverage": 82.2,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Paul Gabias",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 50,
+        "title": "Introduction to Psychology: Basic Processes",
+        "average": 79.7,
+        "median": 82.0,
+        "percentile25": 71.0,
+        "percentile75": 90.0,
+        "high": 98,
+        "low": 38,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "PSYO 111",
+        "subject": "Psychology"
+      }
+    ],
+    "totalStudents": 50,
+    "overallAverage": 79.7,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Piotr Ahmad",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 99,
+        "title": "Introduction to Sociology",
+        "average": 85.3,
+        "median": 88.0,
+        "percentile25": 81.5,
+        "percentile75": 92.0,
+        "high": 98,
+        "low": 53,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "SOCI 111",
+        "subject": "Sociology"
+      }
+    ],
+    "totalStudents": 99,
+    "overallAverage": 85.3,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Ray Taheri-Ardebili",
+    "faculties": [
+      "Faculty of Applied Science"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 47,
+        "title": "Statics",
+        "average": 54.1,
+        "median": 50.0,
+        "percentile25": 50.0,
+        "percentile75": 64.5,
+        "high": 86,
+        "low": 30,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "APSC 180",
+        "subject": "Applied Science"
+      }
+    ],
+    "totalStudents": 47,
+    "overallAverage": 54.1,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Richard Aleong",
+    "faculties": [
+      "Faculty of Applied Science"
+    ],
+    "courses": [
+      {
+        "section": "2",
+        "reported": 16,
+        "title": "Engineering Leadership",
+        "average": 86.1,
+        "median": 86.5,
+        "percentile25": 83.0,
+        "percentile75": 90.3,
+        "high": 96,
+        "low": 70,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ENGR 405",
+        "subject": "Engineering"
+      }
+    ],
+    "totalStudents": 16,
+    "overallAverage": 86.1,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Sabine Weyand",
+    "faculties": [
+      "Faculty of Applied Science"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 35,
+        "title": "Inclusive Design",
+        "average": 81.7,
+        "median": 83.0,
+        "percentile25": 79.0,
+        "percentile75": 84.0,
+        "high": 87,
+        "low": 75,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ENGR 407",
+        "subject": "Engineering"
+      }
+    ],
+    "totalStudents": 35,
+    "overallAverage": 81.7,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Saeed Sabzian",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "2",
+        "reported": 25,
+        "title": "Studies in Composition",
+        "average": 84.6,
+        "median": 87.0,
+        "percentile25": 85.0,
+        "percentile75": 89.0,
+        "high": 94,
+        "low": 60,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ENGL 112",
+        "subject": "English"
+      }
+    ],
+    "totalStudents": 25,
+    "overallAverage": 84.6,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Sandun Tharaka Wanniarachchi",
+    "faculties": [
+      "Faculty of Applied Science"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 84,
+        "title": "Engineering Project Management",
+        "average": 72.4,
+        "median": 73.5,
+        "percentile25": 65.8,
+        "percentile75": 80.0,
+        "high": 94,
+        "low": 47,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ENGR 303",
+        "subject": "Engineering"
+      }
+    ],
+    "totalStudents": 84,
+    "overallAverage": 72.4,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Scott Fazackerley",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 31,
+        "title": "Introduction to Networks",
+        "average": 72.7,
+        "median": 75.0,
+        "percentile25": 68.5,
+        "percentile75": 80.5,
+        "high": 93,
+        "low": 32,
+        "<50": 3,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 2,
+        "64-67": 3,
+        "68-71": 3,
+        "72-75": 7,
+        "76-79": 4,
+        "80-84": 4,
+        "85-89": 3,
+        "90-100": 2,
+        "code": "COSC 328",
+        "subject": "Computer Science"
+      }
+    ],
+    "totalStudents": 31,
+    "overallAverage": 72.7,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Selena Clark",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 30,
+        "title": "Beginners' Spanish I",
+        "average": 95.2,
+        "median": 97.5,
+        "percentile25": 94.0,
+        "percentile75": 100.0,
+        "high": 100,
+        "low": 64,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "SPAN 101",
+        "subject": "Spanish"
+      }
+    ],
+    "totalStudents": 30,
+    "overallAverage": 95.2,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Shirley McDonald",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 27,
+        "title": "Studies in Composition",
+        "average": 69.3,
+        "median": 79.0,
+        "percentile25": 63.5,
+        "percentile75": 86.0,
+        "high": 92,
+        "low": 3,
+        "<50": 4,
+        "50-54": 1,
+        "55-59": 1,
+        "60-63": 1,
+        "64-67": 1,
+        "68-71": 0,
+        "72-75": 1,
+        "76-79": 5,
+        "80-84": 4,
+        "85-89": 6,
+        "90-100": 3,
+        "code": "ENGL 112",
+        "subject": "English"
+      }
+    ],
+    "totalStudents": 27,
+    "overallAverage": 69.3,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Stacey Koosel",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 8,
+        "title": "CONTEMPART&CURAT",
+        "average": 77.5,
+        "median": 87.5,
+        "percentile25": 78.3,
+        "percentile75": 98.5,
+        "high": 100,
+        "low": 0,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ARTH 460J",
+        "subject": "Art History and Visual Culture"
+      }
+    ],
+    "totalStudents": 8,
+    "overallAverage": 77.5,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Tania Willard",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 23,
+        "title": "Interdisciplinary Ecological Art",
+        "average": 85.2,
+        "median": 87.0,
+        "percentile25": 82.5,
+        "percentile75": 91.0,
+        "high": 92,
+        "low": 68,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "CCS 320",
+        "subject": "Creative and Critical Studies"
+      }
+    ],
+    "totalStudents": 23,
+    "overallAverage": 85.2,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Tazul Islam",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 31,
+        "title": "Principles of Macroeconomics",
+        "average": 64.5,
+        "median": 68.0,
+        "percentile25": 61.0,
+        "percentile75": 77.5,
+        "high": 93,
+        "low": 0,
+        "<50": 5,
+        "50-54": 0,
+        "55-59": 2,
+        "60-63": 4,
+        "64-67": 4,
+        "68-71": 3,
+        "72-75": 5,
+        "76-79": 0,
+        "80-84": 3,
+        "85-89": 1,
+        "90-100": 4,
+        "code": "ECON 102",
+        "subject": "Economics"
+      }
+    ],
+    "totalStudents": 31,
+    "overallAverage": 64.5,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Todd Christopher Campbell",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 23,
+        "title": "British Imperialism, 1783-1950",
+        "average": 70.9,
+        "median": 69.0,
+        "percentile25": 63.5,
+        "percentile75": 82.5,
+        "high": 92,
+        "low": 41,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "HIST 312",
+        "subject": "History"
+      }
+    ],
+    "totalStudents": 23,
+    "overallAverage": 70.9,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Tracy Ross",
+    "faculties": [
+      "Faculty of Creative and Critical Studies"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 33,
+        "title": "The Art of Public Speaking",
+        "average": 82.3,
+        "median": 86.0,
+        "percentile25": 83.0,
+        "percentile75": 89.0,
+        "high": 97,
+        "low": 4,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "THTR 104",
+        "subject": "Theatre"
+      }
+    ],
+    "totalStudents": 33,
+    "overallAverage": 82.3,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Yasfatemeh Yamin",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 23,
+        "title": "Introductory Statistics",
+        "average": 69.6,
+        "median": 70.0,
+        "percentile25": 63.5,
+        "percentile75": 75.0,
+        "high": 100,
+        "low": 35,
+        "<50": 2,
+        "50-54": 3,
+        "55-59": 0,
+        "60-63": 1,
+        "64-67": 3,
+        "68-71": 3,
+        "72-75": 5,
+        "76-79": 1,
+        "80-84": 2,
+        "85-89": 0,
+        "90-100": 3,
+        "code": "STAT 230",
+        "subject": "Statistics"
+      }
+    ],
+    "totalStudents": 23,
+    "overallAverage": 69.6,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Yong Gao",
+    "faculties": [
+      "Faculty of Arts and Sciences"
+    ],
+    "courses": [
+      {
+        "section": "101",
+        "reported": 33,
+        "title": "Introduction to Discrete Structures",
+        "average": 75.2,
+        "median": 77.0,
+        "percentile25": 71.0,
+        "percentile75": 88.0,
+        "high": 95,
+        "low": 0,
+        "<50": 1,
+        "50-54": 3,
+        "55-59": 1,
+        "60-63": 1,
+        "64-67": 1,
+        "68-71": 3,
+        "72-75": 2,
+        "76-79": 5,
+        "80-84": 4,
+        "85-89": 8,
+        "90-100": 4,
+        "code": "COSC 221",
+        "subject": "Computer Science"
+      }
+    ],
+    "totalStudents": 33,
+    "overallAverage": 75.2,
+    "numberOfCourses": 1
+  },
+  {
+    "name": "Zheng Liu",
+    "faculties": [
+      "Faculty of Applied Science"
+    ],
+    "courses": [
+      {
+        "section": "1",
+        "reported": 14,
+        "title": "Multicriteria Optimization and Design of Experiments",
+        "average": 82.3,
+        "median": 83.0,
+        "percentile25": 73.5,
+        "percentile75": 90.8,
+        "high": 93,
+        "low": 67,
+        "<50": 0,
+        "50-54": 0,
+        "55-59": 0,
+        "60-63": 0,
+        "64-67": 0,
+        "68-71": 0,
+        "72-75": 0,
+        "76-79": 0,
+        "80-84": 0,
+        "85-89": 0,
+        "90-100": 0,
+        "code": "ENGR 489",
+        "subject": "Engineering"
+      }
+    ],
+    "totalStudents": 14,
+    "overallAverage": 82.3,
+    "numberOfCourses": 1
+  }
+]
