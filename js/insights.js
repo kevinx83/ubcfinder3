@@ -70,7 +70,7 @@ class InsightsManager {
     }
 
     getSession() {
-        return document.getElementById('sessionSelect')?.value || '2023W';
+        return document.getElementById('sessionSelect')?.value || '2024W';
     }
 
     async loadData() {
@@ -127,11 +127,13 @@ class InsightsManager {
         container.innerHTML = `
             <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 30px;">
                 <select id="sessionSelect" class="filter-select">
-                    <option value="2023W">2023W</option>
+                    <option value="2024W">2024-25W</option>
+                    <option value="2024S">2024S</option>
+                    <option value="2023W">2023-24W</option>
                     <option value="2023S">2023S</option>
-                    <option value="2022W">2022W</option>
+                    <option value="2022W">2022-23W</option>
                     <option value="2022S">2022S</option>
-                    <option value="2021W">2021W</option>
+                    <option value="2021W">2021-22W</option>
                     <option value="2021S">2021S</option>
                 </select>
             </div>

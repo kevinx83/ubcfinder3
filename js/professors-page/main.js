@@ -50,6 +50,13 @@ class ProfessorsApp {
 
         await this.loadInitialData(true);
         this.setupEventListeners();
+        // Restore search input from sessionStorage
+        const savedSearch = sessionStorage.getItem('searchTerm');
+        if (savedSearch) {
+            const input = document.getElementById('searchInput');
+            if (input) input.value = savedSearch;
+        }
+
         // Check if we need to apply saved filters
         const hasSessionFilters = sessionStorage.getItem('facultyFilters') ||
             sessionStorage.getItem('yearLevelFilters') ||

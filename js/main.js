@@ -15,9 +15,8 @@ class App {
       localStorage.setItem('selectedCampus', this.currentCampus);
     }
 
-    if (!localStorage.getItem('selectedSession')) {
-      localStorage.setItem('selectedSession', '2024W');
-    }
+    // Force default session to 2024W on page load
+    localStorage.setItem('selectedSession', '2024W');
 
     if (performance.navigation.type === performance.navigation.TYPE_RELOAD) {
       this.clearFilterSessionStorage();
@@ -40,11 +39,16 @@ class App {
   }
 
   async initialize() {
-    document.getElementById('sessionSelect')?.addEventListener('change', async (e) => {
-      localStorage.setItem('selectedSession', e.target.value);
-      dataService.setSession(e.target.value);
-      await this.loadInitialData(false);
-    });
+    const sessionSelect = document.getElementById('sessionSelect');
+    if (sessionSelect) {
+      sessionSelect.value = '2024W';
+      sessionSelect.addEventListener('change', async (e) => {
+        const selected = e.target.value;
+        localStorage.setItem('selectedSession', selected);
+        dataService.setSession(selected);
+        await this.loadInitialData(false);
+      });
+    }
 
     const logoLinks = document.querySelectorAll('.home-link, a[href="index.html"]');
     logoLinks.forEach(link => {
@@ -101,8 +105,10 @@ class App {
         const searchInput = document.getElementById('searchInput');
         if (searchInput) {
           searchInput.value = searchTerm;
+          this.handleFilterChange();
         }
       }
+
     } catch (error) {
       console.error('Failed to load initial data:', error);
     }

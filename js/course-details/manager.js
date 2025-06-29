@@ -19,7 +19,7 @@ export class CourseDetails {
     const urlParams = new URLSearchParams(window.location.search);
     const courseCode = urlParams.get('code');
     const campus = urlParams.get('campus');
-    const session = urlParams.get('session') || '2023W';
+    const session = urlParams.get('session') || '2024W';
 
     if (!courseCode || !campus) {
       this.showNotFound();
